@@ -1,0 +1,5 @@
+'@type': Group
+name: Enspiral Craftworks
+relationships:
+  - '@id': enspiral-craftworks-group-mikey
+    '@type': Relationship

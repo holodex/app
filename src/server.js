@@ -1,0 +1,73 @@
+var Path = require('path');
+var Url = require('url');
+var express = require('express');
+var helmet = require('helmet');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var Moonboots = require('moonboots-express');
+var compress = require('compression');
+var config = require('config');
+var serveStatic = require('serve-static');
+var lessitizer = require('lessitizer');
+
+var app = express();
+
+//
+// setup middleware
+//
+app.use(compress());
+app.use(serveStatic(__dirname + '/assets'));
+app.use(cookieParser());
+app.use(helmet.xframe());
+app.use(helmet.xssFilter());
+app.use(helmet.nosniff());
+
+//
+// setup API
+//
+app.use(config.api.pathname, require('api'));
+
+//
+// set our UI config cookie
+//
+config.ui.api = Url.format(config.api);
+
+app.use(function (req, res, next) {
+  res.cookie('config', JSON.stringify(config.ui));
+  next();
+});
+
+
+//
+// configure Moonboots to serve our UI
+//
+new Moonboots({
+  moonboots: {
+    jsFileName: 'bundle',
+    cssFileName: 'bundle',
+    main: __dirname + '/client.js',
+    developmentMode: config.isDev,
+    stylesheets: [
+      __dirname + '/styles.css',
+    ],
+    browserify: {
+      debug: false,
+    },
+    beforeBuildJS: function () {
+    },
+    beforeBuildCSS: function (done) {
+      lessitizer({
+        files: [
+          __dirname + "/styles.less",
+        ],
+        outputDir: __dirname,
+        development: config.isDev,
+      }, done);
+    },
+  },
+  server: app,
+});
+
+app.listen(config.api.port);
+
+console.log("Craftodex is running at: http://localhost:" + config.api.port + ".");
