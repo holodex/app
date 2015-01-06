@@ -19,6 +19,9 @@ var config = {
   },
   ui: {
     debug: true,
+    pathname: "/",
+    pushState: true,
+    hash: false,
   },
 };
 
