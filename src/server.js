@@ -1,5 +1,6 @@
 var Path = require('path');
 var Url = require('url');
+var fs = require('fs');
 var express = require('express');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
@@ -62,6 +63,13 @@ new Moonboots({
         ],
         outputDir: __dirname,
         development: config.isDev,
+        less: {
+          paths:
+            fs.readdirSync(__dirname + "/node_modules")
+            .concat([
+              __dirname + "/../node_modules/bootstrap/less",
+            ])
+        },
       }, done);
     },
   },
