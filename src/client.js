@@ -20,11 +20,9 @@ domready(function () {
   router.location(function (href) {
     debug("rendering", href);
 
-    var url = Url.parse(href, true);
-
     React.render(
       React.createElement(Ui, {
-        url: url,
+        path: Url.parse(href).path,
         config: config,
       }),
       document.body
