@@ -6,7 +6,8 @@
   "browser": "src/client.js",
   "scripts": {
     "test-server": "tape src/node_modules/**/test",
-    "develop": "DEBUG=* nodemon -w src ."
+    "develop": "DEBUG=* nodemon -w src .",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
