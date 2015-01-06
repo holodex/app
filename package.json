@@ -51,6 +51,7 @@
     "moonboots-express": "^2.0.0",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
+    "querystring": "^0.2.0",
     "reverend": "^0.3.0",
     "serve-static": "^1.7.2",
     "traverse-async": "git://github.com/ahdinosaur/js-traverse-async",

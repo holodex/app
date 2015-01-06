@@ -19,7 +19,7 @@ var config = {
   },
   ui: {
     debug: true,
-    pathname: "/",
+    prefix: "/",
     pushState: true,
     hash: false,
   },
