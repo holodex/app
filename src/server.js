@@ -12,6 +12,8 @@ var config = require('config');
 var serveStatic = require('serve-static');
 var lessitizer = require('lessitizer');
 
+require('node-jsx').install();
+
 var app = express();
 
 //
