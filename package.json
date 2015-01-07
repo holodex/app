@@ -11,21 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/craftodex/ui.git"
+    "url": "https://github.com/craftodex/app.git"
   },
   "keywords": [
     "craftodex",
     "directory",
     "ui",
+    "api",
     "people",
     "groups"
   ],
   "author": "Enspiral Craftworks",
   "license": "AGPLv3",
   "bugs": {
-    "url": "https://github.com/craftodex/ui/issues"
+    "url": "https://github.com/craftodex/app/issues"
   },
-  "homepage": "https://github.com/craftodex/ui",
+  "homepage": "https://github.com/craftodex/app",
   "browserify": {
     "transform": [
       "envify"
