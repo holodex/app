@@ -1,6 +1,7 @@
 var Path = require('path');
 var Url = require('url');
 var fs = require('fs');
+var extend = require('xtend');
 var express = require('express');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
@@ -26,12 +27,19 @@ app.use(helmet.nosniff());
 //
 // setup API
 //
-app.use(config.api.pathname, require('api'));
+app.use(config.api.prefix, require('api'));
 
 //
 // set our UI config cookie
 //
-config.ui.api = Url.format(config.api);
+config.ui.api = Url.format(
+  extend(
+    config.api,
+    {
+      pathname: config.api.prefix,
+    }
+  )
+);
 
 app.use(function (req, res, next) {
   res.cookie('config', JSON.stringify(config.ui));
