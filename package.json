@@ -64,6 +64,7 @@
     "reverend": "^0.3.0",
     "serve-static": "^1.7.2",
     "traverse-async": "git://github.com/ahdinosaur/js-traverse-async",
+    "url-regexp": "^1.0.2",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
