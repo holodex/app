@@ -17,13 +17,13 @@ var Ui = require('ui');
 var router = require('router');
 
 domready(function () {
-  router.location(function (href) {
-    debug("rendering", href);
+  router.route(function (route) {
+    debug("routing", route);
 
     React.render(
       React.createElement(Ui, {
-        path: Url.parse(href).path,
         config: config,
+        route: route,
       }),
       document.body
     );
