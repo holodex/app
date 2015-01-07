@@ -15,15 +15,19 @@ var Url = require('url');
 
 var Ui = require('ui');
 var router = require('router');
+var fetcher = require('fetcher');
 
 domready(function () {
   router.route(function (route) {
     debug("routing", route);
 
+    var model = fetcher(route);
+
     React.render(
       React.createElement(Ui, {
         config: config,
         route: route,
+        model: model,
       }),
       document.body
     );
