@@ -1,7 +1,7 @@
 {
-  "name": "craftodex-ui",
+  "name": "craftodex",
   "version": "0.0.0",
-  "description": "Craftodex user interface",
+  "description": "Craftodex",
   "main": "src/server.js",
   "browser": "src/client.js",
   "scripts": {
