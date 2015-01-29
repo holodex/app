@@ -1,2 +1,9 @@
 '@type': RelationshipType
 name: member
+pluralName: members
+description: A member is part of a group
+label: is member of
+inverseLabel: has member
+symmetric:
+  '@id': group
+  '@type': RelationshipType
