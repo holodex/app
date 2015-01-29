@@ -1,16 +1,11 @@
 '@type': Relationship
 relationshipType: 
-  '@id': steward
-  '@type': RelationshipType
+  '@id': relationshipTypes/steward
 is:
-  '@id': mikey
-  '@type': Person
+  '@id': people/mikey
 has:
-  '@id': simon
-  '@type': Person
+  '@id': people/simon
 symmetric: 
-  '@id': simon-stewardee-mikey
-  '@type': Relationship
+  '@id': relationships/simon-stewardee-mikey
 context:
-  '@id': enspiral-craftworks
-  '@type': Group
+  '@id': groups/enspiral-craftworks

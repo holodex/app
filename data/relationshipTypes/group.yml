@@ -5,5 +5,4 @@ description: A group has constituent members
 label: is group of
 inverseLabel: has group
 symmetric:
-  '@id': member
-  '@type': RelationshipType
+  '@id': relationshipTypes/member

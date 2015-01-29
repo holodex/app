@@ -1,7 +1,5 @@
 '@type': Person
 name: Mikey
 relationships:
-  - "@id": mikey-member-enspiral-craftworks
-    "@type": Relationship
-  - "@id": mikey-steward-simon
-    "@type": Relationship
+  - "@id": relationships/mikey-member-enspiral-craftworks
+  - "@id": relationships/mikey-steward-simon

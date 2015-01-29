@@ -1,7 +1,5 @@
 '@type': Group
 name: Enspiral Craftworks
 relationships:
-  - '@id': enspiral-craftworks-group-mikey
-    '@type': Relationship
-  - '@id': enspiral-craftworks-group-simon
-    '@type': Relationship
+  - '@id': relationships/enspiral-craftworks-group-mikey
+  - '@id': relationships/enspiral-craftworks-group-simon
