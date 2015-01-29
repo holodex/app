@@ -37,6 +37,7 @@
     "ampersand-collection-lodash-mixin": "git://github.com/ahdinosaur/ampersand-collection-lodash-mixin",
     "ampersand-collection-rest-mixin": "^3.0.1",
     "ampersand-model": "^4.0.3",
+    "ampersand-registry": "^0.2.2",
     "async-each": "^0.1.6",
     "body-parser": "^1.10.1",
     "bootstrap": "^3.3.1",
