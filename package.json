@@ -69,7 +69,8 @@
     "url-regexp": "^1.0.2",
     "webcola": "git://github.com/simontegg/WebCola",
     "xtend": "^4.0.0",
-    "d3-dispatch": "0.0.0"
+    "d3-dispatch": "0.0.0",
+    "traverse": "~0.6.6"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
