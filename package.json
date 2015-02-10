@@ -57,6 +57,7 @@
     "lessitizer": "^1.2.0",
     "lodash": "^2.4.1",
     "moonboots-express": "^2.0.0",
+    "nets": "^2.0.0",
     "node-jsx": "^0.12.4",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
