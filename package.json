@@ -70,7 +70,10 @@
     "webcola": "git://github.com/simontegg/WebCola",
     "xtend": "^4.0.0",
     "d3-dispatch": "0.0.0",
-    "traverse": "~0.6.6"
+    "traverse": "~0.6.6",
+    "react-hyperscript": "~2.0.0",
+    "hyperscript": "~1.4.4",
+    "create-element": "~0.2.3"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
