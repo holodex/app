@@ -1,13 +1,9 @@
 '@type': Relationship
 relationshipType: 
-  '@id': group
-  '@type': RelationshipType
+  '@id': relationshipTypes/group
 is:
-  '@id': enspiral-craftworks
-  '@type': Group
+  '@id': groups/enspiral-craftworks
 has:
-  '@id': simon
-  '@type': Person
+  '@id': people/simon
 symmetric: 
-  '@id': simon-member-enspiral-craftworks
-  '@type': Relationship
+  '@id': relationships/simon-member-enspiral-craftworks

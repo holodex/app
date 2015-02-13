@@ -48,14 +48,17 @@
     "domready": "^1.0.7",
     "envify": "^3.2.0",
     "es-class": "^0.9.0",
+    "es6-map": "^0.1.1",
     "express": "^4.10.7",
     "feathers": "^1.0.1",
     "helmet": "^0.5.4",
     "inherits": "^2.0.1",
     "js-yaml": "^3.2.5",
+    "json-stringify-safe": "^5.0.0",
     "lessitizer": "^1.2.0",
     "lodash": "^2.4.1",
     "moonboots-express": "^2.0.0",
+    "nets": "^2.0.0",
     "node-jsx": "^0.12.4",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
@@ -73,7 +76,10 @@
     "traverse": "~0.6.6",
     "react-hyperscript": "~2.0.0",
     "hyperscript": "~1.4.4",
-    "create-element": "~0.2.3"
+    "create-element": "~0.2.3",
+    "traverse": "^0.6.6",
+    "traverse-async": "git://github.com/ahdinosaur/js-traverse-async",
+    "url-regex": "^2.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
