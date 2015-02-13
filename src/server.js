@@ -62,7 +62,7 @@ new Moonboots({
       __dirname + '/styles.css',
     ],
     browserify: {
-      debug: false,
+      debug: true,
     },
     beforeBuildJS: function () {
     },
