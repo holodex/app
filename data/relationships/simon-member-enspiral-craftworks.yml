@@ -2,8 +2,8 @@
 relationshipType: 
   '@id': relationshipTypes/member
 is:
-  '@id': people/mikey
+  '@id': people/simon
 has:
   '@id': groups/enspiral-craftworks
 symmetric: 
-  '@id': relationships/enspiral-craftworks-group-mikey
+  '@id': relationships/enspiral-craftworks-group-simon
