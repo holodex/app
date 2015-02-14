@@ -21,13 +21,13 @@ domready(function () {
   router.route(function (route) {
     debug("routing", route);
 
-    var model = fetcher(route);
+    //var model = fetcher(route);
 
     React.render(
       React.createElement(Ui, {
         config: config,
         route: route,
-        model: model,
+        //model: model,
       }),
       document.body
     );
