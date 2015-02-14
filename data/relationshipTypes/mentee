@@ -1,0 +1,8 @@
+'@type': RelationshipType
+name: mentee
+pluralName: mentees
+description: A mentee is mentored by a mentor.
+label: is mentee of
+inverseLabel: has mentee
+symmetric:
+  '@id': relationshipTypes/mentor
