@@ -55,6 +55,7 @@
     "es6-map": "^0.1.1",
     "express": "^4.10.7",
     "feathers": "^1.0.1",
+    "global": "^4.3.0",
     "helmet": "^0.5.4",
     "hyperscript": "~1.4.4",
     "inherits": "^2.0.1",
