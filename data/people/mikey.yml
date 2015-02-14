@@ -2,4 +2,4 @@
 name: Mikey
 relationships:
   - "@id": relationships/mikey-member-enspiral-craftworks
-  - "@id": relationships/mikey-steward-simon
+  - "@id": relationships/mikey-mentor-simon

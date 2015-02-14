@@ -1,2 +1,8 @@
 '@type': RelationshipType
 name: stewardee
+pluralName: stewardees
+description: A stewardee is stewarded by a steward.
+label: is stewardee of
+inverseLabel: has stewardee
+symmetric:
+  '@id': relationshipTypes/steward
