@@ -6,4 +6,4 @@ is:
 has:
   '@id': people/joshua
 symmetric: 
-  '@id': relationships/joshua-stewardee-ayumi
+  '@id': relationships/joshua-stewardee-mix

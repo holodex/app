@@ -2,5 +2,4 @@
 name: Nanz
 relationships:
   - "@id": relationships/nanz-contributor-enspiral-craftworks
-  - "@id": relationships/nanz-steward-jesse
   - "@id": relationships/nanz-stewardee-craig

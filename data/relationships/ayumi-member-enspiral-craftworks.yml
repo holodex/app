@@ -1,0 +1,9 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/member
+is:
+  '@id': people/ayumi
+has:
+  '@id': groups/enspiral-craftworks
+symmetric: 
+  '@id': relationships/enspiral-craftworks-group-ayumi
