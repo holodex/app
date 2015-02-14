@@ -74,7 +74,7 @@
     "reverend": "^0.3.0",
     "serve-static": "^1.7.2",
     "traverse": "^0.6.6",
-    "traverse-async": "^0.1.5",
+    "traverse-async": "git://github.com/ahdinosaur/js-traverse-async",
     "url-regex": "^2.1.2",
     "url-regexp": "^1.0.2",
     "webcola": "git://github.com/simontegg/WebCola",
