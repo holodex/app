@@ -3,3 +3,5 @@ name: Simon
 relationships:
   - "@id": relationships/simon-member-enspiral-craftworks
   - "@id": relationships/simon-mentee-mikey
+  - "@id": relationships/simon-steward-stephanie
+  - "@id": relationships/simon-stewardee-charlie

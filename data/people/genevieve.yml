@@ -1,0 +1,5 @@
+'@type': Person
+name: Genevieve
+relationships:
+  - "@id": relationships/genevieve-contributor-enspiral-craftworks
+  - "@id": relationships/genevieve-stewardee-joshua

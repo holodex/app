@@ -1,0 +1,5 @@
+'@type': Person
+name: Dr Craig
+relationships:
+  - "@id": relationships/dr-craig-contributor-enspiral-craftworks
+  - "@id": relationships/dr-craig-stewardee-mix

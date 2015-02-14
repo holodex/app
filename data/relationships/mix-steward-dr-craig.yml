@@ -1,0 +1,9 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/steward
+is:
+  '@id': people/mix
+has:
+  '@id': people/dr-craig
+symmetric: 
+  '@id': relationships/dr-craig-stewardee-ayumi
