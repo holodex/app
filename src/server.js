@@ -6,21 +6,62 @@ var express = require('express');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var Moonboots = require('moonboots-express');
 var compress = require('compression');
 var config = require('config');
 var serveStatic = require('serve-static');
-var lessitizer = require('lessitizer');
+var browserify = require('browserify-middleware');
+var less = require('less-middleware');
 
 require('node-jsx').install();
+
+var isDev = process.env.NODE_ENV != 'production';
 
 var app = express();
 
 //
-// setup middleware
+// serve less styles
+//
+app.use(less("/", {
+  debug: isDev,
+  pathRoot: __dirname,
+  dest: '/assets',
+  once: !isDev,
+  parser: {
+    relativeUrls: true,
+    paths: fs.readdirSync(__dirname + "/node_modules")
+      .concat([
+        __dirname + "/../node_modules/bootstrap/less",
+      ]),
+  },
+}));
+
+//
+// serve browserify scripts
+//
+browserify.settings.production('minify', false);
+app.use('/bundle.js',
+  browserify(__dirname + '/client.js')
+);
+
+// set cookie on index.html
+app.use(function (req, res, next) {
+  var url = Url.parse(req.url);
+  if (
+    url.pathname === "/index.html" ||
+    url.pathname === "/"
+  ) {
+    res.cookie('config', JSON.stringify(config.ui));
+  }
+  next();
+});
+
+// serve static files
+app.use(serveStatic(__dirname + '/assets'));
+
+//
+// setup api middleware
 //
 app.use(compress());
-app.use(serveStatic(__dirname + '/assets'));
 app.use(cookieParser());
 app.use(helmet.xframe());
 app.use(helmet.xssFilter());
@@ -43,49 +84,7 @@ config.ui.api = Url.format(
   )
 );
 
-app.use(function (req, res, next) {
-  res.cookie('config', JSON.stringify(config.ui));
-  next();
-});
-
-
-//
-// configure Moonboots to serve our UI
-//
-new Moonboots({
-  moonboots: {
-    jsFileName: 'bundle',
-    cssFileName: 'bundle',
-    main: __dirname + '/client.js',
-    developmentMode: config.isDev,
-    stylesheets: [
-      __dirname + '/styles.css',
-    ],
-    browserify: {
-      debug: true,
-    },
-    beforeBuildJS: function () {
-    },
-    beforeBuildCSS: function (done) {
-      lessitizer({
-        files: [
-          __dirname + "/styles.less",
-        ],
-        outputDir: __dirname,
-        development: config.isDev,
-        less: {
-          paths:
-            fs.readdirSync(__dirname + "/node_modules")
-            .concat([
-              __dirname + "/../node_modules/bootstrap/less",
-            ])
-        },
-      }, done);
-    },
-  },
-  server: app,
-});
-
+// start server
 app.listen(config.api.port);
 
 console.log("Craftodex is running at: http://localhost:" + config.api.port + ".");
