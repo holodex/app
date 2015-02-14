@@ -14,7 +14,7 @@ var config = {
   api: {
     protocol: "http",
     hostname: "localhost",
-    port: 80,
+    port: process.env.PORT,
     prefix: "/api",
   },
   ui: {
