@@ -1,0 +1,9 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/group
+is:
+  '@id': groups/enspiral-craftworks
+has:
+  '@id': people/nicola
+symmetric: 
+  '@id': relationships/nicola-member-enspiral-craftworks

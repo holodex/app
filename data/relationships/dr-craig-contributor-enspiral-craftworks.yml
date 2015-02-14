@@ -1,0 +1,9 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/member
+is:
+  '@id': people/dr-craig
+has:
+  '@id': groups/enspiral-craftworks
+symmetric: 
+  '@id': relationships/enspiral-craftworks-group-dr-craig

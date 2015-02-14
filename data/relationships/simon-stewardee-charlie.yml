@@ -2,8 +2,8 @@
 relationshipType: 
   '@id': relationshipTypes/stewardee
 is:
-  '@id': people/charlie
+  '@id': people/simon
 has:
-  '@id': people/derek
+  '@id': people/charlie
 symmetric: 
-  '@id': relationships/derek-steward-charlie
+  '@id': relationships/charlie-steward-simon
