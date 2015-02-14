@@ -2,10 +2,8 @@
 relationshipType: 
   '@id': relationshipTypes/stewardee
 is:
-  '@id': people/simon
+  '@id': people/hannah
 has:
   '@id': people/mikey
 symmetric: 
-  '@id': relationships/mikey-steward-simon
-context:
-  '@id': groups/enspiral-craftworks
+  '@id': relationships/mikey-steward-hannah

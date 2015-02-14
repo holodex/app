@@ -2,4 +2,7 @@
 name: Mikey
 relationships:
   - "@id": relationships/mikey-member-enspiral-craftworks
-  - "@id": relationships/mikey-steward-simon
+  - "@id": relationships/mikey-mentor-simon
+  - "@id": relationships/mikey-steward-hannah
+  - "@id": relationships/mikey-steward-craig
+  - "@id": relationships/mikey-stewardee-stephanie

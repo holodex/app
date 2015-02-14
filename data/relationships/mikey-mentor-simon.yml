@@ -1,0 +1,11 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/mentor
+is:
+  '@id': people/mikey
+has:
+  '@id': people/simon
+symmetric: 
+  '@id': relationships/simon-mentee-mikey
+context:
+  '@id': groups/enspiral-craftworks

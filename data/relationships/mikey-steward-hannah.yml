@@ -4,8 +4,6 @@ relationshipType:
 is:
   '@id': people/mikey
 has:
-  '@id': people/simon
+  '@id': people/hannah
 symmetric: 
-  '@id': relationships/simon-stewardee-mikey
-context:
-  '@id': groups/enspiral-craftworks
+  '@id': relationships/hannah-stewardee-mikey

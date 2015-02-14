@@ -1,0 +1,6 @@
+'@type': Person
+name: Ayumi
+relationships:
+  - "@id": relationships/ayumi-member-enspiral-craftworks
+  - "@id": relationships/ayumi-steward-mix
+  - "@id": relationships/ayumi-stewardee-nicola

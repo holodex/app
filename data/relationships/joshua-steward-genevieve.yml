@@ -1,0 +1,9 @@
+'@type': Relationship
+relationshipType: 
+  '@id': relationshipTypes/steward
+is:
+  '@id': people/joshua
+has:
+  '@id': people/genevieve
+symmetric: 
+  '@id': relationships/genevieve-stewardee-joshua

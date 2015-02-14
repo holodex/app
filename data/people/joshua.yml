@@ -1,0 +1,6 @@
+'@type': Person
+name: Joshua
+relationships:
+  - "@id": relationships/joshua-member-enspiral-craftworks
+  - "@id": relationships/joshua-steward-derek
+  - "@id": relationships/joshua-stewardee-mix
