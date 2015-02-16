@@ -1,5 +1,4 @@
 var debug = require('debug')("craftodex");
-var domready = require('domready');
 
 var React = require('react');
 var Url = require('url');
