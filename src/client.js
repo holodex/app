@@ -17,19 +17,17 @@ if (config.debug) {
 
 debug("UI starting with config:", config);
 
-domready(function () {
-  router.route(function (route) {
-    debug("routing", route);
+router.route(function (route) {
+  debug("routing", route);
 
-    //var model = fetcher(route);
+  //var model = fetcher(route);
 
-    React.render(
-      React.createElement(Ui, {
-        config: config,
-        route: route,
-        //model: model,
-      }),
-      document.body
-    );
-  })
+  React.render(
+    React.createElement(Ui, {
+      config: config,
+      route: route,
+      //model: model,
+    }),
+    document.querySelector('body > main')
+  );
 });
