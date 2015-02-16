@@ -8,7 +8,8 @@
     "test-server": "tape src/node_modules/**/test",
     "develop": "DEBUG=* nodemon -w src .",
     "prod": "NODE_ENV=production npm start",
-    "start": "node ."
+    "start": "node .",
+    "deploy": "git remote add deploy dokku@craftodex2.enspiral.info:craftodex2; git push deploy master"
   },
   "repository": {
     "type": "git",
