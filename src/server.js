@@ -19,6 +19,19 @@ var isDev = process.env.NODE_ENV != 'production';
 var app = express();
 
 //
+// set our UI config cookie
+//
+config.ui.api = Url.format(
+  extend(
+    config.api,
+    {
+      pathname: config.api.prefix,
+    }
+  )
+);
+
+
+//
 // serve less styles
 //
 app.use(less("/", {
@@ -43,18 +56,6 @@ app.use('/bundle.js',
   browserify(__dirname + '/client.js')
 );
 
-// set cookie on index.html
-app.use(function (req, res, next) {
-  var url = Url.parse(req.url);
-  if (
-    url.pathname === "/index.html" ||
-    url.pathname === "/"
-  ) {
-    res.cookie('config', JSON.stringify(config.ui));
-  }
-  next();
-});
-
 // serve static files
 app.use(serveStatic(__dirname + '/assets'));
 
@@ -72,17 +73,22 @@ app.use(helmet.nosniff());
 //
 app.use(config.api.prefix, require('api'));
 
-//
-// set our UI config cookie
-//
-config.ui.api = Url.format(
-  extend(
-    config.api,
-    {
-      pathname: config.api.prefix,
+// set cookie
+app.use(function (req, res, next) {
+  var url = Url.parse(req.url);
+  res.cookie('config', JSON.stringify(config.ui));
+  next();
+});
+
+// route to UI
+app.use(function (req, res) {
+  var index = __dirname + "/index.html";
+  res.sendFile(index, function (err) {
+    if (err) {
+      res.status(err.status).end();
     }
-  )
-);
+  });
+});
 
 // start server
 app.listen(config.api.port);
