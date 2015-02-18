@@ -69,7 +69,7 @@ config.ui.api = Url.format(
   extend(
     config.api,
     isProd ? {
-      port: null,
+      host: config.api.hostname,
     } : {},
     {
       pathname: config.api.prefix,
