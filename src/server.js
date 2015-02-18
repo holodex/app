@@ -14,21 +14,10 @@ var less = require('less-middleware');
 
 require('node-jsx').install();
 
-var isDev = process.env.NODE_ENV != 'production';
+var isProd = process.env.NODE_ENV === 'production';
+var isDev = !isProd;
 
 var app = express();
-
-//
-// set our UI config cookie
-//
-config.ui.api = Url.format(
-  extend(
-    config.api,
-    {
-      pathname: config.api.prefix,
-    }
-  )
-);
 
 
 //
@@ -72,6 +61,22 @@ app.use(helmet.nosniff());
 // setup API
 //
 app.use(config.api.prefix, require('api'));
+
+//
+// set our UI config cookie
+//
+config.ui.api = Url.format(
+  extend(
+    config.api,
+    isProd ? {
+      port: null,
+    } : {},
+    {
+      pathname: config.api.prefix,
+    }
+  )
+);
+
 
 // set cookie
 app.use(function (req, res, next) {
