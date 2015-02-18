@@ -1,5 +1,11 @@
 '@type': Person
 name: Joshua
+handle: joshuavial
+# location:
+#   - "@id": http://sws.geonames.org/2186224/
+#     "@type": Place
+#     name: New Zealand
+image: https://avatars3.githubusercontent.com/u/72309?v=2&s=460
 relationships:
   - "@id": relationships/joshua-member-enspiral-craftworks
   - "@id": relationships/joshua-steward-derek

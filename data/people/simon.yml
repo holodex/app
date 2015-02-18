@@ -1,5 +1,11 @@
 '@type': Person
 name: Simon
+handle: simontegg
+# location:
+#   - "@id": http://sws.geonames.org/2186224/
+#     "@type": Place
+#     name: New Zealand
+image: https://avatars0.githubusercontent.com/u/1574732?v=2&s=460
 relationships:
   - "@id": relationships/simon-member-enspiral-craftworks
   - "@id": relationships/simon-mentee-mikey

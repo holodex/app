@@ -1,5 +1,19 @@
 '@type': Person
 name: Mikey
+handle: ahdinosaur
+bio: >
+  i'm a hippie hacker on a mission to demystify the magic of technology and put
+  the people in control. i'm currently working on open source socioeconomic
+  infrastructure within the Enspiral, Open App Ecosystem, and Bevry networks.
+# location:
+#   - "@id": http://sws.geonames.org/5332921/
+#     "@type": Place
+#     name: California
+#   - "@id": http://sws.geonames.org/2186224/
+#     "@type": Place
+#     name: New Zealand
+url: http://dinosaur.is
+image: http://gravatar.com/avatar/22ee24b84d0a2a9446fc9c0fe0652c46?s=512&d=identicon
 relationships:
   - "@id": relationships/mikey-member-enspiral-craftworks
   - "@id": relationships/mikey-mentor-simon

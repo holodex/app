@@ -1,5 +1,11 @@
 '@type': Person
 name: Charlie
+handle: charlie
+# location:
+#   - "@id": http://sws.geonames.org/2186224
+#     "@type": Place
+#     name: New Zealand
+image: https://avatars3.githubusercontent.com/u/4934746
 relationships:
   - "@id": relationships/charlie-member-enspiral-craftworks
   - "@id": relationships/charlie-steward-simon

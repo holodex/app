@@ -1,5 +1,6 @@
 '@type': Group
 name: Enspiral Craftworks
+image: http://i.imgur.com/BFmaOxi.png
 relationships:
   - '@id': relationships/enspiral-craftworks-group-hannah
   - '@id': relationships/enspiral-craftworks-group-nanz

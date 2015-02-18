@@ -1,5 +1,13 @@
 '@type': Person
 name: Mix
+handle: s01us
+bio: >
+  I'm a rails dev with a background in education and maths. I like tree climbing, longboarding, and a bit of gelato.
+# location:
+#   - "@id": http://sws.geonames.org/2186224/
+#     "@type": Place
+#     name: New Zealand
+image: http://www.gravatar.com/avatar/3c74b184677ec92d495b328105aed1dc.png 
 relationships:
   - "@id": relationships/mix-member-enspiral-craftworks
   - "@id": relationships/mix-steward-dr-craig
