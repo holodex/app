@@ -32,7 +32,7 @@ app.use(less("/", {
     relativeUrls: true,
     paths: fs.readdirSync(__dirname + "/node_modules")
       .concat([
-        __dirname + "/../node_modules/bootstrap/less",
+        __dirname + "/../node_modules/bootstrap/less"
       ]),
   },
 }));

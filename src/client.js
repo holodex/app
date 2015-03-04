@@ -21,6 +21,8 @@ router.route(function (route) {
 
   var model = fetcher(route);
 
+  debug('model', model)
+
   React.render(
     React.createElement(Ui, {
       config: config,
