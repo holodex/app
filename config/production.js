@@ -13,7 +13,7 @@ var config = {
   },
   api: {
     protocol: "http",
-    hostname: "craftodex2.enspiral.info",
+    hostname: "holodex.enspiral.info",
     port: process.env.PORT,
     prefix: "/api",
   },
