@@ -6,7 +6,6 @@ var express = require('express');
 var helmet = require('helmet');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var compress = require('compression');
 var config = require('config');
 var serveStatic = require('serve-static');
 var browserify = require('browserify-middleware');
@@ -51,7 +50,6 @@ app.use(serveStatic(__dirname + '/assets'));
 //
 // setup api middleware
 //
-app.use(compress());
 app.use(cookieParser());
 app.use(helmet.xframe());
 app.use(helmet.xssFilter());
