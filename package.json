@@ -74,6 +74,7 @@
     "node-jsx": "^0.12.4",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
+    "r-dom": "^1.0.2",
     "react": "^0.12.2",
     "react-bootstrap": "^0.13.0",
     "react-hyperscript": "~2.0.0",
