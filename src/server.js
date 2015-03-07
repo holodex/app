@@ -18,6 +18,19 @@ var isDev = !isProd;
 
 var app = express();
 
+// livereload on static files
+if (isDev) {
+  var livereload = require('easy-livereload')
+  app.use(livereload({
+    watchDirs: [
+      Path.join(__dirname, "assets"),
+    ],
+    checkFunc: function(file) {
+      return /\.(css|js|html)$/.test(file);
+    },
+    port: process.env.LIVERELOAD_PORT || 35729,
+  }))
+}
 
 //
 // serve less styles
@@ -25,27 +38,19 @@ var app = express();
 app.use(less("/", {
   debug: isDev,
   pathRoot: __dirname,
-  dest: '/assets',
+  dest: 'assets',
   once: !isDev,
   parser: {
     relativeUrls: true,
-    paths: fs.readdirSync(__dirname + "/node_modules")
+    paths: fs.readdirSync(Path.join(__dirname, "node_modules"))
       .concat([
-        __dirname + "/../node_modules/bootstrap/less"
+        Path.join(__dirname, "../node_modules/bootstrap/less"),
       ]),
   },
 }));
 
-//
-// serve browserify scripts
-//
-browserify.settings.production('minify', false);
-app.use('/bundle.js',
-  browserify(__dirname + '/client.js')
-);
-
 // serve static files
-app.use(serveStatic(__dirname + '/assets'));
+app.use(serveStatic(Path.join(__dirname, 'assets')));
 
 //
 // setup api middleware
@@ -85,7 +90,7 @@ app.use(function (req, res, next) {
 
 // route to UI
 app.use(function (req, res) {
-  var index = __dirname + "/index.html";
+  var index = Path.join(__dirname, "index.html");
   res.sendFile(index, function (err) {
     if (err) {
       res.status(err.status).end();
