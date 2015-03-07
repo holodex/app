@@ -6,3 +6,4 @@
 *.swp
 
 /src/assets/styles.css
+/src/assets/bundle.js
