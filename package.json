@@ -75,6 +75,7 @@
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
     "r-dom": "^1.0.2",
+    "rcss": "^0.1.5",
     "react": "^0.12.2",
     "react-bootstrap": "^0.13.0",
     "react-hyperscript": "~2.0.0",
