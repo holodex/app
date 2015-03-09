@@ -1,5 +1,4 @@
 var config = {
-  isDev: true,
   isSecure: false,
   data: {
     root: __dirname + "/../data",

@@ -13,8 +13,8 @@ var less = require('less-middleware');
 
 require('node-jsx').install();
 
-var isProd = process.env.NODE_ENV === 'production';
-var isDev = !isProd;
+var isProd = require('util/isProd')
+var isDev = require('util/isDev')
 
 var app = express();
 
