@@ -11,8 +11,6 @@ var serveStatic = require('serve-static');
 var browserify = require('browserify-middleware');
 var less = require('less-middleware');
 
-require('node-jsx').install();
-
 var isProd = require('util/isProd')
 var isDev = require('util/isDev')
 
