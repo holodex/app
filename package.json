@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "browser": "src/client.js",
   "scripts": {
-    "test-server": "tape src/node_modules/**/test",
+    "test-server": "tape src/node_modules/**/test-server",
+    "test-client": "run-browser src/node_modules/**/test-client",
     "build": "browserify . -o src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
     "live": "npm run watch & node-dev .",
@@ -89,6 +90,8 @@
   "devDependencies": {
     "easy-livereload": "^1.0.3",
     "node-dev": "^2.6.1",
+    "run-browser": "^2.0.2",
+    "tape": "^3.5.0",
     "watchify": "^2.4.0"
   }
 }
