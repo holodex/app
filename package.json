@@ -12,7 +12,8 @@
     "develop": "DEBUG=* NODE_ENV=development npm run live",
     "prod": "NODE_ENV=production npm start",
     "start": "npm run build && node .",
-    "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master"
+    "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master",
+    "postinstall": "npm run dedupe"
   },
   "repository": {
     "type": "git",
