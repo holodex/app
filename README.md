@@ -2,6 +2,8 @@
 
 an app for how we relate to people and groups within a network. see [top-level repo](https://github.com/open-app/holodex) for more info.
 
+## [changelog](./HISTORY.md)
+
 ## how to
 
 ### install
