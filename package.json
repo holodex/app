@@ -7,6 +7,7 @@
   "scripts": {
     "test-server": "tape src/node_modules/**/test-server",
     "test-client": "run-browser src/node_modules/**/test-client",
+    "test": "npm run test-server && npm run test-client",
     "build": "browserify . -o src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
     "live": "npm run watch & node-dev .",
