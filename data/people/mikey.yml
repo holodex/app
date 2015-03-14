@@ -12,7 +12,7 @@ bio: >
 #   - "@id": http://sws.geonames.org/2186224/
 #     "@type": Place
 #     name: New Zealand
-url: http://dinosaur.is
+website: http://dinosaur.is
 image: http://gravatar.com/avatar/22ee24b84d0a2a9446fc9c0fe0652c46?s=512&d=identicon
 relationships:
   - "@id": relationships/mikey-member-enspiral-craftworks
