@@ -1,12 +1,12 @@
 {
-  "name": "craftodex",
+  "name": "holodex",
   "version": "0.0.0",
-  "description": "Craftodex",
+  "description": "People and group relationships",
   "main": "src/server.js",
   "browser": "src/client.js",
   "scripts": {
     "test-server": "tape src/node_modules/**/test-server",
-    "test-client": "run-browser src/node_modules/**/test-client",
+    "test-client": "run-browser src/node_modules/**/test-client -b",
     "test": "npm run test-server && npm run test-client",
     "build": "browserify . -o src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
