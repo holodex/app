@@ -2,18 +2,18 @@
 name: Enspiral Craftworks
 image: http://i.imgur.com/BFmaOxi.png
 relationships:
-  - '@id': relationships/hannah-member-enspiral-craftworks
-  - '@id': relationships/nanz-member-enspiral-craftworks
+  - '@id': relationships/hannah-contributor-enspiral-craftworks
+  - '@id': relationships/nanz-contributor-enspiral-craftworks
   - '@id': relationships/craig-member-enspiral-craftworks
   - '@id': relationships/jesse-member-enspiral-craftworks
   - '@id': relationships/nicola-member-enspiral-craftworks
   - '@id': relationships/ayumi-member-enspiral-craftworks
-  - '@id': relationships/dr-craig-member-enspiral-craftworks
+  - '@id': relationships/dr-craig-contributor-enspiral-craftworks
   - '@id': relationships/mix-member-enspiral-craftworks
-  - '@id': relationships/genevieve-member-enspiral-craftworks
+  - '@id': relationships/genevieve-contributor-enspiral-craftworks
   - '@id': relationships/joshua-member-enspiral-craftworks
   - '@id': relationships/derek-member-enspiral-craftworks
-  - '@id': relationships/jon-member-enspiral-craftworks
+  - '@id': relationships/jon-contributor-enspiral-craftworks
   - '@id': relationships/charlie-member-enspiral-craftworks
   - '@id': relationships/simon-member-enspiral-craftworks
   - '@id': relationships/stephanie-member-enspiral-craftworks

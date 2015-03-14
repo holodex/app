@@ -1,6 +1,6 @@
 '@type': Relationship
 relationshipType: 
-  '@id': relationshipTypes/membershipship
+  '@id': relationshipTypes/membership
 member:
   '@id': people/craig
 group:
