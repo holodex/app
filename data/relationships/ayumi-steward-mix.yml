@@ -1,11 +1,9 @@
 '@type': Relationship
 relationshipType: 
-  '@id': relationshipTypes/steward
-is:
+  '@id': relationshipTypes/stewardship
+steward:
   '@id': people/ayumi
-has:
+stewardee:
   '@id': people/mix
-symmetric: 
-  '@id': relationships/mix-stewardee-ayumi
-context:
+group:
   '@id': groups/enspiral-craftworks

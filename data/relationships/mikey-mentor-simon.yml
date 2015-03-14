@@ -1,11 +1,7 @@
 '@type': Relationship
 relationshipType: 
-  '@id': relationshipTypes/mentor
-is:
+  '@id': relationshipTypes/mentorship
+mentor:
   '@id': people/mikey
-has:
+mentee:
   '@id': people/simon
-symmetric: 
-  '@id': relationships/simon-mentee-mikey
-context:
-  '@id': groups/enspiral-craftworks

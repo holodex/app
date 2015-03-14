@@ -1,9 +1,7 @@
 '@type': Relationship
 relationshipType: 
-  '@id': relationshipTypes/member
-is:
+  '@id': relationshipTypes/membership
+member:
   '@id': people/stephanie
-has:
+group:
   '@id': groups/enspiral-craftworks
-symmetric: 
-  '@id': relationships/enspiral-craftworks-group-stephanie
