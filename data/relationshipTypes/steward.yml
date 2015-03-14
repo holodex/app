@@ -1,8 +1,0 @@
-'@type': RelationshipType
-name: steward
-pluralName: stewards
-description: A steward stewards a stewardee.
-label: is steward of
-inverseLabel: has steward
-symmetric:
-  '@id': relationshipTypes/stewardee

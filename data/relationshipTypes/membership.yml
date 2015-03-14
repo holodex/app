@@ -1,0 +1,12 @@
+'@type': RelationshipType
+name: membership
+description: A member is part of a group
+agents: 
+  member: 
+    name: member
+    label: {member} is a member of {group}
+    pluralName: members
+  group: 
+    name: group
+    label: {group} has member {member}
+    pluralName: groups
