@@ -10,6 +10,7 @@ agents:
     name: stewardee
     label: "{stewardee} is stewarded by {steward}"
     pluralName: stewardees
+context:
   group:
     name: group
     pluralName: stewardships
