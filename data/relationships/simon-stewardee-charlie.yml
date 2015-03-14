@@ -7,3 +7,5 @@ has:
   '@id': people/charlie
 symmetric: 
   '@id': relationships/charlie-steward-simon
+context:
+  '@id': groups/enspiral-craftworks

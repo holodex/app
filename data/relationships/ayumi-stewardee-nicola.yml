@@ -7,3 +7,5 @@ has:
   '@id': people/nicola
 symmetric: 
   '@id': relationships/nicola-steward-ayumi
+context:
+  '@id': groups/enspiral-craftworks
