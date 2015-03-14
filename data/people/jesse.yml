@@ -4,4 +4,3 @@ image: http://gravatar.com/avatar/0b1941ab5c9e58601c0ada31f5b4b68b?s=512&d=ident
 relationships:
   - "@id": relationships/jesse-member-enspiral-craftworks
   - "@id": relationships/jesse-steward-nicola
-  - "@id": relationships/jesse-stewardee-craig

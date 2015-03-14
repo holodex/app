@@ -8,6 +8,4 @@ handle: simontegg
 image: https://avatars0.githubusercontent.com/u/1574732?v=2&s=460
 relationships:
   - "@id": relationships/simon-member-enspiral-craftworks
-  - "@id": relationships/simon-mentee-mikey
   - "@id": relationships/simon-steward-stephanie
-  - "@id": relationships/simon-stewardee-charlie

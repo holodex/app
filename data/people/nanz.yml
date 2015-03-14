@@ -3,4 +3,3 @@ name: Nanz
 image: https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/002/685/large/photo.jpeg?1417128452
 relationships:
   - "@id": relationships/nanz-contributor-enspiral-craftworks
-  - "@id": relationships/nanz-stewardee-craig

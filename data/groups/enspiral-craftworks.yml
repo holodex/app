@@ -2,22 +2,22 @@
 name: Enspiral Craftworks
 image: http://i.imgur.com/BFmaOxi.png
 relationships:
-  - '@id': relationships/enspiral-craftworks-group-hannah
-  - '@id': relationships/enspiral-craftworks-group-nanz
-  - '@id': relationships/enspiral-craftworks-group-craig
-  - '@id': relationships/enspiral-craftworks-group-jesse
-  - '@id': relationships/enspiral-craftworks-group-nicola
-  - '@id': relationships/enspiral-craftworks-group-ayumi
-  - '@id': relationships/enspiral-craftworks-group-dr-craig
-  - '@id': relationships/enspiral-craftworks-group-mix
-  - '@id': relationships/enspiral-craftworks-group-genevieve
-  - '@id': relationships/enspiral-craftworks-group-joshua
-  - '@id': relationships/enspiral-craftworks-group-derek
-  - '@id': relationships/enspiral-craftworks-group-jon
-  - '@id': relationships/enspiral-craftworks-group-charlie
-  - '@id': relationships/enspiral-craftworks-group-simon
-  - '@id': relationships/enspiral-craftworks-group-stephanie
-  - '@id': relationships/enspiral-craftworks-group-mikey
+  - '@id': relationships/hannah-member-enspiral-craftworks
+  - '@id': relationships/nanz-member-enspiral-craftworks
+  - '@id': relationships/craig-member-enspiral-craftworks
+  - '@id': relationships/jesse-member-enspiral-craftworks
+  - '@id': relationships/nicola-member-enspiral-craftworks
+  - '@id': relationships/ayumi-member-enspiral-craftworks
+  - '@id': relationships/dr-craig-member-enspiral-craftworks
+  - '@id': relationships/mix-member-enspiral-craftworks
+  - '@id': relationships/genevieve-member-enspiral-craftworks
+  - '@id': relationships/joshua-member-enspiral-craftworks
+  - '@id': relationships/derek-member-enspiral-craftworks
+  - '@id': relationships/jon-member-enspiral-craftworks
+  - '@id': relationships/charlie-member-enspiral-craftworks
+  - '@id': relationships/simon-member-enspiral-craftworks
+  - '@id': relationships/stephanie-member-enspiral-craftworks
+  - '@id': relationships/mikey-member-enspiral-craftworks
   - '@id': relationships/ayumi-steward-mix
   - '@id': relationships/charlie-steward-jon
   - '@id': relationships/charlie-steward-simon
@@ -34,19 +34,3 @@ relationships:
   - '@id': relationships/nicola-steward-ayumi
   - '@id': relationships/simon-steward-stephanie
   - '@id': relationships/stephanie-steward-mikey
-  - '@id': relationships/ayumi-stewardee-nicola
-  - '@id': relationships/charlie-stewardee-derek
-  - '@id': relationships/craig-stewardee-mikey
-  - '@id': relationships/derek-stewardee-joshua
-  - '@id': relationships/dr-craig-stewardee-mix
-  - '@id': relationships/genevieve-stewardee-joshua
-  - '@id': relationships/hannah-stewardee-mikey
-  - '@id': relationships/jesse-stewardee-craig
-  - '@id': relationships/jon-stewardee-charlie
-  - '@id': relationships/joshua-stewardee-mix
-  - '@id': relationships/mikey-stewardee-stephanie
-  - '@id': relationships/mix-stewardee-ayumi
-  - '@id': relationships/nanz-stewardee-craig
-  - '@id': relationships/nicola-stewardee-jesse
-  - '@id': relationships/simon-stewardee-charlie
-  - '@id': relationships/stephanie-stewardee-simon
