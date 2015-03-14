@@ -4,9 +4,9 @@ description: A mentor mentors a mentee.
 agents: 
   mentor:
     name: mentor
-    label: {mentor} is mentor of {mentee}
+    label: "{mentor} is mentor of {mentee}"
     pluralName: mentors
   mentee:
     name: mentee
-    label: {mentee} is mentored by {mentor}
+    label: "{mentee} is mentored by {mentor}"
     pluralName: mentee
