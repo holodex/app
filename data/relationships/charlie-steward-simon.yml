@@ -1,11 +1,9 @@
 '@type': Relationship
 relationshipType: 
-  '@id': relationshipTypes/steward
-is:
+  '@id': relationshipTypes/stewardship
+steward:
   '@id': people/charlie
-has:
+stewardee:
   '@id': people/simon
-symmetric: 
-  '@id': relationships/simon-stewardee-charlie
-context:
+group:
   '@id': groups/enspiral-craftworks

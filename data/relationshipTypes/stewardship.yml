@@ -1,5 +1,5 @@
 '@type': RelationshipType
-name: steward
+name: stewardship
 description: A steward stewards a stewardee.
 agents: 
   steward:
@@ -10,3 +10,6 @@ agents:
     name: stewardee
     label: {stewardee} is stewarded by {steward}
     pluralName: stewardees
+  group:
+    name: group
+    pluralName: stewardships
