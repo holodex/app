@@ -1,7 +1,10 @@
 '@type': Relationship
-relationshipType: 
+type: 
   '@id': relationshipTypes/mentorship
-mentor:
-  '@id': people/mikey
-mentee:
-  '@id': people/simon
+roles:
+  - type: mentor
+    agent:
+      '@id': people/mikey
+  - type: mentee
+    agent:
+      '@id': people/simon

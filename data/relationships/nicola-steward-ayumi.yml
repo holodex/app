@@ -1,9 +1,13 @@
 '@type': Relationship
-relationshipType: 
+type: 
   '@id': relationshipTypes/stewardship
-steward:
-  '@id': people/nicola
-stewardee:
-  '@id': people/ayumi
-group:
-  '@id': groups/enspiral-craftworks
+roles:
+  - type: steward
+    agent: 
+      '@id': people/nicola
+  - type: stewardee
+    agent: 
+      '@id': people/ayumi
+  - type: group
+    agent: 
+      '@id': groups/enspiral-craftworks

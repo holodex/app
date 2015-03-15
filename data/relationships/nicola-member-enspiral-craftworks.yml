@@ -1,7 +1,10 @@
 '@type': Relationship
-relationshipType: 
+type: 
   '@id': relationshipTypes/membership
-member:
-  '@id': people/nicola
-group:
-  '@id': groups/enspiral-craftworks
+roles:
+  - type: member
+    agent:
+      '@id': people/nicola
+  - type: group
+    agent:
+      '@id': groups/enspiral-craftworks

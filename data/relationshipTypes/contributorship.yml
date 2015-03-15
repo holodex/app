@@ -1,12 +1,10 @@
 '@type': RelationshipType
 name: contributorship
 description: A contributor is part of a group
-agents: 
-  contributor: 
-    name: contributor
+roles:
+  - name: contributor
     label: "{contributor} is a contributor of {group}"
     pluralName: contributors
-  group: 
-    name: group
+  - name: group
     label: "{group} has contributor {contributor}"
     pluralName: groups
