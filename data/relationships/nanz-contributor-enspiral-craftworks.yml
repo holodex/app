@@ -1,7 +1,10 @@
 '@type': Relationship
-relationshipType: 
+type: 
   '@id': relationshipTypes/contributorship
-contributor:
-  '@id': people/nanz
-group:
-  '@id': groups/enspiral-craftworks
+roles:
+  - type: contributor
+    agent:
+      '@id': people/nanz
+  - type: group
+    agent:
+      '@id': groups/enspiral-craftworks

@@ -1,12 +1,10 @@
 '@type': RelationshipType
-name: mentor
+name: mentorship
 description: A mentor mentors a mentee.
-agents: 
-  mentor:
-    name: mentor
+roles:
+  - name: mentor
     label: "{mentor} is mentor of {mentee}"
     pluralName: mentors
-  mentee:
-    name: mentee
+  - name: mentee
     label: "{mentee} is mentored by {mentor}"
     pluralName: mentee

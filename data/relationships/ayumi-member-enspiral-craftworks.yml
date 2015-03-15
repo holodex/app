@@ -1,7 +1,10 @@
 '@type': Relationship
-relationshipType: 
+type: 
   '@id': relationshipTypes/membership
-member:
-  '@id': people/ayumi
-group:
-  '@id': groups/enspiral-craftworks
+roles:
+  - type: member
+    agent:
+      '@id': people/ayumi
+  - type: group
+    agent: 
+      '@id': groups/enspiral-craftworks
