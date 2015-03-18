@@ -1,10 +1,7 @@
 '@type': Relationship
-type: 
-  '@id': relationshipTypes/stewardship
+type: relationshipTypes/stewardship
 roles:
   - type: roleTypes/steward
-    agent: 
-      '@id': people/mix
+    agent: people/mix
   - type: roleTypes/stewardee
-    agent: 
-      '@id': people/joshua
+    agent: people/joshua
