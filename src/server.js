@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var config = require('config');
 var serveStatic = require('serve-static');
-var browserify = require('browserify-middleware');
 var less = require('less-middleware');
 
 var isProd = require('util/isProd')
