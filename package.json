@@ -11,7 +11,7 @@
     "build": "browserify . -o src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
     "live": "npm run watch & node-dev .",
-    "develop": "DEBUG=* NODE_ENV=development npm run live",
+    "develop": "NODE_ENV=development npm run live",
     "prod": "NODE_ENV=production npm start",
     "start": "npm run build && node .",
     "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master",
