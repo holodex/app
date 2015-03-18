@@ -1,14 +1,14 @@
-var debug = require('debug')("craftodex");
+var debug = require('debug')("holodex:client");
 
 var React = require('react');
 var Url = require('url');
 
 var Ui = require('ui');
-var config = require('uiconfig');
+var config = require('config');
 var router = require('router');
 var fetcher = require('fetcher');
 
-if (config.debug) {
+if (config.ui.debug) {
   localStorage.setItem("debug", "*");
 } else {
   localStorage.removeItem("debug")
