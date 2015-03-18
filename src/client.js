@@ -1,19 +1,16 @@
-var debug = require('debug')("craftodex")
-
 var React = require('react')
 //path React to enable <image> and xlink:href
 require('react-svg-patch')
 var Url = require('url')
 
 var Ui = require('ui')
-var config = require('uiconfig')
+var config = require('config')
 var router = require('router')
 var fetcher = require('fetcher')
+var debug = require('debug')("holodex:client");
 
-
-
-if (config.debug) {
-  localStorage.setItem("debug", "*")
+if (config.ui.debug) {
+  localStorage.setItem("debug", "*");
 } else {
   localStorage.removeItem("debug")
 }
