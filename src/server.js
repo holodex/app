@@ -64,10 +64,11 @@ app.use(helmet.nosniff());
 app.use(config.api.prefix, require('api'));
 
 //
-// set our UI config cookie
+// set our client config cookie
 //
-config.ui.api = Url.format(
-  extend(
+config.client = {
+  ui: config.ui,
+  api: extend(
     config.api,
     isProd ? {
       host: config.api.hostname,
@@ -76,15 +77,15 @@ config.ui.api = Url.format(
       pathname: config.api.prefix,
     }
   )
-);
+}
 
 
 // set cookie
 app.use(function (req, res, next) {
-  var url = Url.parse(req.url);
-  res.cookie('config', JSON.stringify(config.ui));
-  next();
-});
+  var url = Url.parse(req.url)
+  res.cookie('config', JSON.stringify(config.client))
+  next()
+})
 
 // route to UI
 app.use(function (req, res) {
