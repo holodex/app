@@ -2,9 +2,5 @@
 name: mentorship
 description: A mentor mentors a mentee.
 roles:
-  - name: mentor
-    label: "{mentor} is mentor of {mentee}"
-    pluralName: mentors
-  - name: mentee
-    label: "{mentee} is mentored by {mentor}"
-    pluralName: mentee
+  - '@id': roleTypes/mentor
+  - '@id': roleTypes/mentee

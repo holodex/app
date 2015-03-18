@@ -60,7 +60,7 @@ app.use(helmet.nosniff())
 //
 // setup API
 //
-app.use(config.api.prefix, require('api'))
+app.use(config.api.pathname, require('api'))
 
 //
 // set our client config cookie
@@ -71,10 +71,7 @@ config.client = {
     config.api,
     isProd ? {
       host: config.api.hostname,
-    } : {},
-    {
-      pathname: config.api.prefix,
-    }
+    } : {}
   )
 }
 
@@ -99,4 +96,8 @@ app.use(function (req, res) {
 // start server
 app.listen(config.api.port)
 
-console.log("Holodex is running at: " + Url.format(config.api) + ".")
+var serverUrl = extend(config.api, {
+  pathname: "",
+})
+
+console.log("Holodex is running at: " + Url.format(serverUrl) + ".")

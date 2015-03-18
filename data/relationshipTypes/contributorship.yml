@@ -2,9 +2,5 @@
 name: contributorship
 description: A contributor is part of a group
 roles:
-  - name: contributor
-    label: "{contributor} is a contributor of {group}"
-    pluralName: contributors
-  - name: group
-    label: "{group} has contributor {contributor}"
-    pluralName: groups
+  - '@id': roleTypes/contributor
+  - '@id': roleTypes/group

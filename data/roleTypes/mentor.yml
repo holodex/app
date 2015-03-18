@@ -1,0 +1,3 @@
+name: mentor
+label: "{mentor} is mentor of {mentee}"
+pluralName: mentors

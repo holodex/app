@@ -2,12 +2,9 @@
 type: 
   '@id': relationshipTypes/stewardship
 roles:
-  - type: steward
+  - type: roleTypes/steward
     agent: 
       '@id': people/derek
-  - type: stewardee
+  - type: roleTypes/stewardee
     agent: 
       '@id': people/charlie
-  - type: group
-    agent: 
-      '@id': groups/enspiral-craftworks

@@ -3,11 +3,5 @@ name: stewardship
 pluralName: stewardships
 description: A steward stewards a stewardee.
 roles:
-  - name: steward
-    label: "{steward} is steward of {stewardee}"
-    pluralName: stewards
-  - name: stewardee
-    label: "{stewardee} is stewarded by {steward}"
-    pluralName: stewardees
-  - name: group
-    isContext: true
+  - '@id': roleTypes/steward
+  - '@id': roleTypes/stewardee
