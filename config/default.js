@@ -1,7 +1,7 @@
 var config = {
   isSecure: false,
   data: {
-    root: __dirname + "/../data",
+    location: __dirname + "/../data",
   },
   session: {
     host: "localhost",
