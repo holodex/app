@@ -10,12 +10,14 @@ var config = {
     secret: "bang!",
     secure: false,
   },
+  // TODO make api.url props
   api: {
     protocol: "http",
     hostname: "localhost",
     port: 3000,
-    prefix: "/api",
+    pathname: "/api",
   },
+  // TODO make ui.router and ui.url props
   ui: {
     debug: true,
     prefix: "/",

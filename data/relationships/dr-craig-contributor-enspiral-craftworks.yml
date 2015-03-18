@@ -2,9 +2,9 @@
 type: 
   '@id': relationshipTypes/contributorship
 roles:
-  - type: contributor
+  - type: roleTypes/contributor
     agent:
       '@id': people/dr-craig
-  - type: group
+  - type: roleTypes/group
     agent:
       '@id': groups/enspiral-craftworks

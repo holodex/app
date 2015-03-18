@@ -1,0 +1,3 @@
+name: steward
+label: "{steward} is steward of {stewardee}"
+pluralName: stewards

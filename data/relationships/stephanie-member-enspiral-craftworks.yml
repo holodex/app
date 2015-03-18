@@ -2,9 +2,9 @@
 type: 
   '@id': relationshipTypes/membership
 roles:
-  - type: member
+  - type: roleTypes/member
     agent:
       '@id': people/stephanie
-  - type: group
+  - type: roleTypes/group
     agent:
       '@id': groups/enspiral-craftworks

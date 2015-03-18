@@ -2,9 +2,5 @@
 name: membership
 description: A member is part of a group
 roles:
-  - name: member
-    label: "{member} is a member of {group}"
-    pluralName: members
-  - name: group
-    label: "{group} has member {member}"
-    pluralName: groups
+  - '@id': roleTypes/member
+  - '@id': roleTypes/group
