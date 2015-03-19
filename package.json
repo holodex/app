@@ -72,6 +72,7 @@
     "json-stringify-safe": "^5.0.0",
     "less-middleware": "^1.0.4",
     "lodash": "^2.4.1",
+    "lokijs": "^1.2.0",
     "nets": "^2.0.0",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
