@@ -78,6 +78,7 @@
     "lokijs": "^1.2.0",
     "map-values": "^1.0.1",
     "nets": "^2.0.0",
+    "object-keys-map": "^1.0.2",
     "observ": "^0.2.0",
     "observ-location": "^1.0.0",
     "observ-struct": "^6.0.0",
