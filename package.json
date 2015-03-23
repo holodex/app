@@ -87,6 +87,7 @@
     "react": "^0.12.2",
     "react-bootstrap": "^0.13.0",
     "react-style": "^0.4.0",
+    "reduce": "^1.0.1",
     "reverend": "^0.3.0",
     "selfish": "^0.3.3",
     "serve-static": "^1.7.2",
