@@ -65,6 +65,7 @@
     "for-each": "^0.3.2",
     "fs-db": "^2.0.0",
     "global": "^4.3.0",
+    "got": "^2.5.0",
     "helmet": "^0.5.4",
     "hyperquest": "^1.0.1",
     "js-yaml": "^3.2.5",
@@ -97,6 +98,7 @@
     "node-dev": "^2.6.1",
     "rnd": "0.0.0",
     "run-browser": "^2.0.2",
+    "shmock": "^0.7.1",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0",
     "watchify": "git://github.com/holodex/watchify#1e26dc06b38601b95d88efca3b5e1e66446d25bc"
