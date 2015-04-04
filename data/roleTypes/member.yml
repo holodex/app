@@ -1,3 +1,4 @@
+'@type': RoleType
 name: member
 label: "{member} is a member of {group}"
 pluralName: members

@@ -1,3 +1,4 @@
+'@type': RoleType
 name: stewardee
 label: "{stewardee} is stewarded by {steward}"
 pluralName: stewardees
