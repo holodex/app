@@ -14,8 +14,3 @@ bio: >
 #     name: New Zealand
 website: http://dinosaur.is
 image: http://gravatar.com/avatar/22ee24b84d0a2a9446fc9c0fe0652c46?s=512&d=identicon
-relationships:
-  - "@id": relationships/mikey-member-enspiral-craftworks
-  - "@id": relationships/mikey-mentor-simon
-  - "@id": relationships/mikey-steward-hannah
-  - "@id": relationships/mikey-steward-craig

@@ -1,7 +1,3 @@
 '@type': Person
 name: Craig
 image: http://gravatar.com/avatar/8c1b99675b4ba19460bfed9a04739fc4?s=512&d=identicon
-relationships:
-  - "@id": relationships/craig-member-enspiral-craftworks
-  - "@id": relationships/craig-steward-nanz
-  - "@id": relationships/craig-steward-jesse

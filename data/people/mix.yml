@@ -8,7 +8,3 @@ bio: >
 #     "@type": Place
 #     name: New Zealand
 image: http://www.gravatar.com/avatar/3c74b184677ec92d495b328105aed1dc.png 
-relationships:
-  - "@id": relationships/mix-member-enspiral-craftworks
-  - "@id": relationships/mix-steward-dr-craig
-  - "@id": relationships/mix-steward-joshua

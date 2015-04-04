@@ -1,6 +1,3 @@
 '@type': Person
 name: Jesse
 image: http://gravatar.com/avatar/0b1941ab5c9e58601c0ada31f5b4b68b?s=512&d=identicon
-relationships:
-  - "@id": relationships/jesse-member-enspiral-craftworks
-  - "@id": relationships/jesse-steward-nicola

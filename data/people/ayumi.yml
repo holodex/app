@@ -1,6 +1,3 @@
 '@type': Person
 name: Ayumi
 image: https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p200x200/1962828_657670540966490_1592868860_n.jpg?oh=b6d86446394b918524eac13548b4c945&oe=558ECD62&__gda__=1431693074_689c19d320e10a74562a4870bade8f81
-relationships:
-  - "@id": relationships/ayumi-member-enspiral-craftworks
-  - "@id": relationships/ayumi-steward-mix

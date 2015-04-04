@@ -1,5 +1,3 @@
 '@type': Person
 name: Genevieve
 image: https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/004/638/large/Screenshot_2014-09-30_22.01.31.png?1412069313
-relationships:
-  - "@id": relationships/genevieve-contributor-enspiral-craftworks

@@ -1,5 +1,3 @@
 '@type': Person
 name: Hannah
 image: http://gravatar.com/avatar/afa91980b06fae820c502ed90f8431fd?s=512&d=identicon
-relationships:
-  - "@id": relationships/hannah-contributor-enspiral-craftworks

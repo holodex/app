@@ -1,5 +1,3 @@
 '@type': Person
 name: Jon
 image: https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/003/large/strawberry.jpeg?1406161853
-relationships:
-  - "@id": relationships/jon-contributor-enspiral-craftworks
