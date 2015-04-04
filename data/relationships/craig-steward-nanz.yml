@@ -7,3 +7,5 @@ has:
   '@id': people/nanz
 symmetric: 
   '@id': relationships/nanz-stewardee-craig
+context:
+  '@id': groups/enspiral-craftworks

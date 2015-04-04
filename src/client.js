@@ -1,25 +1,29 @@
-var debug = require('debug')("craftodex");
+var debug = require('debug')("craftodex")
 
-var React = require('react');
-var Url = require('url');
+var React = require('react')
+//path React to enable <image> and xlink:href
+require('react-svg-patch')
+var Url = require('url')
 
-var Ui = require('ui');
-var config = require('uiconfig');
-var router = require('router');
-var fetcher = require('fetcher');
+var Ui = require('ui')
+var config = require('uiconfig')
+var router = require('router')
+var fetcher = require('fetcher')
+
+
 
 if (config.debug) {
-  localStorage.setItem("debug", "*");
+  localStorage.setItem("debug", "*")
 } else {
   localStorage.removeItem("debug")
 }
 
-debug("UI starting with config:", config);
+debug("UI starting with config:", config)
 
 router.route(function (route) {
-  debug("routing", route);
+  debug("routing", route)
 
-  var model = fetcher(route);
+  var model = fetcher(route)
 
   debug('model', model)
 
@@ -30,5 +34,5 @@ router.route(function (route) {
       model: model,
     }),
     document.querySelector('body > main')
-  );
-});
+  )
+})

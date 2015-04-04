@@ -99,4 +99,4 @@ app.use(function (req, res) {
 // start server
 app.listen(config.api.port);
 
-console.log("Craftodex is running at: http://localhost:" + config.api.port + ".");
+console.log("Holodex is running at: http://localhost:" + config.api.port + ".");

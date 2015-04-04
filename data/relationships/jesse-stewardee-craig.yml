@@ -7,3 +7,5 @@ has:
   '@id': people/craig
 symmetric: 
   '@id': relationships/craig-steward-jesse
+context:
+  '@id': groups/enspiral-craftworks

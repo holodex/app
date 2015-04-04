@@ -7,3 +7,5 @@ has:
   '@id': people/genevieve
 symmetric: 
   '@id': relationships/genevieve-stewardee-joshua
+context:
+  '@id': groups/enspiral-craftworks
