@@ -1,7 +1,9 @@
 '@type': Relationship
 type: relationshipTypes/contributorship
 roles:
-  - type: roleTypes/contributor
+  - '@type': Role
+    type: roleTypes/contributor
     agent: people/dr-craig
-  - type: roleTypes/group
+  - '@type': Role
+    type: roleTypes/group
     agent: groups/enspiral-craftworks

@@ -1,7 +1,9 @@
 '@type': Relationship
 type: relationshipTypes/stewardship
 roles:
-  - type: roleTypes/steward
+  - '@type': Role
+    type: roleTypes/steward
     agent: people/nicola
-  - type: roleTypes/stewardee
+  - '@type': Role
+    type: roleTypes/stewardee
     agent: people/ayumi
