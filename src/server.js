@@ -60,7 +60,7 @@ app.use(helmet.nosniff())
 //
 // setup API
 //
-app.use(config.api.pathname, require('api'))
+app.use(config.api.pathname, require('api')(config))
 
 //
 // set our client config cookie
