@@ -3,5 +3,5 @@ name: stewardship
 pluralName: stewardships
 description: A steward stewards a stewardee.
 roles:
-  - '@id': roleTypes/steward
-  - '@id': roleTypes/stewardee
+  - roleTypes/steward
+  - roleTypes/stewardee

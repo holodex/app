@@ -2,5 +2,5 @@
 name: mentorship
 description: A mentor mentors a mentee.
 roles:
-  - '@id': roleTypes/mentor
-  - '@id': roleTypes/mentee
+  - roleTypes/mentor
+  - roleTypes/mentee

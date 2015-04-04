@@ -2,5 +2,5 @@
 name: contributorship
 description: A contributor is part of a group
 roles:
-  - '@id': roleTypes/contributor
-  - '@id': roleTypes/group
+  - roleTypes/contributor
+  - roleTypes/group
