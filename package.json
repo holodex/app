@@ -8,7 +8,7 @@
     "test-server": "tape src/node_modules/**/test-server",
     "test-client": "run-browser src/node_modules/**/test-client --port 3030 -b | tap-spec",
     "test": "npm run test-server && npm run test-client",
-    "build": "browserify . -o src/assets/bundle.js",
+    "build": "browserify . | uglifyjs > src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
     "live": "npm run watch & node-dev .",
     "develop": "NODE_ENV=development npm run live",
@@ -74,6 +74,7 @@
     "reverend": "^0.3.0",
     "send-data": "^6.0.0",
     "serve-static": "^1.7.2",
+    "uglifyjs": "^2.4.10",
     "url-regex": "^2.1.2",
     "webcola": "git://github.com/simontegg/WebCola",
     "xtend": "^4.0.0"
