@@ -1,6 +1,6 @@
 '@type': RelationshipType
 name: mentorship
 description: A mentor mentors a mentee.
-roles:
+roleTypes:
   - roleTypes/mentor
   - roleTypes/mentee

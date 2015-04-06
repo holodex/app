@@ -1,6 +1,6 @@
 '@type': RelationshipType
 name: membership
 description: A member is part of a group
-roles:
+rolesTypes:
   - roleTypes/member
   - roleTypes/group

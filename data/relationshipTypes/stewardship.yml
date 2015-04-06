@@ -2,6 +2,6 @@
 name: stewardship
 pluralName: stewardships
 description: A steward stewards a stewardee.
-roles:
+roleTypes:
   - roleTypes/steward
   - roleTypes/stewardee
