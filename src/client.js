@@ -9,6 +9,8 @@ var router = require('router')
 var fetcher = require('fetcher')
 var debug = require('debug')("holodex:client");
 
+types = require('types')
+
 if (config.ui.debug) {
   localStorage.setItem("debug", "*");
 } else {
