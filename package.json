@@ -61,7 +61,7 @@
     "js-yaml": "^3.2.5",
     "json-stringify-safe": "^5.0.0",
     "less-middleware": "^1.0.4",
-    "lodash": "^2.4.1",
+    "lodash": "^3.6.0",
     "lokijs": "^1.2.3",
     "map-values": "^1.0.1",
     "object-keys-map": "^1.0.2",
