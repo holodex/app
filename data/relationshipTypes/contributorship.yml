@@ -1,6 +1,0 @@
-'@type': RelationshipType
-name: contributorship
-description: A contributor is part of a group
-roleTypes:
-  - roleTypes/contributor
-  - roleTypes/group

@@ -1,8 +1,8 @@
 '@type': Relationship
-type: relationshipTypes/contributorship
+type: relationshipTypes/membership
 roles:
   - '@type': Role
-    type: roleTypes/contributor
+    type: roleTypes/member
     agent: people/jon
   - '@type': Role
     type: roleTypes/group

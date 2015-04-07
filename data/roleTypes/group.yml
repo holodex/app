@@ -1,4 +1,4 @@
 '@type': RoleType
 name: group
-label: "{group} has contributor {contributor}"
+label: "{group} has member {member}"
 pluralName: groups

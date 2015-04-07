@@ -1,4 +1,0 @@
-'@type': RoleType
-name: contributor
-label: "{contributor} is a contributor of {group}"
-pluralName: contributors
