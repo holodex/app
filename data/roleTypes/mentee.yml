@@ -1,4 +1,0 @@
-name: mentee
-'@type': RoleType
-label: "{mentee} is mentored by {mentor}"
-pluralName: mentee

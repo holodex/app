@@ -1,4 +1,0 @@
-'@type': RoleType
-name: group
-label: "{group} has member {member}"
-pluralName: groups
