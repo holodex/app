@@ -11,7 +11,7 @@
     "build": "browserify . | uglifyjs > src/assets/bundle.js",
     "build-dev": "browserify . > src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js",
-    "live": "npm run watch & node-dev .",
+    "live": "(npm run watch & node-dev .)",
     "develop": "NODE_ENV=development npm run live",
     "prod": "NODE_ENV=production npm start",
     "start": "npm run build && node .",
