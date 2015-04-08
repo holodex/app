@@ -7,3 +7,4 @@ roles:
   - '@type': Role
     type: relationshipTypes/stewardship#/roleTypes/1
     agent: people/jon
+context: groups/enspiral-craftworks
