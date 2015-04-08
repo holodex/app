@@ -81,7 +81,7 @@
     "r-dom": "^1.0.2",
     "react-bootstrap": "^0.13.0",
     "react-font-awesome": "git://github.com/tkurki/react-font-awesome",
-    "react-icon-factory": "^1.0.1",
+    "react-icon-factory": "git://github.com/simontegg/react-icon-factory",
     "react-style": "^0.4.0",
     "reverend": "^0.3.0",
     "serve-static": "^1.7.2",
@@ -93,6 +93,8 @@
     "xtend": "^4.0.0"
   },
   "devDependencies": {
+    "browserify": "^9.0.7",
+    "coffee-react": "^3.0.1",
     "easy-livereload": "^1.0.3",
     "node-dev": "^2.6.1",
     "reactify": "^1.1.0",
