@@ -95,6 +95,6 @@
     "run-browser": "^2.0.2",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0",
-    "watchify": "^2.4.0"
+    "watchify": "git://github.com/holodex/watchify#1e26dc06b38601b95d88efca3b5e1e66446d25bc"
   }
 }
