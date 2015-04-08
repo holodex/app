@@ -2,8 +2,8 @@
 type: relationshipTypes/mentorship
 roles:
   - '@type': Role
-    type: roleTypes/mentor
+    type: relationshipTypes/mentorship#/roleTypes/0
     agent: people/mikey
   - '@type': Role
-    type: roleTypes/mentee
+    type: relationshipTypes/mentorship#/roleTypes/1
     agent: people/simon

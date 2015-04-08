@@ -2,8 +2,8 @@
 type: relationshipTypes/membership
 roles:
   - '@type': Role
-    type: roleTypes/member
+    type: relationshipTypes/membership#/roleTypes/0
     agent: people/nicola
   - '@type': Role
-    type: roleTypes/group
+    type: relationshipTypes/membership#/roleTypes/1
     agent: groups/enspiral-craftworks

@@ -2,8 +2,8 @@
 type: relationshipTypes/stewardship
 roles:
   - '@type': Role
-    type: roleTypes/steward
+    type: relationshipTypes/stewardship#/roleTypes/0
     agent: people/stephanie
   - '@type': Role
-    type: roleTypes/stewardee
+    type: relationshipTypes/stewardship#/roleTypes/1
     agent: people/mikey

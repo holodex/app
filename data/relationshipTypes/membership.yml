@@ -2,7 +2,7 @@
 name: membership
 pluralName: memberships
 description: A member is part of a group
-rolesTypes:
+roleTypes:
   - '@type': RoleType
     name: member
     pluralName: members
