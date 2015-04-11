@@ -10,7 +10,7 @@
     "test": "npm run test-server && npm run test-client",
     "build": "browserify . | uglifyjs > src/assets/bundle.js",
     "build-dev": "browserify . > src/assets/bundle.js",
-    "watch": "watchify . -o src/assets/bundle.js",
+    "watch": "watchify . -o src/assets/bundle.js -v",
     "live": "(npm run watch & node-dev .)",
     "develop": "NODE_ENV=development npm run live",
     "prod": "NODE_ENV=production npm start",
