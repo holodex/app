@@ -76,6 +76,7 @@
     "git-pull-cron": "^1.0.0",
     "feathers": "^1.0.1",
     "font-awesome": "^4.3.0",
+    "free-style": "^0.5.2",
     "global": "^4.3.0",
     "got": "^2.5.0",
     "helmet": "^0.5.4",
