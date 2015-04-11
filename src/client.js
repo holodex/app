@@ -1,26 +1,25 @@
 var React = require('react')
-//path React to enable <image> and xlink:href
+// path React to enable <image> and xlink:href
 require('react-svg-patch')
-var Url = require('url')
 
 var Ui = require('ui')
 var config = require('config')
 var router = require('router')
 var fetcher = require('fetcher')
-var debug = require('debug')("holodex:client");
+var debug = require('debug')('holodex:client')
 
-types = require('types')
+global.types = require('types')
 
 if (config.ui.debug) {
-  localStorage.setItem("debug", "*");
+  global.localStorage.setItem('debug', '*')
 } else {
-  localStorage.removeItem("debug")
+  global.localStorage.removeItem('debug')
 }
 
-debug("UI starting with config:", config)
+debug('UI starting with config:', config)
 
 router.route(function (route) {
-  debug("routing", route)
+  debug('routing', route)
 
   var model = fetcher(route)
 
@@ -30,7 +29,7 @@ router.route(function (route) {
     React.createElement(Ui, {
       config: config,
       route: route,
-      model: model,
+      model: model
     }),
     document.querySelector('body > main')
   )

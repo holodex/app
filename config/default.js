@@ -1,29 +1,29 @@
 var config = {
   isSecure: false,
   data: {
-    location: __dirname + "/../data",
+    location: __dirname + '/../data'
   },
   session: {
-    host: "localhost",
+    host: 'localhost',
     port: 6379,
     db: 1,
-    secret: "bang!",
-    secure: false,
+    secret: 'bang!',
+    secure: false
   },
   // TODO make api.url props
   api: {
-    protocol: "http",
-    hostname: "localhost",
+    protocol: 'http',
+    hostname: 'localhost',
     port: 3000,
-    pathname: "/api",
+    pathname: '/api'
   },
   // TODO make ui.router and ui.url props
   ui: {
     debug: true,
-    prefix: "/",
+    prefix: '/',
     pushState: true,
-    hash: false,
-  },
-};
+    hash: false
+  }
+}
 
-module.exports = config;
+module.exports = config

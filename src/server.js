@@ -20,31 +20,31 @@ if (isDev) {
   var livereload = require('easy-livereload')
   app.use(livereload({
     watchDirs: [
-      Path.join(__dirname, "assets"),
+      Path.join(__dirname, 'assets')
     ],
-    checkFunc: function(file) {
-      debug("livereload", file)
+    checkFunc: function (file) {
+      debug('livereload', file)
       return /\.(css|js|html)$/.test(file)
     },
-    port: process.env.LIVERELOAD_PORT || 35729,
+    port: process.env.LIVERELOAD_PORT || 35729
   }))
 }
 
 //
 // serve less styles
 //
-app.use(less("/", {
+app.use(less('/', {
   debug: isDev,
   pathRoot: __dirname,
   dest: 'assets',
   once: !isDev,
   parser: {
     relativeUrls: true,
-    paths: fs.readdirSync(Path.join(__dirname, "node_modules"))
+    paths: fs.readdirSync(Path.join(__dirname, 'node_modules'))
       .concat([
-        Path.join(__dirname, "../node_modules/bootstrap/less"),
-      ]),
-  },
+        Path.join(__dirname, '../node_modules/bootstrap/less')
+      ])
+  }
 }))
 
 // serve static files
@@ -71,22 +71,20 @@ config.client = {
   api: extend(
     config.api,
     isProd ? {
-      host: config.api.hostname,
+      host: config.api.hostname
     } : {}
   )
 }
 
-
 // set cookie
 app.use(function (req, res, next) {
-  var url = Url.parse(req.url)
   res.cookie('config', JSON.stringify(config.client))
   next()
 })
 
 // route to UI
 app.use(function (req, res) {
-  var index = Path.join(__dirname, "index.html")
+  var index = Path.join(__dirname, 'index.html')
   res.sendFile(index, function (err) {
     if (err) {
       res.status(err.status).end()
@@ -95,10 +93,9 @@ app.use(function (req, res) {
 })
 
 // start server
-app.listen(config.api.port)
-
-var serverUrl = extend(config.api, {
-  pathname: "",
+app.listen(config.api.port, function () {
+  var serverUrl = extend(config.api, {
+    pathname: ''
+  })
+  console.log('Holodex is running at: ' + Url.format(serverUrl) + '.')
 })
-
-console.log("Holodex is running at: " + Url.format(serverUrl) + ".")
