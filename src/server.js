@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser')
 var config = require('config')
 var serveStatic = require('serve-static')
 var less = require('less-middleware')
+var debug = require('debug')('holodex:server')
 
 var isProd = require('util/isProd')
 var isDev = require('util/isDev')
@@ -22,6 +23,7 @@ if (isDev) {
       Path.join(__dirname, "assets"),
     ],
     checkFunc: function(file) {
+      debug("livereload", file)
       return /\.(css|js|html)$/.test(file)
     },
     port: process.env.LIVERELOAD_PORT || 35729,
