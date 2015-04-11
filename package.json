@@ -45,6 +45,11 @@
       "envify"
     ]
   },
+  "standard": {
+    "ignore": [
+      "src/node_modules/react-svg-patch"
+    ]
+  },
   "dependencies": {
     "ampersand-state": "^4.5.2",
     "bootstrap": "^3.3.1",
