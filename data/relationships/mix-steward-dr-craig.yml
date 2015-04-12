@@ -1,11 +1,10 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/steward
-is:
-  '@id': people/mix
-has:
-  '@id': people/dr-craig
-symmetric: 
-  '@id': relationships/dr-craig-stewardee-mix
-context:
-  '@id': groups/enspiral-craftworks
+type: relationshipTypes/stewardship
+roles:
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/0
+    agent: people/mix
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/1
+    agent: people/dr-craig
+context: groups/enspiral-craftworks

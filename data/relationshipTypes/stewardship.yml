@@ -1,0 +1,13 @@
+'@type': RelationshipType
+name: stewardship
+pluralName: stewardships
+description: A steward stewards a stewardee.
+roleTypes:
+  - '@type': RoleType
+    name: steward
+    label: "{steward} is steward of {stewardee}"
+    pluralName: stewards
+  - '@type': RoleType
+    name: stewardee
+    pluralName: stewardees
+    label: "{stewardee} is stewarded by {steward}"

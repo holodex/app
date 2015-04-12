@@ -1,9 +1,0 @@
-'@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/group
-is:
-  '@id': groups/enspiral-craftworks
-has:
-  '@id': people/nanz
-symmetric: 
-  '@id': relationships/nanz-contributor-enspiral-craftworks

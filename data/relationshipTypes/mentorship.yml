@@ -1,0 +1,13 @@
+'@type': RelationshipType
+name: mentorship
+pluralName: mentorships
+description: A mentor mentors a mentee.
+roleTypes:
+  - '@type': RoleType
+    name: mentor
+    pluralName: mentors
+    label: "{mentor} is mentor of {mentee}"
+  - '@type': RoleType
+    name: mentee
+    pluralName: mentees
+    label: "{mentee} is mentored by {mentor}"

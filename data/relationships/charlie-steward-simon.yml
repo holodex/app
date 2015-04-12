@@ -1,11 +1,10 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/steward
-is:
-  '@id': people/charlie
-has:
-  '@id': people/simon
-symmetric: 
-  '@id': relationships/simon-stewardee-charlie
-context:
-  '@id': groups/enspiral-craftworks
+type: relationshipTypes/stewardship
+roles:
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/0
+    agent: people/charlie
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/1
+    agent: people/simon
+context: groups/enspiral-craftworks

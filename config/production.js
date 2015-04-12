@@ -1,27 +1,27 @@
 var config = {
   isSecure: false,
   data: {
-    root: __dirname + "/../data",
+    root: __dirname + '/../data'
   },
   session: {
-    host: "localhost",
+    host: 'localhost',
     port: 6379,
     db: 1,
-    secret: "meow:3",
-    secure: false,
+    secret: 'meow:3',
+    secure: false
   },
   api: {
-    protocol: "http",
-    hostname: "holodex.enspiral.info",
+    protocol: 'http',
+    hostname: 'holodex.enspiral.info',
     port: process.env.PORT,
-    prefix: "/api",
+    prefix: '/api'
   },
   ui: {
     debug: true,
-    prefix: "/",
+    prefix: '/',
     pushState: true,
-    hash: false,
-  },
-};
+    hash: false
+  }
+}
 
-module.exports = config;
+module.exports = config
