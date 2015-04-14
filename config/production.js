@@ -19,7 +19,6 @@ var config = {
     prefix: '/api'
   },
   ui: {
-    debug: true,
     prefix: '/',
     pushState: true,
     hash: false

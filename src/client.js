@@ -10,8 +10,8 @@ var debug = require('debug')('holodex:client')
 
 global.types = require('types')
 
-if (config.ui.debug) {
-  global.localStorage.setItem('debug', '*')
+if (process.env.DEBUG) {
+  global.localStorage.setItem('debug', process.env.DEBUG)
 } else {
   global.localStorage.removeItem('debug')
 }

@@ -21,7 +21,6 @@ var config = {
   },
   // TODO make ui.router and ui.url props
   ui: {
-    debug: true,
     prefix: '/',
     pushState: true,
     hash: false
