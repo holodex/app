@@ -17,17 +17,17 @@ var app = express()
 
 // livereload on static files
 if (isDev) {
-  var livereload = require('easy-livereload')
-  app.use(livereload({
-    watchDirs: [
-      Path.join(__dirname, 'assets')
-    ],
-    checkFunc: function (file) {
-      debug('livereload', file)
-      return /\.(css|js|html)$/.test(file)
-    },
-    port: process.env.LIVERELOAD_PORT || 35729
-  }))
+//   var livereload = require('easy-livereload')
+//   app.use(livereload({
+//     watchDirs: [
+//       Path.join(__dirname, 'assets')
+//     ],
+//     checkFunc: function (file) {
+//       debug('livereload', file)
+//       return /\.(css|js|html)$/.test(file)
+//     },
+//     port: process.env.LIVERELOAD_PORT || 35729
+//   }))
 }
 
 //
