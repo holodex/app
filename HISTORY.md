@@ -1,5 +1,10 @@
 # UNRELEASED
 
+# 0.1.4 (2015-04-12)
+
+- [Relationships are now a set of roles](https://github.com/openvocab/holodex/issues/1#issuecomment-81310624)
+- [YAML data is more intelligent](https://github.com/open-app/holodex/issues/13)
+
 # 0.1.3 (2015-03-04)
 
 - User can click on person in group graph to view person page

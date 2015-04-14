@@ -67,6 +67,7 @@
     "free-style": "^0.5.2",
     "format-text": "0.0.3",
     "fs-db": "^2.1.0",
+    "git-pull-cron": "^1.0.0",
     "global": "^4.3.0",
     "got": "^2.5.0",
     "helmet": "^0.5.4",

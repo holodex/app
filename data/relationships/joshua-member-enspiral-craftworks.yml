@@ -1,9 +1,0 @@
-'@type': Relationship
-type: relationshipTypes/membership
-roles:
-  - '@type': Role
-    type: relationshipTypes/membership#/roleTypes/0
-    agent: people/joshua
-  - '@type': Role
-    type: relationshipTypes/membership#/roleTypes/1
-    agent: groups/enspiral-craftworks

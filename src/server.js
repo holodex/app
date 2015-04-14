@@ -92,10 +92,14 @@ app.use(function (req, res) {
   })
 })
 
+var serverUrl = extend(config.api, {
+  pathname: ''
+})
 // start server
 app.listen(config.api.port, function () {
-  var serverUrl = extend(config.api, {
-    pathname: ''
-  })
   console.log('Holodex is running at: ' + Url.format(serverUrl) + '.')
 })
+// unset config api port for production server
+if (isProd) {
+  config.api.port = undefined
+}

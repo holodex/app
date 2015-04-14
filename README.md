@@ -4,6 +4,8 @@ an app for how we relate to people and groups within a network. see [top-level r
 
 ## [changelog](./HISTORY.md)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ## how to
 
 ### install
