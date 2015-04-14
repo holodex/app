@@ -1,6 +1,3 @@
 '@type': Person
 name: Dr Craig
 image: https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/002/033/large/20140304_141657.jpg?1395016339
-relationships:
-  - "@id": relationships/dr-craig-contributor-enspiral-craftworks
-  - "@id": relationships/dr-craig-stewardee-mix

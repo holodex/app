@@ -1,9 +1,9 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/member
-is:
-  '@id': people/nanz
-has:
-  '@id': groups/enspiral-craftworks
-symmetric: 
-  '@id': relationships/enspiral-craftworks-group-nanz
+type: relationshipTypes/membership
+roles:
+  - '@type': Role
+    type: relationshipTypes/membership#/roleTypes/0
+    agent: people/nanz
+  - '@type': Role
+    type: relationshipTypes/membership#/roleTypes/1
+    agent: groups/enspiral-craftworks

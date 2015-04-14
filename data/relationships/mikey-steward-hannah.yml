@@ -1,11 +1,10 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/steward
-is:
-  '@id': people/mikey
-has:
-  '@id': people/hannah
-symmetric: 
-  '@id': relationships/hannah-stewardee-mikey
-context:
-  '@id': groups/enspiral-craftworks
+type: relationshipTypes/stewardship
+roles:
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/0
+    agent: people/mikey
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/1
+    agent: people/hannah
+context: groups/enspiral-craftworks

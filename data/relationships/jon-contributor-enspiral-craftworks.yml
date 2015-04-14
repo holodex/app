@@ -1,9 +1,9 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/member
-is:
-  '@id': people/jon
-has:
-  '@id': groups/enspiral-craftworks
-symmetric: 
-  '@id': relationships/enspiral-craftworks-group-jon
+type: relationshipTypes/membership
+roles:
+  - '@type': Role
+    type: relationshipTypes/membership#/roleTypes/0
+    agent: people/jon
+  - '@type': Role
+    type: relationshipTypes/membership#/roleTypes/1
+    agent: groups/enspiral-craftworks

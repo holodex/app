@@ -1,11 +1,10 @@
 '@type': Relationship
-relationshipType: 
-  '@id': relationshipTypes/steward
-is:
-  '@id': people/nicola
-has:
-  '@id': people/ayumi
-symmetric: 
-  '@id': relationships/ayumi-stewardee-nicola
-context:
-  '@id': groups/enspiral-craftworks
+type: relationshipTypes/stewardship
+roles:
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/0
+    agent: people/nicola
+  - '@type': Role
+    type: relationshipTypes/stewardship#/roleTypes/1
+    agent: people/ayumi
+context: groups/enspiral-craftworks

@@ -1,0 +1,13 @@
+'@type': RelationshipType
+name: membership
+pluralName: memberships
+description: A member is part of a group
+roleTypes:
+  - '@type': RoleType
+    name: member
+    pluralName: members
+    label: "{member} is a member of {group}"
+  - '@type': RoleType
+    name: group
+    pluralName: groups
+    label: "{group} has member {member}"
