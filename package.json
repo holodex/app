@@ -9,7 +9,7 @@
     "test-client": "run-browser src/node_modules/**/test-client --port 3030 -b | tap-spec",
     "test": "npm run test-server && npm run test-client",
     "standard": "standard; echo",
-    "build": "browserify . > src/assets/bundle.js",
+    "build": "browserify . | uglifyjs > src/assets/bundle.js",
     "build-dev": "browserify . > src/assets/bundle.js",
     "watch": "watchify . -o src/assets/bundle.js -v",
     "live": "(npm run watch & node-dev .)",
