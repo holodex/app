@@ -109,6 +109,7 @@
     "react-bootstrap": "^0.13.0",
     "react-font-awesome": "git://github.com/tkurki/react-font-awesome",
     "react-icon-factory": "git://github.com/simontegg/react-icon-factory",
+    "react-select": "^0.4.6",
     "react-style": "^0.4.0",
     "reverend": "^0.3.0",
     "send-data": "^6.0.0",
