@@ -53,7 +53,7 @@
   "dependencies": {
     "ampersand-state": "^4.5.2",
     "bootstrap": "^3.3.1",
-    "browserify": "^9.0.3",
+    "browserify": "^9.0.8",
     "clientconfig": "^1.0.0",
     "config": "^1.9.0",
     "cookie-parser": "^1.3.3",
@@ -112,6 +112,6 @@
     "standard": "^3.5.0",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0",
-    "watchify": "git://github.com/holodex/watchify#1e26dc06b38601b95d88efca3b5e1e66446d25bc"
+    "watchify": "^3.1.2"
   }
 }
