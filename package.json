@@ -20,7 +20,9 @@
     "postinstall": "npm dedupe"
   },
   "engines": {
-    "iojs": "2.x"
+    "iojs": "^2.0.0",
+    "node": "^0.12.0",
+    "npm": "^2.9.1"
   },
   "repository": {
     "type": "git",
