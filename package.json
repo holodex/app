@@ -111,7 +111,7 @@
     "reverend": "^0.3.0",
     "send-data": "^6.0.0",
     "serve-static": "^1.7.2",
-    "simple-react-typeahead": "git://github.com/simontegg/React-Typeahead",
+    "simple-react-typeahead": "git://github.com/ahdinosaur/React-Typeahead#patch-1",
     "smart-split": "^1.0.2",
     "uglifyjs": "^2.4.10",
     "url-regex": "^2.1.2",
