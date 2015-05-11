@@ -19,6 +19,9 @@
     "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master",
     "postinstall": "npm dedupe"
   },
+  "engines": {
+    "iojs": "2.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/craftodex/app.git"
