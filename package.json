@@ -103,6 +103,7 @@
     "lodash.filter": "^3.1.0",
     "lodash.find": "^3.2.0",
     "lodash.foreach": "^3.0.3",
+    "lodash.groupby": "^3.1.1",
     "lodash.includes": "^3.1.1",
     "lodash.indexof": "^3.0.2",
     "lodash.intersection": "^3.1.0",
