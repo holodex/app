@@ -1,9 +1,7 @@
 var config = {
   isSecure: false,
   data: {
-    gitRepoUrl: 'git://github.com/holodex/enspiral-data.git',
-    localDir: __dirname + '/../data',
-    cronSpec: '*/15 * * * *'
+    localDir: __dirname + '/../data'
   },
   session: {
     host: 'localhost',
