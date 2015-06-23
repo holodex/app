@@ -16,6 +16,7 @@ cd ~/repos/holodex
 git clone https://github.com/holodex/app
 cd app
 npm install
+git clone https://github.com/holodex/enspiral-data data
 ```
 
 ### develop
