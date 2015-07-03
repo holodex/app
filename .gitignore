@@ -10,3 +10,5 @@
 /src/assets/.bundle.js
 
 /data
+
+*.pem
