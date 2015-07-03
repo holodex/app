@@ -9,3 +9,5 @@
 
 /data
 /.cache
+
+*.pem
