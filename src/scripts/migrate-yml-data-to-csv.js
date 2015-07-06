@@ -4,6 +4,9 @@ var pull = require('pull-stream')
 var clone = require('lodash.clone')
 var Model = require('base/model')
 
+// terrible monkey patch
+Model.prototype.initialize = function () {}
+
 var db = FsDb({
   location: process.cwd() + "/data",
   idAttribute: '@id',
@@ -55,9 +58,13 @@ function pullGraph (cb) {
         // HACK forget about @mixmix's helper objects
         return !(Object.keys(item).length === 2 && item.agent)
       })
-      //.map(function (item) {
-      //  return Model.new(item)
-      //})
+      .map(function (item) {
+        var attrs = Model.new(item).toJSON()
+        // rename idAttribute back to 'id'
+        attrs.id = attrs['@id']
+        delete attrs['@id']
+        return attrs
+      })
 
       cb(null, pulledGraph)
     })
