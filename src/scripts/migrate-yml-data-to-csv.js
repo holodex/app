@@ -3,6 +3,8 @@ var yaml = require('js-yaml')
 var pull = require('pull-stream')
 var clone = require('lodash.clone')
 var Model = require('base/model')
+var toCsv = require('to-csv')
+var forEach = require('lodash.foreach')
 
 // terrible monkey patch
 Model.prototype.initialize = function () {}
@@ -26,7 +28,23 @@ var latestCommit
 
 pullGraph(function (err, graph) {
   if (err) { throw err; }
-  console.log(graph)
+
+  var graphByTypes = {}
+
+  forEach(graph, function (item) {
+
+    var typeName = item['@type']
+    delete item['@type']
+
+    graphByTypes[typeName] = graphByTypes[typeName] || []
+
+    graphByTypes[typeName].push(item)
+  })
+
+  forEach(graphByTypes, function (typeGraph, typeName) {
+    console.log("type: ", typeName)
+    console.log(toCsv(typeGraph))
+  })
 })
 
 function pullGraph (cb) {
