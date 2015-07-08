@@ -43,7 +43,7 @@ pullGraph(function (err, graph) {
 
   forEach(graphByTypes, function (typeGraph, typeName) {
     console.log("type: ", typeName)
-    console.log(toCsv(typeGraph))
+    console.log(toCsv(getType(graphByTypes, typeName)))
   })
 })
 
@@ -87,4 +87,54 @@ function pullGraph (cb) {
       cb(null, pulledGraph)
     })
   )
+}
+
+function getType (graph, type) {
+  switch (type) {
+    case "Person": return getPeople(graph)
+    case "Group": return getGroups(graph)
+    case "Role": return getRoles(graph)
+    case "RoleType": return getRoleTypes(graph)
+    case "Relationship": return getRelationships(graph)
+    case "RelationshipType": return getRelationshipTypes(graph)
+    case "LinkType": return getLinkTypes(graph)
+  }
+}
+
+function getAgent (graph, type) {
+  return graph[type].map(function (agent) {
+    return {
+      id: agent.id.split('/')[1],
+      name: agent.name,
+      image: agent.image
+    }
+  })
+}
+
+function getPeople (graph) {
+  return getAgent(graph, 'Person')
+}
+
+function getGroups (graph) {
+  return getAgent(graph, 'Group')
+}
+
+function getRoles (graph) {
+  return graph['Role']
+}
+
+function getRoleTypes (graph) {
+  return graph['RoleType']
+}
+
+function getRelationships(graph) {
+  return graph['Relationship']
+}
+
+function getRelationshipTypes (graph) {
+  return graph['RelationshipType']
+}
+
+function getLinkTypes (graph) {
+  return graph['LinkType']
 }
