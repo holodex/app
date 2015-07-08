@@ -6,8 +6,7 @@ var Model = require('base/model')
 var toCsv = require('to-csv')
 var forEach = require('lodash.foreach')
 
-// terrible monkey patch
-Model.prototype.initialize = function () {}
+var store = require('base/store')
 
 var db = FsDb({
   location: process.cwd() + "/data",
@@ -32,12 +31,8 @@ pullGraph(function (err, graph) {
   var graphByTypes = {}
 
   forEach(graph, function (item) {
-
-    var typeName = item['@type']
-    delete item['@type']
-
+    var typeName = item.getType()
     graphByTypes[typeName] = graphByTypes[typeName] || []
-
     graphByTypes[typeName].push(item)
   })
 
@@ -77,11 +72,9 @@ function pullGraph (cb) {
         return !(Object.keys(item).length === 2 && item.agent)
       })
       .map(function (item) {
-        var attrs = Model.new(item).toJSON()
-        // rename idAttribute back to 'id'
-        attrs.id = attrs['@id']
-        delete attrs['@id']
-        return attrs
+        var model = Model.new(item)
+        model.save()
+        return model
       })
 
       cb(null, pulledGraph)
@@ -120,21 +113,64 @@ function getGroups (graph) {
 }
 
 function getRoles (graph) {
-  return graph['Role']
+  var roles = graph['Role'].filter(function (role) {
+    return !role.relationship
+  }).map(function (role) {
+    console.log("role", role, store.findById(role._values.type))
+    return {
+      context: role.context,
+      role: role.type.split('/')[1],
+      agent: role.agent.split('/')[1]
+    }
+  })
+  if (roles.length === 0) {
+    roles.push({ context: "", role: "", agent: "" })
+  }
+  return roles
 }
 
 function getRoleTypes (graph) {
-  return graph['RoleType']
+  return graph['RoleType'].map(function (roleType) {
+    return {
+      id: getId(roleType.id),
+      label: roleType.label,
+      relationshipType: getId(roleType.relationshipType.getId())
+    }
+  })
 }
 
 function getRelationships(graph) {
-  return graph['Relationship']
+  return graph['Relationship'].map(function (relationship) {
+    return {
+      context: relationship.context,
+
+    }
+  })
 }
 
 function getRelationshipTypes (graph) {
-  return graph['RelationshipType']
+  return graph['RelationshipType'].map(function (relType) {
+    return {
+      id: getId(relType.id),
+      description: relType.description
+    }
+  })
 }
 
 function getLinkTypes (graph) {
-  return graph['LinkType']
+  return graph['LinkType'].map(function (linkType) {
+    return {
+      id: getId(linkType.id),
+      relationshipType: getId(linkType.relationshipType.getId()),
+      source: getId(linkType.source),
+      target: getId(linkType.target),
+      label: linkType.label
+    }
+  })
+}
+
+function getId (id) {
+  if (!id) { return null }
+  var s = id.split('/')
+  return s[s.length - 1]
 }
