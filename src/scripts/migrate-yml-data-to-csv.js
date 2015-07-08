@@ -5,6 +5,7 @@ var clone = require('lodash.clone')
 var Model = require('base/model')
 var toCsv = require('to-csv')
 var forEach = require('lodash.foreach')
+var fs = require('fs')
 
 var store = require('base/store')
 
@@ -24,6 +25,7 @@ var db = FsDb({
 
 var graph
 var latestCommit
+var types = require('types')
 
 pullGraph(function (err, graph) {
   if (err) { throw err; }
@@ -37,8 +39,11 @@ pullGraph(function (err, graph) {
   })
 
   forEach(graphByTypes, function (typeGraph, typeName) {
-    console.log("type: ", typeName)
-    console.log(toCsv(getType(graphByTypes, typeName)))
+    var csv = toCsv(getType(graphByTypes, typeName))
+    var path = process.cwd() + "/csv/" + types[typeName].Model.prototype.collectionName + ".csv"
+    fs.writeFile(path, csv, function (err) {
+      if (err) { throw err }
+    })
   })
 })
 
