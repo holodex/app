@@ -141,9 +141,14 @@ function getRoleTypes (graph) {
 
 function getRelationships(graph) {
   return graph['Relationship'].map(function (relationship) {
+    var roles = relationship.rolesByType
+    var linkType = relationship.type.linkTypes[0]
+    var context = relationship.context
     return {
-      context: relationship.context,
-
+      context: context && getId(context.getId()),
+      source: getId(roles[linkType.source.getId()].agent.getId()),
+      link: getId(linkType.getId()),
+      target: getId(roles[linkType.target.getId()].agent.getId())
     }
   })
 }
@@ -162,8 +167,8 @@ function getLinkTypes (graph) {
     return {
       id: getId(linkType.id),
       relationshipType: getId(linkType.relationshipType.getId()),
-      source: getId(linkType.source),
-      target: getId(linkType.target),
+      source: getId(linkType.source.getId()),
+      target: getId(linkType.target.getId()),
       label: linkType.label
     }
   })
