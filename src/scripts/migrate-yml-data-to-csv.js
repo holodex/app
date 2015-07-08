@@ -97,7 +97,7 @@ function getType (graph, type) {
 function getAgent (graph, type) {
   return graph[type].map(function (agent) {
     return {
-      id: agent.id.split('/')[1],
+      id: getId(agent.getId()),
       name: agent.name,
       image: agent.image
     }
