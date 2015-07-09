@@ -16,10 +16,10 @@ var config = {
       groups: '1',
       people: '2',
       roles: '3',
-      relationships: '4',
       roleTypes: '6',
       relationshipTypes: '6',
-      linkTypes: '7'
+      linkTypes: '7',
+      relationships: '4'
     }
   },
   api: {

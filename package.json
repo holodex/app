@@ -102,6 +102,7 @@
     "matrix-zoom": "^1.0.0",
     "micro-req": "^1.0.0",
     "ngraph.graph": "0.0.10",
+    "node-uuid": "^1.4.3",
     "object-keys-map": "^1.0.2",
     "observ-location": "^1.0.0",
     "path-match": "^1.2.2",
