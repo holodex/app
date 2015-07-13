@@ -12,9 +12,9 @@ var config = {
       groups: '1',
       people: '2',
       roles: '3',
-      roleTypes: '6',
+      roleTypes: '7',
       relationshipTypes: '6',
-      linkTypes: '7',
+      linkTypes: '8',
       relationships: '4'
     }
   },
