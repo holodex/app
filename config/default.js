@@ -7,6 +7,7 @@ var config = {
     port: 3000
   },
   data: {
+    db: 'yml',
     localDir: __dirname + '/../data',
     email: "31338047380-lndnfeihifv0ibtiic8aa36a9ea2h7m5@developer.gserviceaccount.com",
     key: fs.readFileSync(__dirname + "/sheet-key.pem"),
