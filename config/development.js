@@ -4,6 +4,7 @@ module.exports = {
   data: {
     db: 'sheet',
     data: __dirname + '/../data',
+    cronSpec: '*/2 * * * *',
     email: "31338047380-lndnfeihifv0ibtiic8aa36a9ea2h7m5@developer.gserviceaccount.com",
     key: fs.readFileSync(__dirname + "/sheet-key.pem"),
     scopes: ["https://spreadsheets.google.com/feeds"],

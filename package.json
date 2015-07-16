@@ -62,6 +62,7 @@
     "config": "^1.9.0",
     "configurify": "^1.0.0",
     "create-element": "~0.2.3",
+    "cron": "^1.0.9",
     "d3-dispatch": "0.0.0",
     "d3-transform": "^1.0.3",
     "debug": "^2.2.0",
