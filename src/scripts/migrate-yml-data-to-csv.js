@@ -121,7 +121,6 @@ function getRoles (graph) {
   var roles = graph['Role'].filter(function (role) {
     return !role.relationship
   }).map(function (role) {
-    console.log("role", role, store.findById(role._values.type))
     return {
       context: role.context,
       role: role.type.split('/')[1],
