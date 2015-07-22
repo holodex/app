@@ -55,6 +55,7 @@
   "dependencies": {
     "ampersand-state": "^4.5.2",
     "angle-between-points": "0.0.3",
+    "babel": "^5.8.3",
     "bootstrap": "^3.3.1",
     "brfs": "^1.4.0",
     "browserify": "^9.0.8",
