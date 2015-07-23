@@ -11,11 +11,11 @@ var Actions = require('actions')
 
 global.types = require('types')
 
-// if (process.env.DEBUG) {
-//   global.localStorage.setItem('debug', process.env.DEBUG)
-// } else {
-//   global.localStorage.removeItem('debug')
-// }
+if (process.env.DEBUG) {
+  global.localStorage.setItem('debug', process.env.DEBUG)
+} else {
+  global.localStorage.removeItem('debug')
+}
 
 debug('UI starting with config:', config)
 
