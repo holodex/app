@@ -7,6 +7,7 @@ var config = require('config')
 var router = require('router')
 var fetcher = require('fetcher')
 var debug = require('debug')('holodex:client')
+var Actions = require('actions')
 
 global.types = require('types')
 
@@ -22,7 +23,6 @@ router.route(function (route) {
   debug('routing', route)
 
   var model = fetcher(route)
-
   debug('model', model)
 
   React.render(
