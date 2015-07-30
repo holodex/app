@@ -16,13 +16,12 @@
     "develop": "NODE_ENV=development npm run live",
     "prod": "NODE_ENV=production npm start",
     "start": "npm run build && node .",
-    "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master",
-    "postinstall": "npm dedupe"
+    "deploy": "git remote add deploy dokku@holodex.enspiral.info:holodex; git push deploy master"
   },
   "engines": {
     "iojs": "^2.0.0",
     "node": "^0.12.0",
-    "npm": "^2.9.1"
+    "npm": "^3.0.0"
   },
   "repository": {
     "type": "git",
