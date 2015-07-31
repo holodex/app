@@ -4,6 +4,9 @@
   "description": "People and group relationships",
   "main": "src/server.js",
   "browser": "src/client.js",
+  "bin": {
+    "holodex": "bin/holodex"
+  },
   "scripts": {
     "test-server": "tape src/node_modules/**/test-server",
     "test-client": "run-browser src/node_modules/**/test-client --port 3030 -b | tap-spec",
