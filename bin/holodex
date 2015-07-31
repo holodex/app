@@ -2,13 +2,17 @@
 
 var spawn = require('child_process').spawn
 var join = require('path').join
+var assign = require('lodash.assign')
 
 var holodex = spawn(
   'npm',
   ['run', 'start'],
   {
     cwd: join(__dirname, '..'),
-    stdio: 'inherit'
+    stdio: 'inherit',
+    env: assign({
+      CONFIG: join(process.cwd(), 'config')
+    }, process.env)
   }
 )
 .on('exit', function(code) {
