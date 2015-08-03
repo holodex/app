@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process').spawn
+var join = require('path').join
+var assign = require('lodash.assign')
+
+var holodex = spawn(
+  'npm',
+  ['run', 'start'],
+  {
+    cwd: join(__dirname, '..'),
+    stdio: 'inherit',
+    env: assign({
+      CWD: process.cwd(),
+      CONFIG: join(process.cwd(), 'config')
+    }, process.env)
+  }
+)
+.on('exit', function(code) {
+  process.exit(code)
+})
