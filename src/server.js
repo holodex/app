@@ -1,11 +1,7 @@
 var Path = require('path')
 var Url = require('url')
-var fs = require('fs')
-var extend = require('xtend')
 var express = require('express')
 var config = require('config')
-var serveStatic = require('serve-static')
-var debug = require('debug')('holodex:server')
 
 var isProd = require('util/isProd')
 var isDev = require('util/isDev')
@@ -23,8 +19,11 @@ app.use(require('bundle-service')({
   cacheFile: Path.join(__dirname, 'assets', '.bundle.json')
 }))
 
-// TODO css
-// TODO assets
+// less
+app.use(require('less-service')(config))
+
+// assets
+app.use(require('assets-service')(config))
 
 // html
 app.use(config.ui.url.pathname, require('ui-service')(config))
