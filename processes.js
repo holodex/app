@@ -1,3 +1,4 @@
+var Path = require('path')
 var defined = require('defined')
 
 var env = process.env
@@ -6,7 +7,7 @@ var nodeEnv = env.NODE_ENV
 module.exports = {
   apps: [{
     name: "holodex",
-    script: "src/server.js",
+    script: Path.join(__dirname, "src", "server.js"),
     watch: nodeEnv === 'development',
     env: {
       NODE_ENV: defined(nodeEnv, 'production'),
