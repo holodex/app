@@ -8,6 +8,8 @@ pm.connect(function (err) {
   pm.start(require('../processes'), killOnError)
 })
 
+Log.stream('all', true, 'YYYY-MM-DD-HH:mm:ss', false)
+
 process.on('SIGINT', function() {
   kill()
 })
@@ -15,9 +17,10 @@ process.on('SIGINT', function() {
 function kill () {
   pm.killDaemon(function (err) {
     logError(err)
-    pm.disconnect()
-    pm.disconnectBus()
-    process.exit(1)
+    pm.disconnectBus(function (err) {
+      logError(err)
+      process.exit(1)
+    })
   })
 }
 
