@@ -12,7 +12,21 @@ var isDev = require('util/isDev')
 
 var app = express()
 
+// api
 app.use(config.api.url.pathname, require('api-service')(config))
+
+// js
+app.use(require('bundle-service')({
+  entries: [Path.join(__dirname, 'client.js')],
+  debug: isDev,
+  cacheLength: isProd ? 'days' : undefined,
+  cacheFile: Path.join(__dirname, 'assets', '.bundle.json')
+}))
+
+// TODO css
+// TODO assets
+
+// html
 app.use(config.ui.url.pathname, require('ui-service')(config))
 
 // start server
