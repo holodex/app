@@ -8,7 +8,7 @@
     "holodex": "bin/holodex"
   },
   "scripts": {
-    "develop": "NODE_ENV=development npm start",
+    "develop": "NODE_ENV=development node-dev .",
     "standard": "standard; echo",
     "start": "bin/holodex",
     "test": "npm run test-server && npm run test-client",
