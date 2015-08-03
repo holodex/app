@@ -2,7 +2,7 @@ module.exports = {
   url: {
     protocol: 'http',
     hostname: 'localhost',
-    port: 5000
+    port: 3000
   },
   data: {
     localDir: __dirname + '/../data'
@@ -18,7 +18,7 @@ module.exports = {
       hash: false
     },
     url: {
-      pathname: '/',
+      pathname: '/'
     }
   }
 }
