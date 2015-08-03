@@ -10,6 +10,7 @@ pm.connect(function (err) {
 
 Log.stream('all', true, 'YYYY-MM-DD-HH:mm:ss', false)
 
+process.stdin.resume()
 process.on('SIGINT', function() {
   kill()
 })
