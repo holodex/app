@@ -9,7 +9,7 @@
   },
   "scripts": {
     "develop": "NODE_ENV=development node-dev .",
-    "prod": "NODE_ENV=production npm start",
+    "devstart": "NODE_ENV=development npm start",
     "standard": "standard; echo",
     "start": "bin/holodex",
     "test": "npm run test-server && npm run test-client",
@@ -72,6 +72,7 @@
     "create-element": "~0.2.3",
     "d3-dispatch": "0.0.0",
     "debug": "^2.2.0",
+    "defined": "^1.0.0",
     "dot-object": "^0.11.0",
     "eases": "^1.0.6",
     "envify": "^3.2.0",
