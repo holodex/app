@@ -1,18 +1,11 @@
 #!/usr/bin/env node
 
 var pm = require('pm2')
+var Log = require('pm2/lib/Log')
 
 pm.connect(function (err) {
   if (err) { throw err }
   pm.start(require('../processes'), killOnError)
-})
-
-pm.launchBus(function (err, bus) {
-  killOnError(err)
-
-  bus.on('log:out', function (type, data) {
-    console.log(type, data)
-  })
 })
 
 process.on('SIGINT', function() {
