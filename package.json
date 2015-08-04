@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/craftodex/app.git"
+    "url": "https://github.com/holodex/app.git"
   },
   "keywords": [
     "api",
@@ -39,9 +39,9 @@
   "author": "Enspiral Craftworks",
   "license": "AGPLv3",
   "bugs": {
-    "url": "https://github.com/craftodex/app/issues"
+    "url": "https://github.com/holodex/app/issues"
   },
-  "homepage": "https://github.com/craftodex/app",
+  "homepage": "https://github.com/holodex/app",
   "browserify": {
     "transform": [
       "envify"
