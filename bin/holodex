@@ -1,21 +1,35 @@
 #!/usr/bin/env node
 
-var spawn = require('child_process').spawn
-var join = require('path').join
-var assign = require('lodash.assign')
+var pm = require('pm2')
+var Log = require('pm2/lib/Log')
 
-var holodex = spawn(
-  'npm',
-  ['run', 'start'],
-  {
-    cwd: join(__dirname, '..'),
-    stdio: 'inherit',
-    env: assign({
-      CWD: process.cwd(),
-      CONFIG: join(process.cwd(), 'config')
-    }, process.env)
-  }
-)
-.on('exit', function(code) {
-  process.exit(code)
+pm.connect(function (err) {
+  if (err) { throw err }
+  pm.start(require('../processes'), killOnError)
 })
+
+Log.stream('all', true, 'YYYY-MM-DD-HH:mm:ss', false)
+
+process.stdin.resume()
+process.on('SIGINT', function() {
+  kill()
+})
+
+function kill () {
+  pm.killDaemon(function (err) {
+    logError(err)
+    pm.disconnectBus(function (err) {
+      logError(err)
+      process.exit(1)
+    })
+  })
+}
+
+function logError (err) {
+  if (err) { console.error(err) }
+}
+
+function killOnError (err) {
+  logError(err)
+  if (err) { kill(logError) }
+}
