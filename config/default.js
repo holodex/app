@@ -5,7 +5,7 @@ module.exports = {
     port: 3000
   },
   data: {
-    db: 'yml',
+    db: 'fs',
     localDir: __dirname + '/../data'
   },
   api: {
