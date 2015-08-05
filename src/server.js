@@ -16,7 +16,7 @@ app.use(require('bundle-service')({
   entries: [Path.join(__dirname, 'client.js')],
   debug: isDev,
   cacheLength: isProd ? 'days' : undefined,
-  cacheFile: Path.join(__dirname, 'assets', '.bundle.json')
+  cacheFile: Path.join(__dirname, '..', '.cache', 'bundle.json')
 }))
 
 // less

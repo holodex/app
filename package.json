@@ -8,6 +8,7 @@
     "holodex": "bin/holodex"
   },
   "scripts": {
+    "clean": "rm .cache",
     "develop": "NODE_ENV=development node-dev .",
     "devstart": "NODE_ENV=development npm start",
     "standard": "standard; echo",
