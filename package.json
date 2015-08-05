@@ -1,6 +1,6 @@
 {
   "name": "holodex",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "People and group relationships",
   "main": "src/server.js",
   "browser": "src/client.js",
