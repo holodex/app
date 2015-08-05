@@ -1,4 +1,4 @@
-var config = {
+module.exports = {
   url: {
     protocol: 'http',
     hostname: 'localhost',
