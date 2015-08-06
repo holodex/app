@@ -14,9 +14,7 @@
     "start": "bin/holodex",
     "unused-deps": "dependency-check package.json --unused $(for file in src/node_modules/*/index.js; do echo --entry $file; done)",
     "lint": "standard --verbose | snazzy; echo",
-    "test": "npm run test-server && npm run test-client",
-    "test-client": "run-browser src/node_modules/**/test-client --port 3030 -b | tap-spec",
-    "test-server": "tape src/node_modules/**/test-server"
+    "test": "npm run lint"
   },
   "engines": {
     "iojs": "^2.0.0",
@@ -142,12 +140,7 @@
   "devDependencies": {
     "dependency-check": "^2.5.0",
     "node-dev": "^2.6.1",
-    "rnd": "0.0.0",
-    "run-browser": "^2.0.2",
-    "shmock": "^0.7.1",
     "snazzy": "^2.0.0",
-    "standard": "^5.0.1",
-    "tap-spec": "^2.2.2",
-    "tape": "^4.0.0"
+    "standard": "^5.0.1"
   }
 }
