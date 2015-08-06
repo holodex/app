@@ -11,8 +11,8 @@
     "clean": "rm .cache",
     "develop": "NODE_ENV=development node-dev .",
     "devstart": "NODE_ENV=development npm start",
-    "standard": "standard; echo",
     "start": "bin/holodex",
+    "lint": "standard --verbose | snazzy; echo",
     "test": "npm run test-server && npm run test-client",
     "test-client": "run-browser src/node_modules/**/test-client --port 3030 -b | tap-spec",
     "test-server": "tape src/node_modules/**/test-server"
@@ -143,7 +143,8 @@
     "rnd": "0.0.0",
     "run-browser": "^2.0.2",
     "shmock": "^0.7.1",
-    "standard": "^3.7.3",
+    "snazzy": "^2.0.0",
+    "standard": "^5.0.1",
     "tap-spec": "^2.2.2",
     "tape": "^4.0.0"
   }
