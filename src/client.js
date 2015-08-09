@@ -7,7 +7,6 @@ var config = require('config')
 var router = require('router')
 var fetcher = require('fetcher')
 var debug = require('debug')('holodex:client')
-var Actions = require('actions')
 
 global.types = require('types')
 
