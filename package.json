@@ -89,6 +89,7 @@
     "lodash.foreach": "^3.0.3",
     "lodash.indexof": "^3.0.2",
     "lodash.intersection": "^3.1.0",
+    "lodash.isequal": "^3.0.4",
     "lodash.keys": "^3.0.7",
     "lodash.map": "^3.1.2",
     "lodash.mapvalues": "^3.0.1",
