@@ -137,8 +137,9 @@ function getRoleTypes (graph) {
   return graph['RoleType'].map(function (roleType) {
     return {
       id: getId(roleType.id),
-      label: roleType.label,
-      relationshipType: getId(roleType.relationshipType.getId())
+      relationshipType: getId(roleType.relationshipType.getId()),
+      labels: roleType.labels,
+      queryLabels: roleType.queryLabels
     }
   })
 }
@@ -173,7 +174,8 @@ function getLinkTypes (graph) {
       relationshipType: getId(linkType.relationshipType.getId()),
       source: getId(linkType.source.getId()),
       target: getId(linkType.target.getId()),
-      label: linkType.label
+      labels: linkType.labels,
+      queryLabels: linkType.queryLabels
     }
   })
 }
