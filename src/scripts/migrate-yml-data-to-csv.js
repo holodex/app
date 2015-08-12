@@ -138,8 +138,11 @@ function getRoleTypes (graph) {
     return {
       id: getId(roleType.id),
       relationshipType: getId(roleType.relationshipType.getId()),
+      name: roleType.name,
+      pluralName: roleType.pluralName,
       labels: roleType.labels,
-      queryLabels: roleType.queryLabels
+      queryLabels: roleType.queryLabels,
+      color: roleType.color
     }
   })
 }
@@ -172,10 +175,12 @@ function getLinkTypes (graph) {
     return {
       id: getId(linkType.id),
       relationshipType: getId(linkType.relationshipType.getId()),
+      inverse: linkType.inverse && getId(linkType.inverse.getId()),
       source: getId(linkType.source.getId()),
       target: getId(linkType.target.getId()),
       labels: linkType.labels,
-      queryLabels: linkType.queryLabels
+      queryLabels: linkType.queryLabels,
+      color: linkType.color
     }
   })
 }
