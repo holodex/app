@@ -72,7 +72,6 @@
     "express": "^4.10.7",
     "font-awesome": "^4.3.0",
     "format-text": "0.0.3",
-    "from2": "^2.1.0",
     "git-sync": "^1.0.1",
     "global": "^4.3.0",
     "inherits": "^2.0.1",
