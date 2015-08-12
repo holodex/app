@@ -30,9 +30,5 @@ app.use(config.ui.url.pathname, require('ui-service')(config))
 
 // start server
 app.listen(config.url.port, function () {
-  var url = config.url
-  if (isProd) {
-    url.port = undefined
-  }
-  console.log('Holodex is running at: ' + Url.format(url) + '.')
+  console.log('Holodex is running at: ' + Url.format(config.url) + '.')
 })
