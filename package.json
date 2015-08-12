@@ -102,7 +102,7 @@
     "node-uuid": "^1.4.3",
     "object-keys-map": "^1.0.2",
     "observ-location": "^1.0.0",
-    "parse-input-stream": "^1.0.1",
+    "parse-input-stream": "ahdinosaur/parse-input-stream#patch-1",
     "path-match": "^1.2.2",
     "path-to-regexp": "^1.2.0",
     "paths-js": "^0.3.4",
