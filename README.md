@@ -1,4 +1,5 @@
 # holodex app
+[![bitHound Score](https://www.bithound.io/github/holodex/app/badges/score.svg)](https://www.bithound.io/github/holodex/app)
 
 an app for how we relate to people and groups within a network. see [top-level repo](https://github.com/open-app/holodex) for more info.
 
