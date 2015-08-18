@@ -12,7 +12,7 @@ var app = express()
 app.use(config.api.url.pathname, require('api-service')(config))
 
 // js
-app.use(require('bundle-service')({
+app.use(config.bundle.url.pathname, require('bundle-service')({
   entries: [Path.join(__dirname, 'client.js')],
   debug: isDev,
   cacheLength: isProd ? 'days' : undefined,
@@ -20,19 +20,15 @@ app.use(require('bundle-service')({
 }))
 
 // less
-app.use(require('less-service')(config))
+app.use(config.less.url.pathname, require('less-service')(config))
 
 // assets
-app.use(require('assets-service')(config))
+app.use(config.assets.url.pathname, require('assets-service')(config))
 
 // html
 app.use(config.ui.url.pathname, require('ui-service')(config))
 
 // start server
 app.listen(config.url.port, function () {
-  var url = config.url
-  if (isProd) {
-    url.port = undefined
-  }
-  console.log('Holodex is running at: ' + Url.format(url) + '.')
+  console.log('Holodex is running at: ' + Url.format(config.url) + '.')
 })

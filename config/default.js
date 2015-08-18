@@ -1,8 +1,16 @@
 module.exports = {
+  services: [
+    'api',
+    'ui',
+    'bundle',
+    'less',
+    'assets'
+  ],
   url: {
     protocol: 'http',
     hostname: 'localhost',
-    port: 3000
+    port: 3000,
+    pathname: '/'
   },
   data: {
     db: 'fs',
@@ -18,8 +26,5 @@ module.exports = {
       pushState: true,
       hash: false
     },
-    url: {
-      pathname: '/'
-    }
   }
 }

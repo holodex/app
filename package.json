@@ -82,7 +82,7 @@
     "lodash.chunk": "^3.0.1",
     "lodash.clone": "^3.0.1",
     "lodash.contains": "^2.4.3",
-    "lodash.defaults": "^3.1.2",
+    "lodash.defaultsdeep": "^3.10.0",
     "lodash.filter": "^3.1.0",
     "lodash.find": "^3.2.0",
     "lodash.foreach": "^3.0.3",
