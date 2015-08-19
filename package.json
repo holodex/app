@@ -121,7 +121,7 @@
     "simple-react-typeahead": "git://github.com/ahdinosaur/React-Typeahead#patch-1",
     "smart-split": "^1.0.2",
     "through2": "^2.0.0",
-    "uglifyjs": "^2.4.10",
+    "uglifyify": "^3.0.1",
     "url-regex": "^2.1.2",
     "webcola": "git://github.com/simontegg/WebCola",
     "xtend": "^4.0.0"

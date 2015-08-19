@@ -1,3 +1,7 @@
+var nodeEnv = process.env.NODE_ENV
+
+var isProd = nodeEnv === 'production'
+
 module.exports = {
   services: [
     'api',
@@ -26,5 +30,10 @@ module.exports = {
       pushState: true,
       hash: false
     },
+  },
+  bundle: {
+    debug: !isProd,
+    cache: isProd,
+    minify: isProd
   }
 }
