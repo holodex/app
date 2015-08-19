@@ -1,7 +1,7 @@
 module.exports = {
   url: {
     protocol: 'http',
-    hostname: 'holodex.enspiral.info',
+    hostname: 'holodex.enspiral.com',
     port: process.env.PORT
   },
   data: {
