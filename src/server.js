@@ -4,8 +4,6 @@ var config = require('config')
 
 var app = express()
 
-console.log("config port", config.get('url.port'))
-
 // api
 app.use(config.api.url.pathname, require('api-service')(config))
 
