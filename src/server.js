@@ -1,10 +1,6 @@
-var Path = require('path')
 var Url = require('url')
 var express = require('express')
 var config = require('config')
-
-var isProd = require('util/isProd')
-var isDev = require('util/isDev')
 
 var app = express()
 
@@ -12,12 +8,7 @@ var app = express()
 app.use(config.api.url.pathname, require('api-service')(config))
 
 // js
-app.use(config.bundle.url.pathname, require('bundle-service')({
-  entries: [Path.join(__dirname, 'client.js')],
-  debug: isDev,
-  cacheLength: isProd ? 'days' : undefined,
-  cacheFile: Path.join(__dirname, '..', '.cache', 'bundle.json')
-}))
+app.use(config.bundle.url.pathname, require('bundle-service')(config))
 
 // less
 app.use(config.less.url.pathname, require('less-service')(config))
