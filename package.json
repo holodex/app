@@ -114,7 +114,6 @@
     "react": "^0.13.3",
     "react-bootstrap": "^0.13.0",
     "react-icon-factory": "git://github.com/simontegg/react-icon-factory",
-    "react-timer-mixin": "^0.13.2",
     "reflux": "^0.2.7",
     "run-auto": "^1.1.3",
     "send-data": "^6.0.0",
