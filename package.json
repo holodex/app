@@ -87,6 +87,7 @@
     "lodash.filter": "^3.1.0",
     "lodash.find": "^3.2.0",
     "lodash.foreach": "^3.0.3",
+    "lodash.get": "^3.7.0",
     "lodash.groupby": "^3.1.1",
     "lodash.indexby": "^3.1.1",
     "lodash.indexof": "^3.0.2",
