@@ -2,11 +2,15 @@ var React = require('react')
 // path React to enable <image> and xlink:href
 require('react-svg-patch')
 
-var Ui = require('ui')
-var config = require('config')
-var router = require('router')
-var fetcher = require('fetcher')
+// var Ui = require('ui')
+// var config = require('config')
+// var router = require('router')
+// var fetcher = require('fetcher')
+
+var state = require('state')
+
 var debug = require('debug')('holodex:client')
+
 
 global.types = require('types')
 
@@ -17,12 +21,6 @@ if (process.env.DEBUG) {
 }
 
 debug('UI starting with config:', config)
-
-router.route(function (route) {
-  debug('routing', route)
-
-  var model = fetcher(route)
-  debug('model', model)
 
   React.render(
     React.createElement(Ui, {

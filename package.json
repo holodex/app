@@ -9,6 +9,7 @@
   },
   "scripts": {
     "clean": "rm .cache",
+    "compost": "beefy src/index.js:bundle.js --index src/index.html -t babelify",
     "develop": "NODE_ENV=development node-dev .",
     "devstart": "NODE_ENV=development npm start",
     "start": "bin/holodex",
@@ -86,6 +87,7 @@
     "lodash.defaultsdeep": "^3.10.0",
     "lodash.filter": "^3.1.0",
     "lodash.find": "^3.2.0",
+    "lodash.findkey": "^3.0.1",
     "lodash.foreach": "^3.0.3",
     "lodash.get": "^3.7.0",
     "lodash.groupby": "^3.1.1",
@@ -100,6 +102,7 @@
     "lodash.pluck": "^3.1.2",
     "lodash.reduce": "^3.1.1",
     "lodash.reject": "^3.1.1",
+    "lodash.set": "^3.7.4",
     "lodash.uniq": "^3.2.2",
     "lodash.values": "^3.0.0",
     "lodash.zipobject": "^3.0.0",
@@ -142,6 +145,7 @@
   },
   "devDependencies": {
     "babelify": "^6.3.0",
+    "budo": "^4.2.1",
     "dependency-check": "^2.5.0",
     "faucet": "0.0.1",
     "node-dev": "^2.6.1",
