@@ -5,14 +5,19 @@ import Ui from 'ui'
 import types from 'types'
 import map from 'lodash.map'
 import mapValues from 'lodash.mapvalues'
+import holodex from 'reducers'
+console.log('holodex', holodex)
 var debug = require('debug')('index')
 
-let App = combineReducers(mapValues(types, type => { return type.reducers }))
 debug('state', state)
 
-
-let store = createStore(App, state)
+let store = createStore(holodex, state)
+console.log('store', store)
 debug('store', store)
+
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
 React.render(
   React.createElement(Ui, {
