@@ -13,7 +13,6 @@ debug('state', state)
 
 let store = createStore(holodex, state)
 console.log('store', store)
-debugger
 debug('store', store.getState())
 
 store.subscribe(() => {
