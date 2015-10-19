@@ -1,6 +1,6 @@
 var React = require('react')
-// path React to enable <image> and xlink:href
-require('react-svg-patch')
+var ReactDOM = require('react-dom')
+
 
 // var Ui = require('ui')
 // var config = require('config')
@@ -22,7 +22,7 @@ if (process.env.DEBUG) {
 
 debug('UI starting with config:', config)
 
-  React.render(
+  ReactDOM.render(
     React.createElement(Ui, {
       config: config,
       route: route,
