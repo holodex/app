@@ -1,0 +1,2455 @@
+{
+  "agentTypes": [
+    {
+      "id": "agent",
+      "displayName": "Agent",
+      "description": "A thing with agency."
+    },
+    {
+      "id": "person",
+      "displayName": "Person",
+      "description": "A person."
+    },
+    {
+      "id": "group",
+      "displayName": "Group",
+      "description": "A group."
+    }
+  ],
+  "agents": [
+    {
+      "id": "action-station",
+      "type": "group",
+      "displayName": "Action Station",
+      "image": "http://d3n8a8pro7vhmx.cloudfront.net/actionstation/sites/6/meta_images/original/logo-360.png?1405398767"
+    },
+    {
+      "id": "bucky-box",
+      "type": "group",
+      "displayName": "Bucky Box",
+      "image": "https://logo.clearbit.com/buckybox.com"
+    },
+    {
+      "id": "chalkle",
+      "type": "group",
+      "displayName": "Chalkle",
+      "image": "https://logo.clearbit.com/chalkle.com"
+    },
+    {
+      "id": "enspiral-accounting",
+      "type": "group",
+      "displayName": "Enspiral Accounting",
+      "image": "https://logo.clearbit.com/enspiralaccounting.com"
+    },
+    {
+      "id": "enspiral-craftworks",
+      "type": "group",
+      "displayName": "Enspiral Craftworks",
+      "image": "http://i.imgur.com/ErXtiQw.png"
+    },
+    {
+      "id": "enspiral-dev-academy",
+      "type": "group",
+      "displayName": "Enspiral Dev Academy",
+      "image": "https://logo.clearbit.com/devacademy.co.nz"
+    },
+    {
+      "id": "enspiral-foundation",
+      "type": "group",
+      "displayName": "Enspiral Foundation",
+      "image": "http://i.imgur.com/BFmaOxi.png"
+    },
+    {
+      "id": "enspiral-lean-lab",
+      "type": "group",
+      "displayName": "Enspiral Lean Lab",
+      "image": "http://leanlab.co.nz/wp-content/uploads/2015/04/LeanLabs_5002-500x472-53380.png"
+    },
+    {
+      "id": "enspiral-legal",
+      "type": "group",
+      "displayName": "Enspiral Legal",
+      "image": "http://static1.squarespace.com/static/5169f4a1e4b0fdc6c23ef665/t/5175e1e0e4b0c6cbe9544b99/1366680032917/logo-enspiral-legal.png?format=300w"
+    },
+    {
+      "id": "enspiral-services",
+      "type": "group",
+      "displayName": "Enspiral Services",
+      "image": "http://i.imgur.com/BFmaOxi.png"
+    },
+    {
+      "id": "enspiral-space",
+      "type": "group",
+      "displayName": "Enspiral Space",
+      "image": "http://static1.squarespace.com/static/5169f4a1e4b0fdc6c23ef665/t/5175e36ee4b0e5c0dba11d15/1366680430910/logo-enspiral-space.png?format=300w"
+    },
+    {
+      "id": "freewheelers",
+      "type": "group",
+      "displayName": "Freewheelers",
+      "image": "http://i.imgur.com/tiiYGJv.png"
+    },
+    {
+      "id": "iguanas",
+      "type": "group",
+      "displayName": "Internal Iguanas",
+      "image": "http://i.imgur.com/BFmaOxi.png"
+    },
+    {
+      "id": "lifehack",
+      "type": "group",
+      "displayName": "Lifhack",
+      "image": "http://i.imgur.com/2v56ia0.png"
+    },
+    {
+      "id": "loomio",
+      "type": "group",
+      "displayName": "Loomio",
+      "image": "https://www.loomio.org/assets/logo-orange-ab953e0ed76daf6a5fbcc7ed8674b38a45bbeafd4626c2c0100d5c75736343e5.png"
+    },
+    {
+      "id": "noshi-creative",
+      "type": "group",
+      "displayName": "Noshi Creative",
+      "image": "http://i.imgur.com/WxsHqkb.png"
+    },
+    {
+      "id": "purposive",
+      "type": "group",
+      "displayName": "Purposive",
+      "image": "http://i.imgur.com/LvqIsgw.jpg"
+    },
+    {
+      "id": "rabid",
+      "type": "group",
+      "displayName": "Rabid",
+      "image": "https://logo.clearbit.com/rabid.co.nz"
+    },
+    {
+      "id": "scoop",
+      "type": "group",
+      "displayName": "Scoop",
+      "image": "https://logo.clearbit.com/scoop.co.nz"
+    },
+    {
+      "id": "volunteer-impact",
+      "type": "group",
+      "displayName": "Volunteer Impact",
+      "image": "https://logo.clearbit.com/volunteerimpact.co"
+    },
+    {
+      "id": "aaron-thornton",
+      "type": "person",
+      "displayName": "Aaron",
+      "image": "https://secure.gravatar.com/avatar/8472cfc8ffeb8e3df53c9fe77fb25985.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "alanna",
+      "type": "person",
+      "displayName": "Alanna Krause",
+      "image": "https://secure.gravatar.com/avatar/04dbc46af4a947751837e68c37552ea2.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "alastair-thompson",
+      "type": "person",
+      "displayName": "Alastair Thompson",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/023/918/large/dobbyavatar.jpg?1403478755"
+    },
+    {
+      "id": "alexanda",
+      "type": "person",
+      "displayName": "Alexanda",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/042/896/large/Alexanda.jpg?1413926361"
+    },
+    {
+      "id": "allan",
+      "type": "person",
+      "displayName": "Allan Anderson",
+      "image": "https://avatars1.githubusercontent.com/u/278694?v=3&s=460"
+    },
+    {
+      "id": "andrew-fyfe",
+      "type": "person",
+      "displayName": "Andrew Fyfe",
+      "image": "https://secure.gravatar.com/avatar/bde3f03b8cd6cd7985a6b42e61d7c2bf.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "anne-marie-sullivan",
+      "type": "person",
+      "displayName": "Anne-Marie Sullivan"
+    },
+    {
+      "id": "anthony-cabraal",
+      "type": "person",
+      "displayName": "Anthony Cabraal",
+      "image": "http://www.buckybox.com/images/team-anthony-6e6c9d73.jpg"
+    },
+    {
+      "id": "ayumi",
+      "type": "person",
+      "displayName": "Ayumi Udaka",
+      "image": "http://photos4.meetupstatic.com/photos/member/5/4/1/2/highres_152841522.jpeg"
+    },
+    {
+      "id": "ben-knight",
+      "type": "person",
+      "displayName": "Ben Knight",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/031/large/ProfilePicture.png?1406161877"
+    },
+    {
+      "id": "breccan-mcleod-lundy",
+      "type": "person",
+      "displayName": "Breccan Mcleod-Lundy",
+      "image": "http://www.rabid.co.nz/assets/profiles/breccan-sq-681ef74fd2023d258c79d7cf7760d4d5.jpg"
+    },
+    {
+      "id": "anthony-rohan",
+      "type": "person",
+      "displayName": "Anthony Rohan",
+      "image": "http://www.enspiralaccounting.com/wp-content/uploads/2014/03/Antz_350_BW.jpg"
+    },
+    {
+      "id": "brenda-wallace",
+      "type": "person",
+      "displayName": "Brenda Wallace",
+      "image": "http://www.rabid.co.nz/assets/profiles/brenda-sq-242b2b4d34295772855d3cda4ad22157.jpg"
+    },
+    {
+      "id": "carlos-chambers",
+      "type": "person",
+      "displayName": "Carlos Chambers",
+      "image": "http://www.buckybox.com/images/team-carlos-ffa3475a.jpg"
+    },
+    {
+      "id": "charlie",
+      "type": "person",
+      "displayName": "Charlie Ablett",
+      "image": "https://avatars3.githubusercontent.com/u/4934746"
+    },
+    {
+      "id": "cara-hill",
+      "type": "person",
+      "displayName": "Cara Hill",
+      "image": "http://www.rabid.co.nz/assets/profiles/cara-sq-9e8447024c56e57a1d6982a7499f945a.jpg"
+    },
+    {
+      "id": "charmaine-meyers",
+      "type": "person",
+      "displayName": "Charmaine Meyers",
+      "image": "http://www.enspiralaccounting.com/wp-content/uploads/2014/03/Charmainex350.jpg"
+    },
+    {
+      "id": "chelsea-robinson",
+      "type": "person",
+      "displayName": "Chelsea Robinson",
+      "image": "http://livethedream.org.nz/wp/wp-content/uploads/2014/01/Contributors_ChelseaRobinson.jpg"
+    },
+    {
+      "id": "chloe",
+      "type": "person",
+      "displayName": "Chloe",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/040/large/Chloe-Waretini-image-210x210_%281%29.jpg?1426715295"
+    },
+    {
+      "id": "chris-bull",
+      "type": "person",
+      "displayName": "Chris Bull",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/022/large/llama.jpg"
+    },
+    {
+      "id": "chris",
+      "type": "person",
+      "displayName": "Chris Toynbee",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/042/large/me.jpeg?1406161892"
+    },
+    {
+      "id": "craig",
+      "type": "person",
+      "displayName": "Craig Ambrose",
+      "image": "http://gravatar.com/avatar/8c1b99675b4ba19460bfed9a04739fc4?s=512&d=identicon"
+    },
+    {
+      "id": "cédric-félizard",
+      "type": "person",
+      "displayName": "Cédric Félizard",
+      "image": "http://www.buckybox.com/images/team-cedric-0489e2b8.jpg"
+    },
+    {
+      "id": "dale-de-graaf",
+      "type": "person",
+      "displayName": "Dale de Graaf",
+      "image": "http://www.enspiralaccounting.com/wp-content/uploads/2014/03/Dale_350_BW.jpg"
+    },
+    {
+      "id": "damian-sligo-green",
+      "type": "person",
+      "displayName": "Damian Sligo-Green",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/067/large/Profile_pic.jpg?1406161896"
+    },
+    {
+      "id": "dan-lewis",
+      "type": "person",
+      "displayName": "Dan Lewis",
+      "image": "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2014-11-12/2989479254_e0c4701cc7fb3409cf6e_192.jpg"
+    },
+    {
+      "id": "daniel-spector",
+      "type": "person",
+      "displayName": "Daniel Spector",
+      "image": "http://www.rabid.co.nz/assets/profiles/daniel-sq-d5671c74529d19f22d69779314a63131.jpg"
+    },
+    {
+      "id": "darcy-burge",
+      "type": "person",
+      "displayName": "Darcy Burge",
+      "image": "https://lh4.googleusercontent.com/-Y_et7av4kT8/UrJ9gSXaQnI/AAAAAAAAAEI/YHGiNRYRsPE/s544-no/ProfilePhoto.png"
+    },
+    {
+      "id": "derek",
+      "type": "person",
+      "displayName": "Derek Razo",
+      "image": "https://lh4.googleusercontent.com/-eyaiiPvDQD4/AAAAAAAAAAI/AAAAAAAAAAA/6G9Kw5SoZ8A/photo.jpg"
+    },
+    {
+      "id": "dr-craig",
+      "type": "person",
+      "displayName": "Dr Craig Schock",
+      "image": "https://lh3.googleusercontent.com/-31fWSpad1Ig/AAAAAAAAAAI/AAAAAAAAAAA/52U1IHgcqlM/photo.jpg"
+    },
+    {
+      "id": "duncan-matheson",
+      "type": "person",
+      "displayName": "Duncan Matheson",
+      "image": "http://www.buckybox.com/images/team-duncan-c519bce1.jpg"
+    },
+    {
+      "id": "emily-harris",
+      "type": "person",
+      "displayName": "Emily Harris",
+      "image": "https://lh6.googleusercontent.com/-XWjNFjYTID4/UzIvHc7VrqI/AAAAAAAAAVM/82XxeGcqOQI/s96-no/2014-03-25"
+    },
+    {
+      "id": "ela-alptekin",
+      "type": "person",
+      "displayName": "Ela Alptekin",
+      "image": "https://lh6.googleusercontent.com/-1H9WLz3Lr5Y/VNAKfZTPVLI/AAAAAAAAAmM/wlTQjDTtrm4/s544-no/10532940_10152543216839130_882099269063416338_n.jpg"
+    },
+    {
+      "id": "gary-elshaw",
+      "type": "person",
+      "displayName": "Gary Elshaw",
+      "image": "https://secure.gravatar.com/avatar/e30cb409d435f5b626db44620e95d134.png?d=none&r=pg&s=256"
+    },
+    {
+      "id": "genevieve",
+      "type": "person",
+      "displayName": "Genevieve Parkes",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/004/638/large/Screenshot_2014-09-30_22.01.31.png?1412069313"
+    },
+    {
+      "id": "gina-rembe",
+      "type": "person",
+      "displayName": "Gina Rembe",
+      "image": "https://secure.gravatar.com/avatar/77bb18aa5925ecd7dff8ef71325cc57f.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "hannah",
+      "type": "person",
+      "displayName": "Hannah Salmon",
+      "image": "http://gravatar.com/avatar/afa91980b06fae820c502ed90f8431fd?s=512&d=identicon"
+    },
+    {
+      "id": "helene-malandain",
+      "type": "person",
+      "displayName": "Helene Malandain",
+      "image": "https://lh3.googleusercontent.com/-tcCfOtEa9cs/T8iAok1mdXI/AAAAAAAAA2c/VLrBjao3Nlk/s480-no/1%2BJun%2B2012%2B20%3A43%3A22.jpg"
+    },
+    {
+      "id": "isabelle-metz",
+      "type": "person",
+      "displayName": "Isabelle Metz"
+    },
+    {
+      "id": "jack-tolley",
+      "type": "person",
+      "displayName": "Jack Tolley",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/216/large/jackphotolowresjan2015.jpg?1423689804"
+    },
+    {
+      "id": "jackson",
+      "type": "person",
+      "displayName": "Jackson",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/004/678/large/tintin.jpeg?1411354440"
+    },
+    {
+      "id": "jaime-campbell",
+      "type": "person",
+      "displayName": "Jaime Campbell",
+      "image": "https://lh4.googleusercontent.com/-Hsu9wgqMCNA/VD8MAT8pm1I/AAAAAAAAABU/YvpZLLgxUFs/w427-h426-no/Jamanius.jpg"
+    },
+    {
+      "id": "jaime-mcdonald",
+      "type": "person",
+      "displayName": "Jaime McDonald"
+    },
+    {
+      "id": "james-kiesel",
+      "type": "person",
+      "displayName": "James",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/011/834/large/10366246_10203157007760488_1186876061934200688_n.jpg?1405896966"
+    },
+    {
+      "id": "james-king",
+      "type": "person",
+      "displayName": "James King"
+    },
+    {
+      "id": "jess",
+      "type": "person",
+      "displayName": "Jess",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/030/918/large/puppy.jpg?1412151528"
+    },
+    {
+      "id": "jesse",
+      "type": "person",
+      "displayName": "Jesse Doud",
+      "image": "https://www.loomio.org/assets/people/jesse-b605b0d9033fc5638acfb5ab5b2181e1.jpg"
+    },
+    {
+      "id": "jon",
+      "type": "person",
+      "displayName": "Jon Lemmon",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/003/large/strawberry.jpeg?1406161853"
+    },
+    {
+      "id": "jordan-carter",
+      "type": "person",
+      "displayName": "Jordan Carter",
+      "image": "http://www.buckybox.com/images/team-jordan-023095f4.jpg"
+    },
+    {
+      "id": "josh-forde",
+      "type": "person",
+      "displayName": "Josh Forde",
+      "image": "http://www.rabid.co.nz/assets/profiles/josh-sq-e1486588bc767caf12d3bd4a8523558a.jpg"
+    },
+    {
+      "id": "josh-mcarthur",
+      "type": "person",
+      "displayName": "Josh McArthur",
+      "image": "http://www.rabid.co.nz/assets/profiles/josh-mc-sq-403f5efd53096fe8fe2bc54a664710ac.jpg"
+    },
+    {
+      "id": "joshua-vial",
+      "type": "person",
+      "displayName": "Joshua Vial",
+      "image": "https://avatars3.githubusercontent.com/u/72309?v=2&s=460"
+    },
+    {
+      "id": "kate-beecroft",
+      "type": "person",
+      "displayName": "Kate Beecroft",
+      "image": "http://www.buckybox.com/images/team-kate-5bd81dff.jpg"
+    },
+    {
+      "id": "katie",
+      "type": "person",
+      "displayName": "Katie",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/030/918/large/puppy.jpg?1412151528"
+    },
+    {
+      "id": "kiesia",
+      "type": "person",
+      "displayName": "Kiesia Carmine",
+      "image": "https://secure.gravatar.com/avatar/e83333fdb3380a648d42a4e174e6c0d5.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "laura-o'connell-rapira",
+      "type": "person",
+      "displayName": "Laura O'Connell-Rapira",
+      "image": "https://d3n8a8pro7vhmx.cloudfront.net/actionstation/pages/104/attachments/original/1407014944/laura.jpg?1407014944"
+    },
+    {
+      "id": "malcolm-shearer",
+      "type": "person",
+      "displayName": "Malcolm Shearer",
+      "image": "https://lh3.googleusercontent.com/-xu_ROW_sm8w/AAAAAAAAAAI/AAAAAAAAGms/hhOUOgZNCJM/photo.jpg"
+    },
+    {
+      "id": "manu",
+      "type": "person",
+      "displayName": "Manu Vallyon",
+      "image": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/00a/1e6/0930f0c.jpg"
+    },
+    {
+      "id": "marianne-elliott",
+      "type": "person",
+      "displayName": "Marianne Elliot",
+      "image": "https://d3n8a8pro7vhmx.cloudfront.net/actionstation/pages/104/attachments/original/1407013228/marianne.jpg?1407013228"
+    },
+    {
+      "id": "mary-o'keeffe",
+      "type": "person",
+      "displayName": "Mary O'Keeffe",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/040/445/large/photo1_%283%29.jpg?1414569625"
+    },
+    {
+      "id": "mason-herber",
+      "type": "person",
+      "displayName": "Mason Herber",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/011/190/large/profile_pic.jpg?1403835891"
+    },
+    {
+      "id": "matt-poland",
+      "type": "person",
+      "displayName": "Matt Poland"
+    },
+    {
+      "id": "matt-sinnock",
+      "type": "person",
+      "displayName": "Matt Sinnock",
+      "image": "https://media.licdn.com/mpr/mpr/shrink_120_120/p/3/000/033/33f/1b85d25.jpg"
+    },
+    {
+      "id": "matthew-bartlett",
+      "type": "person",
+      "displayName": "Matthew Bartlett",
+      "image": "https://secure.gravatar.com/avatar/63bb0231a55daec448cd2ecf30ed722e.png?d=none&r=pg&s=512"
+    },
+    {
+      "id": "matthew-kerr",
+      "type": "person",
+      "displayName": "Matthew Kerr",
+      "image": "https://secure.gravatar.com/avatar/b064ca94396ebd53f3154f15d6fb5f3c.jpg?s=192&d=https%3A%2F%2Fslack.global.ssl.fastly.net%2F3654%2Fimg%2Favatars%2Fava_0012.png"
+    },
+    {
+      "id": "maz-hermon",
+      "type": "person",
+      "displayName": "Maz Hermon",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/019/large/mazProfileOfficeBW.png?1406161867"
+    },
+    {
+      "id": "megan-bowra-dean",
+      "type": "person",
+      "displayName": "Megan Bowra Dean",
+      "image": "http://www.rabid.co.nz/assets/profiles/megan-sq-48b9b564b39b994ade5b7acb89c5f734.jpg"
+    },
+    {
+      "id": "megan-salole",
+      "type": "person",
+      "displayName": "Megan Salole",
+      "image": "http://static1.squarespace.com/static/5169f4a1e4b0fdc6c23ef665/t/531fc2d5e4b019b60a36e035/1394590574949/megan.jpg"
+    },
+    {
+      "id": "michael-elwood-smith",
+      "type": "person",
+      "displayName": "Michael",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/003/827/large/Michael_waterfront_compressed.jpg?1366258373"
+    },
+    {
+      "id": "mikey",
+      "type": "person",
+      "displayName": "Mikey Williams",
+      "image": "http://gravatar.com/avatar/22ee24b84d0a2a9446fc9c0fe0652c46?s=512&d=identicon"
+    },
+    {
+      "id": "milan",
+      "type": "person",
+      "displayName": "Milan Holzapfel",
+      "image": "https://media.licdn.com/mpr/mpr/shrink_500_500/p/8/005/09a/1ca/171c54a.jpg"
+    },
+    {
+      "id": "minh",
+      "type": "person",
+      "displayName": "Minh Nhat Ha",
+      "image": "https://secure.gravatar.com/avatar/9ad30edff43316a917fdc37d71329a8f.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "mix",
+      "type": "person",
+      "displayName": "Mix Irving",
+      "image": "http://www.gravatar.com/avatar/3c74b184677ec92d495b328105aed1dc.png"
+    },
+    {
+      "id": "nanz",
+      "type": "person",
+      "displayName": "Nanz Nair",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/002/685/large/photo.jpeg?1417128452"
+    },
+    {
+      "id": "mj-kaplan",
+      "type": "person",
+      "displayName": "MJ",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/005/693/large/Swearer_140421_1710.jpg?1429795564"
+    },
+    {
+      "id": "neva-poletti",
+      "type": "person",
+      "displayName": "Neva Poletti",
+      "image": "https://lh3.googleusercontent.com/-UZ4rJVCvOuw/AAAAAAAAAAI/AAAAAAAAAI0/lMkDce_2yz8/photo.jpg"
+    },
+    {
+      "id": "nicola",
+      "type": "person",
+      "displayName": "Nicola Rankin",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/003/272/large/Photo_on_24-03-14_at_9.21_AM__4.jpg?1396254523"
+    },
+    {
+      "id": "nina-atkinson",
+      "type": "person",
+      "displayName": "Nina Atkinson",
+      "image": "https://d3n8a8pro7vhmx.cloudfront.net/actionstation/pages/104/attachments/original/1431904760/AS_Nina_resized.png?1431904760"
+    },
+    {
+      "id": "patrick",
+      "type": "person",
+      "displayName": "Patrick Corrieri",
+      "image": "https://lh4.googleusercontent.com/-sbXdtdJVuTY/UwKytJCw6KI/AAAAAAAAAE8/cDvuH3uEStM/s498-no/IMG_0114.JPG"
+    },
+    {
+      "id": "paul-ingle",
+      "type": "person",
+      "displayName": "Paul Ingle",
+      "image": "https://media.licdn.com/media/p/1/000/05e/05a/182215a.jpg"
+    },
+    {
+      "id": "penny-hagen",
+      "type": "person",
+      "displayName": "Penny Hagen",
+      "image": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/082/036/2a69d82.jpg"
+    },
+    {
+      "id": "pepper-curry",
+      "type": "person",
+      "displayName": "Pepper Curry",
+      "image": "http://www.rabid.co.nz/assets/profiles/pepper-sq-66a2ca32f29350c3a36976146e5b5586.jpg"
+    },
+    {
+      "id": "phill-coxon",
+      "type": "person",
+      "displayName": "Phill Coxon",
+      "image": "https://lh4.googleusercontent.com/-sbXdtdJVuTY/UwKytJCw6KI/AAAAAAAAAE8/cDvuH3uEStM/s498-no/IMG_0114.JPG"
+    },
+    {
+      "id": "reaksmey",
+      "type": "person",
+      "displayName": "Reaksmey Chea",
+      "image": "https://lh4.googleusercontent.com/-sbXdtdJVuTY/UwKytJCw6KI/AAAAAAAAAE8/cDvuH3uEStM/s498-no/IMG_0114.JPG"
+    },
+    {
+      "id": "rebeka",
+      "type": "person",
+      "displayName": "Rebeka",
+      "image": "https://secure.gravatar.com/avatar/4f3d55c2cfc8d738fe3bb5b55c09d12d.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "riccardo-tacconi",
+      "type": "person",
+      "displayName": "Riccardo Tacconi",
+      "image": "https://avatars2.githubusercontent.com/u/82217?v=3&s=460"
+    },
+    {
+      "id": "richard-bartlett",
+      "type": "person",
+      "displayName": "Dick Bartlett",
+      "image": "https://secure.gravatar.com/avatar/d5039eb7649c89379ed0715e41a68310.png?d=none&r=pg&s=512"
+    },
+    {
+      "id": "rithy",
+      "type": "person",
+      "displayName": "Rithy",
+      "image": "https://secure.gravatar.com/avatar/4f3d55c2cfc8d738fe3bb5b55c09d12d.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "rob-guthrie",
+      "type": "person",
+      "displayName": "Rob Guthrie",
+      "image": "https://www.loomio.org/assets/people/rob-f876c436322be6a84b17abf80872e68b.jpg"
+    },
+    {
+      "id": "rob-ramsay",
+      "type": "person",
+      "displayName": "Rob Ramsay",
+      "image": "http://www.rabid.co.nz/assets/profiles/rob-sq-905a27971311a49ff1cb7817fe1243db.jpg"
+    },
+    {
+      "id": "rochelle-furneaux",
+      "type": "person",
+      "displayName": "Rochelle Furneaux",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/000/080/large/2012-03-26_22.58.25.jpg?1417033509"
+    },
+    {
+      "id": "rohan-wakefield",
+      "type": "person",
+      "displayName": "Rohan Wakefield",
+      "image": "http://devacademy.co.nz/wp-content/uploads/2014/07/Rohan_Wakefield.jpg"
+    },
+    {
+      "id": "rose-lu",
+      "type": "person",
+      "displayName": "Rose Lu",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/005/506/large/rose.jpg?1417556673"
+    },
+    {
+      "id": "rowan-brooks",
+      "type": "person",
+      "displayName": "Rowan Brooks"
+    },
+    {
+      "id": "ryan-mearns",
+      "type": "person",
+      "displayName": "Ryan Mearns",
+      "image": "https://d3n8a8pro7vhmx.cloudfront.net/actionstation/pages/104/attachments/original/1418589420/ryan.jpg?1418589420"
+    },
+    {
+      "id": "sam-parkin",
+      "type": "person",
+      "displayName": "Sam Parkin",
+      "image": "https://secure.gravatar.com/avatar/beab112fb9bfe5ce100e37fbb1d7c89e.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "sam-rye",
+      "type": "person",
+      "displayName": "Sam Rye",
+      "image": "http://static2.stuff.co.nz/1352053939/736/7906736.jpg"
+    },
+    {
+      "id": "samnang",
+      "type": "person",
+      "displayName": "Samnang",
+      "image": "https://secure.gravatar.com/avatar/863e24c91fcf1cd3c879ea62a401365e.png?d=none&r=pg&s=200"
+    },
+    {
+      "id": "samson-ootoovak",
+      "type": "person",
+      "displayName": "Samson Ootoovak",
+      "image": "https://secure.gravatar.com/avatar/638d7e4bb8d455e8149b2f46355c0973.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "sandra-clark",
+      "type": "person",
+      "displayName": "Sandra Clark",
+      "image": "http://www.rabid.co.nz/assets/profiles/sandra-sq-b002f08a7f3fcf87869193102b1c60e3.jpg"
+    },
+    {
+      "id": "sea-rotman",
+      "type": "person",
+      "displayName": "Sea Rotman",
+      "image": "http://www.eceee.org/all-news/columnists/sea-rotmann/square_photo"
+    },
+    {
+      "id": "seb-paquet",
+      "type": "person",
+      "displayName": "Seb Paquet",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/056/077/large/photo_%283%29.jpg?1426715631"
+    },
+    {
+      "id": "silvia-zuur",
+      "type": "person",
+      "displayName": "Silvia Zuur",
+      "image": "http://www.buckybox.com/images/team-silvia-13b913f3.jpg"
+    },
+    {
+      "id": "simon",
+      "type": "person",
+      "displayName": "Simon Tegg",
+      "image": "https://avatars0.githubusercontent.com/u/1574732?v=2&s=460"
+    },
+    {
+      "id": "stephanie",
+      "type": "person",
+      "displayName": "Stephanie Noirpoudre",
+      "image": "https://trello-avatars.s3.amazonaws.com/7eb4f53599c96d2ae86d901eb9e7bdc9/170.png"
+    },
+    {
+      "id": "thomas-mitchell",
+      "type": "person",
+      "displayName": "Thomas Mitchell",
+      "image": "http://www.thomasmitchell.co.nz/assets/photo.jpg"
+    },
+    {
+      "id": "thomas",
+      "type": "person",
+      "displayName": "Thomas",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/006/347/large/1391568_10201894748628703_266872761_n.jpg?1383903958"
+    },
+    {
+      "id": "tracey",
+      "type": "person",
+      "displayName": "Tracey Ambrose",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/002/249/large/208497_10150167121387617_677007616_6980518_4853552_n.jpg?1359511960"
+    },
+    {
+      "id": "trudy-lane",
+      "type": "person",
+      "displayName": "Trudy Lane",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/002/249/large/208497_10150167121387617_677007616_6980518_4853552_n.jpg?1359511960"
+    },
+    {
+      "id": "viv-maidaborn",
+      "type": "person",
+      "displayName": "Viv",
+      "image": "https://secure.gravatar.com/avatar/2e1a65be5c5afea18cdca64f9b5e5ea0.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "vivienne-askey",
+      "type": "person",
+      "displayName": "Vivienne Askey",
+      "image": "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2015-05-19/4965630241_aa3bd7f418d20487248e_192.jpg"
+    },
+    {
+      "id": "will-lau",
+      "type": "person",
+      "displayName": "Will Lau",
+      "image": "http://www.buckybox.com/images/team-will-683106f2.jpg"
+    },
+    {
+      "id": "yasmine",
+      "type": "person",
+      "displayName": "Yasmine",
+      "image": "https://secure.gravatar.com/avatar/a4f4b24f727137f9a8b7654d45a72012.png?d=none&r=pg&s=170"
+    },
+    {
+      "id": "wiremu",
+      "type": "person",
+      "displayName": "Wiremu",
+      "image": "https://loomio-attachments.s3.amazonaws.com/users/uploaded_avatars/000/006/452/large/edward-snowden-stylized.png?1411340195"
+    }
+  ],
+  "relationshipTypes": [
+    {
+      "id": "is-member-of",
+      "inverse": "has-member",
+      "labels": [
+        "{source} belongs to {target}"
+      ],
+      "color": "#3F51B5"
+    },
+    {
+      "id": "has-member",
+      "inverse": "is-member-of",
+      "labels": [
+        "{source} includes {target}"
+      ],
+      "color": "#2196F3"
+    },
+    {
+      "id": "mentors",
+      "inverse": "",
+      "labels": [
+        "{source} mentors {target}",
+        "mentors in {context}"
+      ],
+      "color": "#673AB7"
+    },
+    {
+      "id": "is-subgroup-of",
+      "inverse": "has-subgroup",
+      "labels": [
+        "{source} is part of {target}"
+      ],
+      "color": "#E91E63"
+    },
+    {
+      "id": "has-subgroup",
+      "inverse": "is-subgroup-of",
+      "labels": [
+        "{source} incorporates {target}"
+      ],
+      "color": "#FF5722"
+    },
+    {
+      "id": "stewards",
+      "inverse": "",
+      "labels": [
+        "{source} stewards {target}"
+      ],
+      "color": "#F44336"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "a53c6bb7-e3c9-403e-90a0-96ddb232c44b",
+      "type": "is-subgroup-of",
+      "source": "action-station",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "71452e63-f227-4c46-aea9-511aa6743b88",
+      "type": "is-subgroup-of",
+      "source": "bucky-box",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "a99797b2-1e86-4c2c-9b37-aa687b644081",
+      "type": "is-subgroup-of",
+      "source": "chalkle",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "f5854b26-2bfa-4919-b317-e7140ac15a2c",
+      "type": "is-subgroup-of",
+      "source": "enspiral-accounting",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "30da6cb0-94ea-4b62-88f1-23f15b2f2a4a",
+      "type": "is-subgroup-of",
+      "source": "enspiral-craftworks",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "b724639c-c619-4158-ac06-944856a510c0",
+      "type": "is-subgroup-of",
+      "source": "enspiral-dev-academy",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "2d34d7fa-b913-48c7-9044-122ff00f8b5c",
+      "type": "is-subgroup-of",
+      "source": "enspiral-lean-lab",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "f9afadd2-1e46-4bed-9205-2fe970909d4d",
+      "type": "is-subgroup-of",
+      "source": "enspiral-legal",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "14419d87-ae42-4048-945e-af4ed1fb3abd",
+      "type": "is-subgroup-of",
+      "source": "enspiral-services",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "ca0d9140-e7d5-4d98-86b3-b9f79f7a6831",
+      "type": "is-subgroup-of",
+      "source": "enspiral-space",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "7c20d7ee-0858-4977-9bad-b3e43b96eb57",
+      "type": "is-subgroup-of",
+      "source": "freewheelers",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "2130e547-48a2-469a-ae2a-3b84e9bce11d",
+      "type": "is-subgroup-of",
+      "source": "iguanas",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "a4a30f81-d4c8-4a96-83fb-8d5cc42f097c",
+      "type": "is-subgroup-of",
+      "source": "lifehack",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "216554db-7b25-4758-bfc8-f92d3bc143ef",
+      "type": "is-subgroup-of",
+      "source": "loomio",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "4ce26f2d-2cfe-4521-b37f-a6d1cc9f8c82",
+      "type": "is-subgroup-of",
+      "source": "noshi-creative",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "b592d599-6156-407b-8b50-72d4bd69f196",
+      "type": "is-subgroup-of",
+      "source": "purposive",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "f4db00fc-b9b2-4671-b4d9-e8b0e509eb92",
+      "type": "is-subgroup-of",
+      "source": "rabid",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "e059a593-75e2-41b7-afe4-6c1385bbd712",
+      "type": "is-subgroup-of",
+      "source": "scoop",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "8d3abae7-9dbd-4a73-ac36-ecd0427d126d",
+      "type": "is-subgroup-of",
+      "source": "volunteer-impact",
+      "target": "enspiral-foundation"
+    },
+    {
+      "id": "c59e3603-7535-4643-8d16-16a6fdadf173",
+      "type": "is-member-of",
+      "source": "aaron-thornton",
+      "target": "loomio"
+    },
+    {
+      "id": "7db93fe5-6ac6-47da-9c6a-33df69b52716",
+      "type": "is-member-of",
+      "source": "alanna",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "ecb32a6c-21f2-44fc-8745-394d75c8dc09",
+      "type": "is-member-of",
+      "source": "alanna",
+      "target": "loomio"
+    },
+    {
+      "id": "ed2ec779-4900-48c0-aa48-9009a353c2b0",
+      "type": "stewards",
+      "source": "alanna",
+      "target": "mj-kaplan",
+      "context": "loomio"
+    },
+    {
+      "id": "b426fd01-024f-4739-a79d-ee6d10c60a60",
+      "type": "is-member-of",
+      "source": "alastair-thompson",
+      "target": "scoop"
+    },
+    {
+      "id": "7e958a1e-68a0-48f5-bc9e-76edd84f4d90",
+      "type": "is-member-of",
+      "source": "alexanda",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "47996a50-29fb-4fb1-876a-3179cd14d1a9",
+      "type": "is-member-of",
+      "source": "allan",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "0914253f-6d53-4e6e-8293-43cde19a38a3",
+      "type": "is-member-of",
+      "source": "allan",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "366988aa-84de-47a3-bdbf-4c28ca579845",
+      "type": "is-member-of",
+      "source": "andrew-fyfe",
+      "target": "freewheelers"
+    },
+    {
+      "id": "df0d6682-fd51-49fe-98f8-ddc897a41b03",
+      "type": "is-member-of",
+      "source": "andrew-fyfe",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "2afeddee-123c-4011-8252-17c97533c8b6",
+      "type": "is-member-of",
+      "source": "anne-marie-sullivan",
+      "target": "freewheelers"
+    },
+    {
+      "id": "ac194271-9364-45e8-86fe-0e34f1170572",
+      "type": "is-member-of",
+      "source": "anne-marie-sullivan",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "91f1786a-fab1-4eae-8e27-8e5be497245b",
+      "type": "is-member-of",
+      "source": "anthony-cabraal",
+      "target": "bucky-box"
+    },
+    {
+      "id": "f8a2a81a-66ad-437d-84da-1f2c345cc891",
+      "type": "is-member-of",
+      "source": "anthony-cabraal",
+      "target": "chalkle"
+    },
+    {
+      "id": "bc8c1360-1fad-45a2-9ac1-14b252353c29",
+      "type": "is-member-of",
+      "source": "ayumi",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "906bc650-243c-4ce4-b127-a0c446df977b",
+      "type": "is-member-of",
+      "source": "ayumi",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "f509fa9a-7063-4c15-8ece-0be755d09e4e",
+      "type": "stewards",
+      "source": "ayumi",
+      "target": "simon",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "61b7743b-4e3c-4959-b003-5998f58adbe4",
+      "type": "is-member-of",
+      "source": "ben-knight",
+      "target": "loomio"
+    },
+    {
+      "id": "6dd00362-171b-402e-8282-777a1a82db35",
+      "type": "stewards",
+      "source": "ben-knight",
+      "target": "mary-o'keeffe",
+      "context": "loomio"
+    },
+    {
+      "id": "0046cb27-64ff-4baa-8027-ac1d91c3b0f6",
+      "type": "stewards",
+      "source": "ben-knight",
+      "target": "derek",
+      "context": "loomio"
+    },
+    {
+      "id": "c1dcc927-7a89-4c52-917f-bac806308b32",
+      "type": "is-member-of",
+      "source": "breccan-mcleod-lundy",
+      "target": "rabid"
+    },
+    {
+      "id": "6c5af3f0-63f1-4108-9ce4-18fb260c9976",
+      "type": "is-member-of",
+      "source": "breccan-mcleod-lundy",
+      "target": "enspiral-space"
+    },
+    {
+      "id": "8cdcd210-463c-4dc6-9f95-96e5b7bb29e1",
+      "type": "is-member-of",
+      "source": "anthony-rohan",
+      "target": "enspiral-accounting"
+    },
+    {
+      "id": "2d42c734-59de-4455-9567-5d7ecae378d1",
+      "type": "is-member-of",
+      "source": "brenda-wallace",
+      "target": "rabid"
+    },
+    {
+      "id": "6c4853f4-cbf4-4ae7-9dc0-03e1fba5ebc0",
+      "type": "is-member-of",
+      "source": "carlos-chambers",
+      "target": "bucky-box"
+    },
+    {
+      "id": "52b0e164-43cf-4113-b115-af5ec404a18e",
+      "type": "is-member-of",
+      "source": "charlie",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "c5403a69-7d63-493a-8e42-91509d7e4e54",
+      "type": "is-member-of",
+      "source": "charlie",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "1464aea3-a093-45ff-94c5-4d267a6881c9",
+      "type": "stewards",
+      "source": "charlie",
+      "target": "jon",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "36e9f7e5-1542-4191-ab6e-9271ea84c8e0",
+      "type": "is-member-of",
+      "source": "cara-hill",
+      "target": "rabid"
+    },
+    {
+      "id": "1f622e65-b1f9-4b4b-b230-70fa1cc0ec50",
+      "type": "is-member-of",
+      "source": "charmaine-meyers",
+      "target": "enspiral-accounting"
+    },
+    {
+      "id": "18a74e92-3675-4747-a8d1-c269c6a51b91",
+      "type": "is-member-of",
+      "source": "charmaine-meyers",
+      "target": "enspiral-space"
+    },
+    {
+      "id": "56d4b2d8-c9d4-47f0-b8ce-dfb1008df5a9",
+      "type": "is-member-of",
+      "source": "chelsea-robinson",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "54493536-fea2-48f7-8be3-599bf4df575a",
+      "type": "is-member-of",
+      "source": "chelsea-robinson",
+      "target": "loomio"
+    },
+    {
+      "id": "6f9b1fc6-dcae-4cb4-aacf-69a99d49afb2",
+      "type": "stewards",
+      "source": "chelsea-robinson",
+      "target": "alanna",
+      "context": "loomio"
+    },
+    {
+      "id": "aef6cdcf-e436-4e89-ab4e-cf251a93b4fe",
+      "type": "stewards",
+      "source": "chelsea-robinson",
+      "target": "james-kiesel",
+      "context": "loomio"
+    },
+    {
+      "id": "0a22beb3-15e9-4675-907c-a789cbb424f0",
+      "type": "is-member-of",
+      "source": "chelsea-robinson",
+      "target": "lifehack"
+    },
+    {
+      "id": "ab9d562d-1f41-4541-a87e-9f5aa497357c",
+      "type": "is-member-of",
+      "source": "chloe",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "b6b9b4f5-30e1-43ed-b2c5-e223c99a7478",
+      "type": "is-member-of",
+      "source": "chris-bull",
+      "target": "freewheelers"
+    },
+    {
+      "id": "d2fbb783-72c0-45c3-8f9c-e220762df822",
+      "type": "is-member-of",
+      "source": "chris-bull",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "db5d9cdf-78c8-46c6-a9ee-d8fce62f76eb",
+      "type": "is-member-of",
+      "source": "chris",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "af8b43b6-ccd5-41e3-b7bf-72a069f0975b",
+      "type": "is-member-of",
+      "source": "chris",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "121706d1-001e-468d-845b-954890a50715",
+      "type": "is-member-of",
+      "source": "craig",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "671bfa06-a48a-4561-b92c-b14416b6cc04",
+      "type": "is-member-of",
+      "source": "craig",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "40288eea-f7e8-459e-8394-0d87a5e825c1",
+      "type": "stewards",
+      "source": "craig",
+      "target": "nicola",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "2b8f0d41-df6b-49b6-baff-632ba38bcfe8",
+      "type": "is-member-of",
+      "source": "cédric-félizard",
+      "target": "bucky-box"
+    },
+    {
+      "id": "ce8a208b-bf51-4891-a445-76ac61fec686",
+      "type": "is-member-of",
+      "source": "dale-de-graaf",
+      "target": "enspiral-accounting"
+    },
+    {
+      "id": "110d863c-787b-48ca-972b-d6149516b5af",
+      "type": "is-member-of",
+      "source": "damian-sligo-green",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "b42b8103-9139-45f7-a045-9c55997a32b5",
+      "type": "is-member-of",
+      "source": "damian-sligo-green",
+      "target": "noshi-creative"
+    },
+    {
+      "id": "bf7f099f-7f1a-47fd-a796-623af194e927",
+      "type": "is-member-of",
+      "source": "dan-lewis",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "8cfb2eec-7040-4e1a-96fb-9eb21fcf3ffb",
+      "type": "is-member-of",
+      "source": "daniel-spector",
+      "target": "rabid"
+    },
+    {
+      "id": "c6f13560-0cff-4519-8ee4-ded8dd1383ea",
+      "type": "is-member-of",
+      "source": "darcy-burge",
+      "target": "iguanas"
+    },
+    {
+      "id": "6ff6f3d1-bb8e-4ee8-b645-06642a48a9de",
+      "type": "is-member-of",
+      "source": "darcy-burge",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "8d6022fe-8a12-4dbb-9171-e06c6efaef3b",
+      "type": "is-member-of",
+      "source": "darcy-burge",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "e5d6a638-3181-41cb-9206-63c983009cd2",
+      "type": "is-member-of",
+      "source": "derek",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "4ce96f5e-7570-4327-9773-05b45f980dc3",
+      "type": "is-member-of",
+      "source": "derek",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "2b301c8f-9747-415b-9b68-6df3750b0f80",
+      "type": "is-member-of",
+      "source": "derek",
+      "target": "loomio"
+    },
+    {
+      "id": "b7bd6a63-85c6-47d6-91a7-dbce75ba30ff",
+      "type": "is-member-of",
+      "source": "dr-craig",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "83a888ff-e936-4442-a0f4-c5c09974fbc4",
+      "type": "is-member-of",
+      "source": "dr-craig",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "bf6ce27a-1d4c-4dcf-bdc5-e442f460004f",
+      "type": "stewards",
+      "source": "dr-craig",
+      "target": "joshua-vial",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "57736704-6075-4e23-b065-5aec26dd9234",
+      "type": "is-member-of",
+      "source": "duncan-matheson",
+      "target": "bucky-box"
+    },
+    {
+      "id": "ce4dc2c3-3e46-4237-92db-179e413c3d47",
+      "type": "is-member-of",
+      "source": "emily-harris",
+      "target": "purposive"
+    },
+    {
+      "id": "61c2b475-c66b-41de-9c01-efd108c007cc",
+      "type": "is-member-of",
+      "source": "emily-harris",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "5444c3ce-c7b2-4b61-aa6a-dc8d13907837",
+      "type": "is-member-of",
+      "source": "ela-alptekin",
+      "target": "noshi-creative"
+    },
+    {
+      "id": "ae0397cc-a4b3-4442-97f0-c17b04e92005",
+      "type": "is-member-of",
+      "source": "ela-alptekin",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "375acc15-0174-4127-8d57-4d750560d57f",
+      "type": "is-member-of",
+      "source": "gary-elshaw",
+      "target": "freewheelers"
+    },
+    {
+      "id": "4c63cb4b-56b0-4536-89eb-401269f47766",
+      "type": "is-member-of",
+      "source": "gary-elshaw",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "cad32796-b907-424a-9ab2-4b8945cbd894",
+      "type": "is-member-of",
+      "source": "genevieve",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "e893952a-d29c-4932-91c5-b508eff0cc49",
+      "type": "is-member-of",
+      "source": "genevieve",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "79b10d80-8a62-43a7-b76e-c458a59068ea",
+      "type": "stewards",
+      "source": "genevieve",
+      "target": "jesse",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "21621b41-2121-479c-a45d-cb6d34d52bda",
+      "type": "is-member-of",
+      "source": "gina-rembe",
+      "target": "iguanas"
+    },
+    {
+      "id": "4ae7ae9e-9ef5-49fe-8620-059c44273eae",
+      "type": "is-member-of",
+      "source": "gina-rembe",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "196d90fd-67e5-4f83-8944-b482d9c79b85",
+      "type": "is-member-of",
+      "source": "gina-rembe",
+      "target": "lifehack"
+    },
+    {
+      "id": "ce2e8fee-3a83-43c0-b18d-8bc91fc39ad0",
+      "type": "is-member-of",
+      "source": "hannah",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "5cc79ef5-cdf2-47f7-8a56-14ee91a79f08",
+      "type": "is-member-of",
+      "source": "hannah",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "4a7bd26f-e08f-4b7a-ac48-5d2f75c5b1e9",
+      "type": "is-member-of",
+      "source": "hannah",
+      "target": "loomio"
+    },
+    {
+      "id": "d7f515dd-9134-40fd-a7aa-32f5a6d72c4d",
+      "type": "stewards",
+      "source": "hannah",
+      "target": "jesse",
+      "context": "loomio"
+    },
+    {
+      "id": "11335d74-9ffb-4183-85c1-11e5fd886537",
+      "type": "is-member-of",
+      "source": "helene-malandain",
+      "target": "noshi-creative"
+    },
+    {
+      "id": "a7ec6baa-c54d-478b-8c3b-840a0b3e05c3",
+      "type": "is-member-of",
+      "source": "helene-malandain",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "f6c30a2d-e5e2-434b-b74e-ce20cd9e6981",
+      "type": "is-member-of",
+      "source": "isabelle-metz",
+      "target": "noshi-creative"
+    },
+    {
+      "id": "589e245a-accb-42b7-9ea2-88aef21fcd60",
+      "type": "is-member-of",
+      "source": "isabelle-metz",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "22961ad6-f7c5-4d35-bf76-fd6643ae837d",
+      "type": "is-member-of",
+      "source": "jack-tolley",
+      "target": "freewheelers"
+    },
+    {
+      "id": "9b6c9fdc-e01d-4968-a47e-f09f9e0df875",
+      "type": "is-member-of",
+      "source": "jack-tolley",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "f6bc90ac-94e8-44a6-8b0f-919ff6f81064",
+      "type": "is-member-of",
+      "source": "jackson",
+      "target": "freewheelers"
+    },
+    {
+      "id": "8685c68a-66b0-4be0-a805-c70aea004d49",
+      "type": "is-member-of",
+      "source": "jackson",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e3020d90-9fdf-4087-9729-21fc54978681",
+      "type": "is-member-of",
+      "source": "jaime-campbell",
+      "target": "iguanas"
+    },
+    {
+      "id": "0e69f190-1b4c-4051-96a2-802a34205659",
+      "type": "is-member-of",
+      "source": "jaime-campbell",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e7d0a5f2-e9b0-4979-a815-bf8a74ab7df9",
+      "type": "is-member-of",
+      "source": "jaime-campbell",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "a79ee187-3663-412d-a56a-30c4a4c51779",
+      "type": "is-member-of",
+      "source": "jaime-mcdonald",
+      "target": "freewheelers"
+    },
+    {
+      "id": "6c8cdb87-c9c7-4a63-a750-ecd83275c1d8",
+      "type": "is-member-of",
+      "source": "jaime-mcdonald",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "015f9b24-85c9-4c58-a4ad-da5b71b5f22b",
+      "type": "is-member-of",
+      "source": "james-kiesel",
+      "target": "iguanas"
+    },
+    {
+      "id": "045d4127-fecc-45b0-a628-f20ab97f6910",
+      "type": "is-member-of",
+      "source": "james-kiesel",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "cf8921c6-f33d-412c-a866-90d09aa32b0a",
+      "type": "is-member-of",
+      "source": "james-kiesel",
+      "target": "loomio"
+    },
+    {
+      "id": "eef3db59-e748-4680-9960-8c5fa1bd9e79",
+      "type": "stewards",
+      "source": "james-kiesel",
+      "target": "richard-bartlett",
+      "context": "loomio"
+    },
+    {
+      "id": "628d2d90-2a88-4b62-bbc8-e41cc2eb26dd",
+      "type": "is-member-of",
+      "source": "james-king",
+      "target": "freewheelers"
+    },
+    {
+      "id": "f1434672-d7f2-4b7a-82b0-6a324e0e5dc7",
+      "type": "is-member-of",
+      "source": "james-king",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "9021d425-22cc-416f-a0ec-f609069b80aa",
+      "type": "is-member-of",
+      "source": "jess",
+      "target": "iguanas"
+    },
+    {
+      "id": "157bbd45-10a3-4ed4-be26-136c2a3a85dc",
+      "type": "is-member-of",
+      "source": "jess",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "3991e13c-30c1-49eb-9b8e-fd868d1a756f",
+      "type": "is-member-of",
+      "source": "jesse",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "47846907-1940-4803-9fa4-fa519f337696",
+      "type": "is-member-of",
+      "source": "jesse",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "38f94101-16d5-4379-9b52-02d4c7893cc6",
+      "type": "is-member-of",
+      "source": "jesse",
+      "target": "loomio"
+    },
+    {
+      "id": "38a11bd0-b0ed-4304-a1d8-4b929dbb5d5f",
+      "type": "stewards",
+      "source": "jesse",
+      "target": "mix",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "50bd3590-a50f-428f-b8a5-88260b67c8e5",
+      "type": "is-member-of",
+      "source": "jon",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "dad08976-8a83-45a4-aa09-a25faec6c090",
+      "type": "stewards",
+      "source": "jon",
+      "target": "mikey",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "ad62cfcc-0839-44c2-b21b-90806eb675d3",
+      "type": "is-member-of",
+      "source": "jon",
+      "target": "loomio"
+    },
+    {
+      "id": "e1c2a4fd-31e5-440e-87ff-4068280b874f",
+      "type": "is-member-of",
+      "source": "jordan-carter",
+      "target": "bucky-box"
+    },
+    {
+      "id": "45a3b032-98cd-41fd-b12f-5f4153799056",
+      "type": "is-member-of",
+      "source": "josh-forde",
+      "target": "rabid"
+    },
+    {
+      "id": "ce8ddca3-ee4d-48a8-9c26-e492f2c148a4",
+      "type": "is-member-of",
+      "source": "josh-forde",
+      "target": "lifehack"
+    },
+    {
+      "id": "09c2596f-1813-405b-8dc2-c2085a0c84e8",
+      "type": "is-member-of",
+      "source": "josh-mcarthur",
+      "target": "rabid"
+    },
+    {
+      "id": "851e2003-855b-4857-846a-ec01043e8a73",
+      "type": "is-member-of",
+      "source": "joshua-vial",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "deebd361-09c1-43da-bec1-536ad2c3c39d",
+      "type": "is-member-of",
+      "source": "joshua-vial",
+      "target": "iguanas"
+    },
+    {
+      "id": "6cde0a39-c268-4369-8a95-9b6c32fcae29",
+      "type": "is-member-of",
+      "source": "joshua-vial",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "94e4a59a-f78e-4d9c-8014-81c8e69e7298",
+      "type": "stewards",
+      "source": "joshua-vial",
+      "target": "genevieve",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "c29725e4-34b8-464f-af22-b810f02b0795",
+      "type": "is-member-of",
+      "source": "joshua-vial",
+      "target": "bucky-box"
+    },
+    {
+      "id": "25199bf7-f638-49ef-95cb-dc0dbe3b735e",
+      "type": "is-member-of",
+      "source": "joshua-vial",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "7dd33a0b-f82f-48c8-85a4-c6c61c3159c4",
+      "type": "is-member-of",
+      "source": "kate-beecroft",
+      "target": "bucky-box"
+    },
+    {
+      "id": "0241edea-86e5-4af5-a1a8-4d80823bb972",
+      "type": "is-member-of",
+      "source": "katie",
+      "target": "purposive"
+    },
+    {
+      "id": "72e7ca04-532f-4c6a-9a9b-d9dcdc8c8058",
+      "type": "is-member-of",
+      "source": "katie",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "02dec243-477e-4541-9b38-6acc8f949fe3",
+      "type": "is-member-of",
+      "source": "kiesia",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "717e8e80-26c0-434f-a976-68edf5419888",
+      "type": "is-member-of",
+      "source": "kiesia",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "9120a082-ae10-4406-bdc9-08d4ed172d4d",
+      "type": "is-member-of",
+      "source": "laura-o'connell-rapira",
+      "target": "action-station"
+    },
+    {
+      "id": "0292abb1-5110-452e-9693-a7c0baf19b7e",
+      "type": "is-member-of",
+      "source": "malcolm-shearer",
+      "target": "iguanas"
+    },
+    {
+      "id": "8a189afd-f638-4037-beca-c5e70f28c783",
+      "type": "is-member-of",
+      "source": "malcolm-shearer",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "85504549-26ed-477d-81d2-6a572f382fae",
+      "type": "is-member-of",
+      "source": "malcolm-shearer",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "bef13eca-9f26-4f0a-95cf-16dbe6095b2a",
+      "type": "is-member-of",
+      "source": "manu",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "6fe46051-1c27-4742-984b-a5ff287d4d09",
+      "type": "is-member-of",
+      "source": "manu",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e8ff6b53-c1bc-491c-848b-d1cf9ee3a779",
+      "type": "is-member-of",
+      "source": "marianne-elliott",
+      "target": "action-station"
+    },
+    {
+      "id": "818aee28-4fdf-4ccb-8855-0afec012581c",
+      "type": "is-member-of",
+      "source": "mary-o'keeffe",
+      "target": "loomio"
+    },
+    {
+      "id": "00e1b483-9353-44d7-b776-b36db49b1a50",
+      "type": "stewards",
+      "source": "mary-o'keeffe",
+      "target": "mix",
+      "context": "loomio"
+    },
+    {
+      "id": "835f5aa5-9034-45be-b1c4-439d7f744119",
+      "type": "stewards",
+      "source": "mary-o'keeffe",
+      "target": "hannah",
+      "context": "loomio"
+    },
+    {
+      "id": "2fa732cb-fe43-4e02-bd21-2b57a0322537",
+      "type": "is-member-of",
+      "source": "mason-herber",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "84d6e1e7-b258-4937-84fa-0995acfd3b8f",
+      "type": "is-member-of",
+      "source": "mason-herber",
+      "target": "purposive"
+    },
+    {
+      "id": "94585ad6-cd23-43de-8d31-22d98782b4d5",
+      "type": "is-member-of",
+      "source": "mason-herber",
+      "target": "enspiral-lean-lab"
+    },
+    {
+      "id": "0a951447-bb0a-433d-86ea-188643b1333f",
+      "type": "is-member-of",
+      "source": "matt-poland",
+      "target": "purposive"
+    },
+    {
+      "id": "eae8ce3e-f88b-4761-9b6c-894c08d6cd73",
+      "type": "is-member-of",
+      "source": "matt-poland",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "438624e5-373a-436d-8c1c-b4ea037c6b2f",
+      "type": "is-member-of",
+      "source": "matt-sinnock",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "319d8ce2-0d4f-43ad-8115-3d9c015adcff",
+      "type": "is-member-of",
+      "source": "matt-sinnock",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "42868343-d763-4e1a-ab2e-571db5a6b96c",
+      "type": "is-member-of",
+      "source": "matthew-bartlett",
+      "target": "loomio"
+    },
+    {
+      "id": "b44a9055-de41-4941-b20e-e851aa17c9b3",
+      "type": "stewards",
+      "source": "matthew-bartlett",
+      "target": "jon",
+      "context": "loomio"
+    },
+    {
+      "id": "bc5ce64c-75d6-4a20-8cfa-f43025e2bac9",
+      "type": "is-member-of",
+      "source": "matthew-kerr",
+      "target": "chalkle"
+    },
+    {
+      "id": "5e1e6397-20d4-4956-8112-84975284634a",
+      "type": "is-member-of",
+      "source": "maz-hermon",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "ee6f3932-4213-453e-b645-171903ce3423",
+      "type": "is-member-of",
+      "source": "maz-hermon",
+      "target": "noshi-creative"
+    },
+    {
+      "id": "45563f5f-83a6-4130-a52c-22d35b630512",
+      "type": "is-member-of",
+      "source": "megan-bowra-dean",
+      "target": "rabid"
+    },
+    {
+      "id": "5e093c56-9aef-4d7a-b2eb-ef82ea3876be",
+      "type": "is-member-of",
+      "source": "megan-salole",
+      "target": "freewheelers"
+    },
+    {
+      "id": "cb7cb93e-5e7f-44bd-b363-390184f6bc50",
+      "type": "is-member-of",
+      "source": "megan-salole",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "85941e19-9c45-4a15-84a0-1534a857d424",
+      "type": "is-member-of",
+      "source": "michael-elwood-smith",
+      "target": "loomio"
+    },
+    {
+      "id": "98ce6cd9-ca6d-49fe-a41c-ae10f322cb04",
+      "type": "stewards",
+      "source": "michael-elwood-smith",
+      "target": "rob-guthrie",
+      "context": "loomio"
+    },
+    {
+      "id": "af15d195-7e68-4f87-a9c7-89b282490a52",
+      "type": "is-member-of",
+      "source": "mikey",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "17b76a2d-e631-4e96-9e3e-62c1f4aa680d",
+      "type": "is-member-of",
+      "source": "mikey",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "6681e467-45d3-48ff-8bc0-c4e6f0858d06",
+      "type": "mentors",
+      "source": "simon",
+      "target": "mikey"
+    },
+    {
+      "id": "e95b139e-1f0e-471f-906e-9f7107611d55",
+      "type": "stewards",
+      "source": "mikey",
+      "target": "craig",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "3dfab89f-c029-4a08-a9ac-5d2c1e134b80",
+      "type": "is-member-of",
+      "source": "milan",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "d8186eae-61bb-4f2a-8c78-6f935fb567bf",
+      "type": "is-member-of",
+      "source": "milan",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "1b18d190-6379-4694-b487-8b36cdf8929a",
+      "type": "is-member-of",
+      "source": "minh",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "59a8bd65-daa8-4c8f-a140-c5460957316e",
+      "type": "is-member-of",
+      "source": "minh",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "02e786d2-ea10-4437-8a12-e395e529ea88",
+      "type": "is-member-of",
+      "source": "mix",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "3e09c8f9-10c2-4a29-869d-e440ae836a45",
+      "type": "is-member-of",
+      "source": "mix",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "5e3b66e1-d683-4cd0-8394-6a8bd9c9061d",
+      "type": "stewards",
+      "source": "mix",
+      "target": "charlie",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "a32def42-b8d9-4e24-b6e6-2e69f646dbcf",
+      "type": "is-member-of",
+      "source": "mix",
+      "target": "loomio"
+    },
+    {
+      "id": "c3fc094f-0284-4da5-a7d3-548fb6ef80bb",
+      "type": "stewards",
+      "source": "mix",
+      "target": "ben-knight",
+      "context": "loomio"
+    },
+    {
+      "id": "e6286eb8-8fad-4986-b9b6-fb79c863f330",
+      "type": "is-member-of",
+      "source": "nanz",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "1bd4f99b-5c67-4528-a29c-2f8b807e53b3",
+      "type": "is-member-of",
+      "source": "nanz",
+      "target": "purposive"
+    },
+    {
+      "id": "b73af4e5-6b4c-4db8-82a9-99b0ed9c69ea",
+      "type": "is-member-of",
+      "source": "nanz",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "8b0cb39f-89ad-47d1-8444-3150c8a1aa14",
+      "type": "is-member-of",
+      "source": "mj-kaplan",
+      "target": "loomio"
+    },
+    {
+      "id": "8a011c73-dd9c-4723-83a7-4d8237bde914",
+      "type": "stewards",
+      "source": "mj-kaplan",
+      "target": "matthew-bartlett",
+      "context": "loomio"
+    },
+    {
+      "id": "0deaf7d5-11ba-427f-8065-f9f9f6d52ca2",
+      "type": "is-member-of",
+      "source": "neva-poletti",
+      "target": "freewheelers"
+    },
+    {
+      "id": "df5aadfb-292e-439e-9432-a7033ee47d67",
+      "type": "is-member-of",
+      "source": "neva-poletti",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "ad99b7a6-b5d8-4ac9-ad08-09b37473319b",
+      "type": "is-member-of",
+      "source": "nicola",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "9d9f4f46-8508-44fa-97a8-cf9dbd1ae6ad",
+      "type": "is-member-of",
+      "source": "nicola",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "9fa63ec8-4cd6-4b2e-a903-f1d1b4d45728",
+      "type": "stewards",
+      "source": "nicola",
+      "target": "ayumi",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "9c7f2459-f88e-4130-b46b-d49c7abd7468",
+      "type": "is-member-of",
+      "source": "nina-atkinson",
+      "target": "action-station"
+    },
+    {
+      "id": "cb93fdc4-2539-42ef-8c93-2d45a8643649",
+      "type": "is-member-of",
+      "source": "patrick",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "231c3c4c-2373-4c3d-baf9-6138bc19b7d0",
+      "type": "is-member-of",
+      "source": "patrick",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "b3da24c8-ef71-4310-a5a6-9a8ab24fd1ae",
+      "type": "is-member-of",
+      "source": "paul-ingle",
+      "target": "lifehack"
+    },
+    {
+      "id": "df2def69-6c6d-4a0e-acbb-f1b3c5c29f3b",
+      "type": "is-member-of",
+      "source": "penny-hagen",
+      "target": "lifehack"
+    },
+    {
+      "id": "621cd349-1132-417b-bc28-9d9b9aab51ed",
+      "type": "is-member-of",
+      "source": "pepper-curry",
+      "target": "rabid"
+    },
+    {
+      "id": "48199d49-553f-40d0-a0d8-c046d9c8ee1f",
+      "type": "is-member-of",
+      "source": "phill-coxon",
+      "target": "enspiral-lean-lab"
+    },
+    {
+      "id": "ebeabbdf-affb-424d-8b2f-29aebd23d620",
+      "type": "is-member-of",
+      "source": "phill-coxon",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "3313decf-14a4-4c0e-8897-98f3d6ce473f",
+      "type": "is-member-of",
+      "source": "reaksmey",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "f88a86dd-65f4-4ce4-915b-398996c27dcb",
+      "type": "is-member-of",
+      "source": "reaksmey",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "516376c3-fdb9-4f78-8bd0-f8ea2d3cc3e7",
+      "type": "is-member-of",
+      "source": "rebeka",
+      "target": "freewheelers"
+    },
+    {
+      "id": "3d746e28-f71e-47b3-a1e4-21e2c0816e61",
+      "type": "is-member-of",
+      "source": "rebeka",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "dcb87a2f-6ddb-4add-bcb7-fbf723b2b66c",
+      "type": "is-member-of",
+      "source": "rob-guthrie",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "24286dbe-411b-4ebe-8ed4-071e5d037c05",
+      "type": "is-member-of",
+      "source": "rob-guthrie",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e8288b4b-0e49-4c79-91ed-9094ee433a57",
+      "type": "is-member-of",
+      "source": "richard-bartlett",
+      "target": "loomio"
+    },
+    {
+      "id": "c542cb7f-1f59-4983-a123-a61b0f456e69",
+      "type": "stewards",
+      "source": "richard-bartlett",
+      "target": "mj-kaplan",
+      "context": "loomio"
+    },
+    {
+      "id": "1cd7df68-7021-4326-8830-847d65606611",
+      "type": "stewards",
+      "source": "richard-bartlett",
+      "target": "simon",
+      "context": "loomio"
+    },
+    {
+      "id": "a9745c80-b11f-4154-a8d1-1e8488751610",
+      "type": "is-member-of",
+      "source": "rithy",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e82acd11-755b-43b8-b16b-2f1fb0baf572",
+      "type": "is-member-of",
+      "source": "rob-guthrie",
+      "target": "loomio"
+    },
+    {
+      "id": "a7ceda6b-ce1b-4c13-91bc-5430a8c267c1",
+      "type": "is-member-of",
+      "source": "rob-guthrie",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "fec08d51-fc75-4bcd-ba91-a90558733cdd",
+      "type": "is-member-of",
+      "source": "rob-guthrie",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "04215679-b50b-41e3-9daf-2f2b3f78dfa6",
+      "type": "stewards",
+      "source": "rob-guthrie",
+      "target": "ben-knight",
+      "context": "loomio"
+    },
+    {
+      "id": "0b25b3b9-58a5-42ea-bd65-52850a82d6f5",
+      "type": "is-member-of",
+      "source": "rob-ramsay",
+      "target": "rabid"
+    },
+    {
+      "id": "a22fa14a-cdf2-405a-b300-e8f9a29cabea",
+      "type": "is-member-of",
+      "source": "rochelle-furneaux",
+      "target": "enspiral-legal"
+    },
+    {
+      "id": "fb5e3adc-4e7d-4bbd-927a-704991ac4162",
+      "type": "is-member-of",
+      "source": "rohan-wakefield",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "9d9c2212-bded-4431-9d2a-7531c16aee4b",
+      "type": "is-member-of",
+      "source": "rose-lu",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "5771dfc1-e7a8-455c-ae76-1c89a5ec89ab",
+      "type": "is-member-of",
+      "source": "rose-lu",
+      "target": "rabid"
+    },
+    {
+      "id": "9f229650-b528-45d3-8595-1125c35488cd",
+      "type": "is-member-of",
+      "source": "rowan-brooks",
+      "target": "purposive"
+    },
+    {
+      "id": "77c8a28a-9f58-4716-8c3a-e6542adbec64",
+      "type": "is-member-of",
+      "source": "rowan-brooks",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "1ca5c3fc-1df4-4d09-88cd-20eefc216014",
+      "type": "is-member-of",
+      "source": "ryan-mearns",
+      "target": "action-station"
+    },
+    {
+      "id": "0524c342-39a9-4507-b28c-c4dd773440e4",
+      "type": "is-member-of",
+      "source": "sam-parkin",
+      "target": "enspiral-lean-lab"
+    },
+    {
+      "id": "2dc482d0-0de4-4762-be47-1f47d3e77624",
+      "type": "is-member-of",
+      "source": "sam-parkin",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "27ee4502-c420-4ee1-bc36-638d9845a010",
+      "type": "is-member-of",
+      "source": "sam-rye",
+      "target": "purposive"
+    },
+    {
+      "id": "382aa60b-3af8-4769-9a87-76ae30cad657",
+      "type": "is-member-of",
+      "source": "sam-rye",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "2e3af371-ec2e-4480-9e1f-f1d646f2ed64",
+      "type": "is-member-of",
+      "source": "sam-rye",
+      "target": "volunteer-impact"
+    },
+    {
+      "id": "8bd0f866-ad41-442a-99b5-6c44cdb00dfa",
+      "type": "is-member-of",
+      "source": "sam-rye",
+      "target": "lifehack"
+    },
+    {
+      "id": "853a6812-4934-4b9d-b4a2-ea519233df59",
+      "type": "is-member-of",
+      "source": "samnang",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "cea25bae-95c3-43e5-b363-a1a2ff1c6826",
+      "type": "is-member-of",
+      "source": "samnang",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "f98c6e1d-7cf2-45c3-a184-9e6b9264c4a7",
+      "type": "is-member-of",
+      "source": "samson-ootoovak",
+      "target": "bucky-box"
+    },
+    {
+      "id": "8faad3cb-629d-4174-a80d-e18f7058d178",
+      "type": "is-member-of",
+      "source": "samson-ootoovak",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "804d6337-63fb-47ff-92f7-be60701e02cc",
+      "type": "is-member-of",
+      "source": "samson-ootoovak",
+      "target": "enspiral-dev-academy"
+    },
+    {
+      "id": "7407794f-c05f-4e74-b449-c12e17cbe0fc",
+      "type": "is-member-of",
+      "source": "sandra-clark",
+      "target": "rabid"
+    },
+    {
+      "id": "26661cf5-26b8-493f-b521-2d6d9ed6d548",
+      "type": "is-member-of",
+      "source": "sea-rotman",
+      "target": "freewheelers"
+    },
+    {
+      "id": "89f98fa7-41e2-4b2d-ace9-f35aedfced92",
+      "type": "is-member-of",
+      "source": "sea-rotman",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "e190db08-f68a-46d8-a0b0-03b003c0dbae",
+      "type": "is-member-of",
+      "source": "seb-paquet",
+      "target": "purposive"
+    },
+    {
+      "id": "ddd48634-f50a-4f65-91c6-a599a707df3e",
+      "type": "is-member-of",
+      "source": "seb-paquet",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "82831728-a314-4e95-8a71-cbb8be084412",
+      "type": "is-member-of",
+      "source": "silvia-zuur",
+      "target": "freewheelers"
+    },
+    {
+      "id": "b2b50fa4-f0aa-489d-ae82-b2a60bf4ce77",
+      "type": "is-member-of",
+      "source": "silvia-zuur",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "5e9260fc-3872-45d2-89ab-34169fab2dfc",
+      "type": "is-member-of",
+      "source": "silvia-zuur",
+      "target": "bucky-box"
+    },
+    {
+      "id": "fa3471af-5abb-4e8d-8c95-88405b9a7c11",
+      "type": "is-member-of",
+      "source": "silvia-zuur",
+      "target": "chalkle"
+    },
+    {
+      "id": "d3d3097d-9de8-4d34-a22f-bc12ea464683",
+      "type": "is-member-of",
+      "source": "simon",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "fdd03b91-c52f-47ad-b1dd-163b8b982d97",
+      "type": "stewards",
+      "source": "simon",
+      "target": "dr-craig",
+      "context": "enspiral-craftworks"
+    },
+    {
+      "id": "113e9753-065b-495e-b9d8-fdc4f90cb3ec",
+      "type": "is-member-of",
+      "source": "simon",
+      "target": "loomio"
+    },
+    {
+      "id": "3edc1bdd-bf3c-48a4-94d6-e453f8644991",
+      "type": "is-member-of",
+      "source": "stephanie",
+      "target": "enspiral-craftworks"
+    },
+    {
+      "id": "c362727a-f06a-44f0-a614-8762e9df4c82",
+      "type": "is-member-of",
+      "source": "stephanie",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "eef1c3df-ec98-429b-8501-2b6991ab4b1d",
+      "type": "is-member-of",
+      "source": "thomas-mitchell",
+      "target": "purposive"
+    },
+    {
+      "id": "30ef2935-777b-4d15-bc1a-f6acc2fcaa9b",
+      "type": "is-member-of",
+      "source": "thomas-mitchell",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "a6daa18e-aa9c-417a-915d-abd959140a6b",
+      "type": "is-member-of",
+      "source": "thomas",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "019d2ef6-e300-4679-ac65-ee1c0c749da3",
+      "type": "is-member-of",
+      "source": "thomas",
+      "target": "freewheelers"
+    },
+    {
+      "id": "46926b43-2ca0-4d66-8fc4-42810169b1b2",
+      "type": "is-member-of",
+      "source": "tracey",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "4a109d51-9689-4f30-b6d7-c6744227745e",
+      "type": "is-member-of",
+      "source": "trudy-lane",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "c1b3f86d-4e60-4c2a-a4c5-69ae576cd2b2",
+      "type": "is-member-of",
+      "source": "trudy-lane",
+      "target": "freewheelers"
+    },
+    {
+      "id": "08cf3772-65a7-444e-b6ed-84f69309671a",
+      "type": "is-member-of",
+      "source": "viv-maidaborn",
+      "target": "loomio"
+    },
+    {
+      "id": "1b2314c6-7a9b-4b9b-9778-9810e3d731dc",
+      "type": "stewards",
+      "source": "viv-maidaborn",
+      "target": "michael-elwood-smith",
+      "context": "loomio"
+    },
+    {
+      "id": "45809e07-15e6-48b6-b876-a83982cd63e8",
+      "type": "is-member-of",
+      "source": "vivienne-askey",
+      "target": "enspiral-space"
+    },
+    {
+      "id": "6ead66fc-0b76-4297-98fc-cc86ae4268dd",
+      "type": "is-member-of",
+      "source": "will-lau",
+      "target": "bucky-box"
+    },
+    {
+      "id": "b7c7c5b7-acff-4f11-b40e-01d88ea3421b",
+      "type": "is-member-of",
+      "source": "yasmine",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "41fdc9fd-ebcb-4d09-bf62-c8f0df2ea628",
+      "type": "is-member-of",
+      "source": "yasmine",
+      "target": "freewheelers"
+    },
+    {
+      "id": "e3e0921d-8b07-4bab-9fc6-1c29b8055481",
+      "type": "is-member-of",
+      "source": "wiremu",
+      "target": "enspiral-services"
+    },
+    {
+      "id": "a7486795-b9bf-467f-9cdb-0e9b62592f97",
+      "type": "is-member-of",
+      "source": "wiremu",
+      "target": "enspiral-lean-lab"
+    },
+    {
+      "id": "3845dafa-6416-438f-9096-cd2531998073",
+      "type": "is-member-of",
+      "source": "wiremu",
+      "target": "enspiral-craftworks"
+    }
+  ]
+}
