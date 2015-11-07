@@ -146,7 +146,7 @@
     "through2": "^2.0.0",
     "uglifyify": "^3.0.1",
     "url-regex": "^2.1.2",
-    "webcola": "git://github.com/simontegg/WebCola",
+    "webcola": "^3.1.2",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
