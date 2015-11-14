@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm .cache",
-    "compost": "beefy src/index.js:bundle.js --index src/index.html -t babelify",
+    "compost": "beefy src/index.js:bundle.js --index src/index.html",
     "develop": "NODE_ENV=development node-dev .",
     "devstart": "NODE_ENV=development npm start",
     "start": "bin/holodex",
