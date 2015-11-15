@@ -11,12 +11,14 @@ var debug = require('debug')('index')
 debug('state', state)
 
 let store = createStore(holodex, state)
-console.log('store', store)
+
 debug('store', store.getState())
 
 let acting = false
 store.subscribe(function() {
+  console.log('state updating', store.getState().graph.nodes)
   // debug('graph', store.getState().graph)
+  // debug('Nodes', store.getState().graph.nodes)
 
   if (!acting) {
     acting = true

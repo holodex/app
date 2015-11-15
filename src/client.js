@@ -9,7 +9,7 @@ var ReactDOM = require('react-dom')
 
 var state = require('state')
 
-var debug = require('debug')('holodex:client')
+var debug = require('debug')('client')
 
 
 global.types = require('types')
