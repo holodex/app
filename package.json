@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm .cache",
     "start": "bin/holodex",
-    "compost": "budo src/index.js --dir src/assets --serve bundle.js --live -- -d",
+    "compost": "budo src/index.js --dir src/assets --serve bundle.js --live -- -d | garnish",
     "develop": "NODE_ENV=development node-dev .",
     "devstart": "NODE_ENV=development npm start",
     "unused-deps": "dependency-check package.json --unused $(for file in src/node_modules/*/index.js; do echo --entry $file; done)",
@@ -133,6 +133,7 @@
     "qs": "^4.0.0",
     "r-dom": "^2.1.0",
     "raf": "^2.0.4",
+    "ramda": "^0.18.0",
     "react": "^0.14",
     "react-bootstrap": "^0.13.0",
     "react-dom": "^0.14.0",
@@ -167,6 +168,7 @@
     "xtend": "^4.0.0"
   },
   "devDependencies": {
+    "babel-plugin-ramda": "^0.1.3",
     "babel-plugin-transform-object-rest-spread": "^6.1.18",
     "babel-plugin-transform-react-jsx": "^6.1.18",
     "babel-plugin-transform-runtime": "^6.1.18",
@@ -176,6 +178,7 @@
     "budo": "^4.2.2",
     "dependency-check": "^2.5.0",
     "faucet": "0.0.1",
+    "garnish": "^5.0.1",
     "node-dev": "^2.6.1",
     "redux-devtools": "^1.1.2",
     "snazzy": "^2.0.0",
