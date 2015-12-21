@@ -7,6 +7,8 @@ import vdux from 'vdux'
 import { listen } from 'virtual-component'
 import { handleOnce } from 'redux-effects-events'
 import * as getters from 'graph/getters'
+import { getProps } from 'getters'
+
 // HACK for webcola not requiring RBTree propoerly
 global.RBTree = require('bintrees').RBTree
 
@@ -21,7 +23,8 @@ store.dispatch(handleOnce('domready', () => {
   vdux(
     store,
     (state) => {
-      return Ui({ state, ...getters })
+      const props = getProps(state)
+      return Ui({ ...props })
     },
     document.querySelector('body > main')
   )

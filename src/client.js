@@ -1,15 +1,10 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+const React = require('react')
+const ReactDOM = require('react-dom')
 
 
-// var Ui = require('ui')
-// var config = require('config')
-// var router = require('router')
-// var fetcher = require('fetcher')
+const state = require('state')
 
-var state = require('state')
-
-var debug = require('debug')('client')
+const debug = require('debug')('client')
 
 
 global.types = require('types')
