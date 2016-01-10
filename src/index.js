@@ -8,24 +8,31 @@ import { listen } from 'virtual-component'
 import { handleOnce } from 'redux-effects-events'
 import * as getters from 'graph/getters'
 import { getProps } from 'getters'
+import dom from 'virtex-dom'
+import { holodex } from 'reducers'
+import element from 'virtex-element'
 
+
+const debug = require('debug')('index')
 // HACK for webcola not requiring RBTree propoerly
 global.RBTree = require('bintrees').RBTree
 
 const store = configureStore(state)
+debug('store', store)
 
 store.subscribe(() => {
-  console.log('state updating')
+  console.log('store updating...', store.getState())
 })
 
-store.dispatch(handleOnce('domready', () => {
-  listen(store.dispatch)
+
+
+document.addEventListener('DOMContentLoaded', () => {
   vdux(
     store,
-    (state) => {
-      const props = getProps(state)
-      return Ui({ ...props })
-    },
+    Ui,
     document.querySelector('body > main')
   )
-}))
+
+  store.dispatch({ type: 'initialized' })
+
+})
