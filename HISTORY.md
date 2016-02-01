@@ -1,5 +1,7 @@
 # UNRELEASED
 
+- Re-write for [Enspiral Dev Academy](http://devacademy.co.nz) alumni
+
 # 0.2.1 (2015-05-24)
 
 - Parent group is shown above graph connected to selected person or group

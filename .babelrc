@@ -3,7 +3,11 @@
     "es2015"
   ],
   "plugins": [
+    "transform-runtime",
     "transform-object-rest-spread",
-    "transform-runtime"
+    "transform-class-properties"
+  ],
+  "ignore": [
+    "**/api/primus.js"
   ]
 }
