@@ -1,0 +1,21 @@
+{
+  "name": "render",
+  "private": true,
+  "version": "0.0.0",
+  "main": "main",
+  "browser": "browser",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "inject-lr-script": "^1.2.0"
+  },
+  "dependencies": {
+    "api": "file:../api",
+    "config": "file:../config",
+    "send-data": "^8.0.0",
+    "vdux": "^2.0.0"
+  }
+}

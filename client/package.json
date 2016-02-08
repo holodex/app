@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "api": "file:../api",
+    "config": "file:../config",
+    "vdux": "^1.0.4",
+    "vdux-preset-client": "^0.2.3"
+  }
+}

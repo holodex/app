@@ -1,11 +1,4 @@
-/node_modules
-*.log
+node_modules
+npm-debug.log*
 
-.DS_Store
-
-*.swp
-
-/src/assets/styles.css
-
-/data
-/.cache
+/build

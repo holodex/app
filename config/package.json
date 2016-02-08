@@ -1,0 +1,24 @@
+{
+  "name": "config",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./index.js",
+  "browser": "./browser.js",
+  "browserify": {
+    "transform": [
+      [
+        "evalify",
+        {
+          "files": [
+            "**/browser.js"
+          ]
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "deep-assign": "^2.0.0",
+    "evalify": "github:ahdinosaur/evalify#minimatch",
+    "minimist": "^1.2.0"
+  }
+}

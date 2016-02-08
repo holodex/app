@@ -1,0 +1,12 @@
+{
+  "name": "static",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "ecstatic-lr": "^1.0.1"
+  },
+  "dependencies": {
+    "config": "file:../config",
+    "ecstatic": "^1.4.0"
+  }
+}
