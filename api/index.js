@@ -6,6 +6,7 @@ const primus = require('feathers-primus')
 const join = require('path').join
 
 const todosService = require('app/todos/service')
+const profilesService = require('app/profile/service')
 
 module.exports = {
   createServer
@@ -24,6 +25,7 @@ function createServer (config) {
       })
     }))
     .use('/todos', todosService)
+    .use('/profiles', profilesService)
 
   const server = http.createServer(app)
 
