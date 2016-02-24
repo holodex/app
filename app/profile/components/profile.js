@@ -1,5 +1,7 @@
 const h = require('vdux/element').default
 
+const { map } = require('lodash')
+
 const actions = require('../actions')
 
 module.exports = {
@@ -8,8 +10,9 @@ module.exports = {
 }
 
 function render ({ props }) {
-  return h('div', {
-    textContent: "All Profiles"
+  console.log(props)
+  return h('p', {
+    textContent: props.name
   }, [])
 }
 

@@ -1,5 +1,5 @@
 const service = require('api/service')
 
-const { Profile } = require('./models')
+const { Profiles } = require('./models')
 
-module.exports = service(Profile)
+module.exports = service(Profiles)

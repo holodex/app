@@ -1,6 +1,6 @@
 const h = require('vdux/element').default
 
-const Profiles = require('./components/profiles')
+const ProfileList = require('./components/profileList')
 const { getIndexProps } = require('./getters')
 
 module.exports = routes
@@ -8,6 +8,6 @@ module.exports = routes
 function routes (route) {
   return route('/profiles', (params, state) => {
     const props = getIndexProps(state)
-    return h(Profiles, props)
+    return h(ProfileList, props.profiles)
   })
 }

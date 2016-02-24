@@ -38,8 +38,7 @@
     "files": [
       "**/*.spec.js"
     ],
-    "require": [
-    ]
+    "require": []
   },
   "repository": {
     "type": "git",
@@ -74,6 +73,7 @@
     "cuke-tap": "^1.0.2",
     "glob": "^6.0.2",
     "jsdom": "^7.1.0",
+    "lodash": "^4.5.1",
     "node-dev": "^2.7.1",
     "redux-logger": "^2.0.4",
     "run-parallel": "^1.1.4",
