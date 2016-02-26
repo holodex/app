@@ -10,9 +10,8 @@ module.exports = {
 }
 
 function render ({ props }) {
-  console.log(props)
   return h('p', {
-    textContent: props.name
+    textContent: props.profile.name
   }, [])
 }
 

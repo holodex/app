@@ -1,7 +1,5 @@
 const h = require('vdux/element').default
 
-const Profile = require('./profile')
-
 const { map } = require('lodash')
 
 const actions = require('../actions')
@@ -11,9 +9,9 @@ module.exports = {
   onCreate
 }
 
-function render ({ props }) {
-  return h('div', {},  map(props, (profile, profileKey) => {
-    return h(Profile, profile, [])
+function render ({ props, children }) {
+  return h('ul', {},  map(children, (profile) => {
+    return h('li',{}, profile)
   }))
 }
 
