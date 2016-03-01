@@ -10,9 +10,7 @@ module.exports = {
 }
 
 function render ({ props, children }) {
-  return h('ul', {},  map(children, (profile) => {
-    return h('li',{}, profile)
-  }))
+  return h('div', {},  children)
 }
 
 function onCreate () {
