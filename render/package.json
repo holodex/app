@@ -16,6 +16,6 @@
     "api": "file:../api",
     "config": "file:../config",
     "send-data": "^8.0.0",
-    "vdux": "^2.0.0"
+    "vdux": "^2.3.17"
   }
 }

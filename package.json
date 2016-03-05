@@ -104,7 +104,6 @@
     "pinkie-promise": "^2.0.0",
     "ramda": "^0.18.0",
     "render": "file:./render",
-    "sheetify": "^3.3.3",
     "static": "file:./static",
     "uglifyify": "^3.0.1"
   }
