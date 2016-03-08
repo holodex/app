@@ -19,6 +19,9 @@ function render ({ props, children }) {
       }, {
         href: '/profiles',
         text: 'profiles'
+      }, {
+        href: '/profiles/new',
+        text: 'new profile'
       }]
     }),
     h('div', {}, children)

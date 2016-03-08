@@ -1,8 +1,10 @@
 const t = require('tcomb')
 
+const NonEmptyString = t.refinement(t.String, (s) => s.length > 0, 'NonEmptyString')
+
 const Profile = t.struct({
-  name: t.String,
-  note: t.String,
+  name: NonEmptyString,
+  note: NonEmptyString,
   image: t.String,
   /*
   hasMany Highlights
