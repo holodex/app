@@ -5,7 +5,7 @@ const NonEmptyString = t.refinement(t.String, (s) => s.length > 0, 'NonEmptyStri
 const Profile = t.struct({
   name: NonEmptyString,
   note: NonEmptyString,
-  image: t.String,
+  image: t.String
   /*
   hasMany Highlights
 hasMany Links

@@ -6,7 +6,9 @@ const Profile = require('./components/profile')
 
 const NewProfile = require('./components/newProfile')
 
-const { getIndexProps } = require('./getters')
+const { getIndexProps,  } = require('./getters')
+const { getHighlights } = require('../highlights/getters')
+
 
 const { map } = require('lodash')
 
@@ -18,9 +20,11 @@ function routes (route) {
               const props = getIndexProps(state)
               
               return h(ProfileList, {}, map(props.profiles, (profile, profileKey) => {
-                return h(Profile, { profile }, [])
+                let highlights = getHighlights(props.highlights, profile)
+                return h(Profile, { profile, highlights },[])
               }))
             }),
+            //TODO /:id
             route('/new', (params, state) => {
               const props = getIndexProps(state)
                 return h(NewProfile, { props }, [])

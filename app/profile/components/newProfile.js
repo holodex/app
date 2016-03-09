@@ -34,6 +34,7 @@ function createProfile(ev) {
      let profileResult = validate(profile, Profile)
      
      if (profileResult.isValid()) {
+         //TODO upload image
          return actions.create(profile)
      } else {
          profileErrors(profileResult.errors)
