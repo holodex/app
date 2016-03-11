@@ -3,7 +3,6 @@ const t = require('tcomb')
 const NonEmptyString = t.refinement(t.String, (s) => s.length > 0, 'NonEmptyString')
 
 const Highlight = t.struct({
-  id: t.Number,
   profileId: t.Number,
   note: NonEmptyString
 }, 'Highlight')

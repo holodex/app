@@ -1,8 +1,14 @@
 const h = require('vdux/element').default
 const { Profile } = require('../models')
+const NewHighlightList = require('../../highlights/components/newHighlightList')
+const NewHighlight = require('../../highlights/components/newHighlight')
+
 const validate = require('tcomb-validation').validate
 
+const { map, filter } = require('lodash')
+
 const actions = require('../actions')
+const highlightActions = require ('../../highlights/actions')
 
 module.exports = {
   render,
@@ -16,6 +22,7 @@ function render ({ props }) {
            h('label', {for: 'note'}, 'Note:'),
            h('textarea', {id: 'note', required: true},[]),
            h('input', {type: 'file', id: 'image'}, [] ),
+           h(NewHighlightList, {}, [NewHighlight, NewHighlight]),
            h('button', {}, 'Create profile')
     )
 }
@@ -23,7 +30,7 @@ function render ({ props }) {
 function createProfile(ev) {
     ev.preventDefault()
     
-    let form = ev.target
+    let form = ev.target.children
 
     let profile = {
         name: form.name.value,
@@ -35,7 +42,24 @@ function createProfile(ev) {
      
      if (profileResult.isValid()) {
          //TODO upload image
-         return actions.create(profile)
+         return (dispatch) => {
+            const highlights =   filter(form.newHighlightList.children, (highlight) => {
+                //Hack - remove buttons from list of children
+                return highlight.value
+            }).map((highlight) => {
+                return Object.assign({note: highlight.value})
+            })
+            
+            return dispatch(actions.create(profile))
+            .then((createdAction) => {
+                const profile = createdAction.payload.body
+                return Promise.all(highlights.map((highlight) => {
+                    return dispatch(highlightActions.create(
+                        Object.assign({ profileId: profile.id }, highlight)
+                    ))
+                }))  
+            })
+         }
      } else {
          profileErrors(profileResult.errors)
      }
