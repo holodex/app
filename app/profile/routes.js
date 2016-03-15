@@ -18,10 +18,8 @@ function routes (route) {
   return route('/profiles',[ 
             route('/', (params, state) => {
               const props = getIndexProps(state)
-              
-              return h(ProfileList, {}, map(props.profiles, (profile, profileKey) => {
-                let highlights = getHighlights(props.highlights, profile)
-                return h(Profile, { profile, highlights },[])
+              return h(ProfileList, {}, map(props.profilesWithData, (profile, profileKey) => {
+                return h(Profile, { profile },[])
               }))
             }),
             //TODO /:id

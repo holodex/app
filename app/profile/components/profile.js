@@ -18,7 +18,7 @@ function render ({ props }) {
            h('p', {}, props.profile.name),
            h('p', {}, props.profile.note),
            h('p', {}, props.profile.image),
-           h(HighlightList, {}, map(props.highlights, (highlight, highlightKey) => {
+           h(HighlightList, {}, map(props.profile.highlights, (highlight, highlightKey) => {
              return h(Highlight, { highlight }, [])
            }) )
     )
