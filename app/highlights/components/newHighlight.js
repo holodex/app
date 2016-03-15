@@ -10,8 +10,8 @@ module.exports = {
 }
 
 function render ({ props }) {
-  return h('label', {for: 'highlightNote'}, 'Highlight:'),
-         h('input', {type: 'text', class: 'highlightNote', name: 'highlightNote'},[])
+  return h('label', {}, 'Highlight:', 
+           h('input', {type: 'text', class: 'highlightNote'},[]))
 }
 
 function onCreate () {

@@ -16,7 +16,7 @@ module.exports = {
 }
 
 function render ({ props }) {
-  return h('form', {onSubmit: createProfile},
+  return h('form', { onSubmit: createProfile, style: { width:'200px'} },
            h('label', {for: 'name'}, 'Name:'),
            h('input', {type: 'text', required: true, id: 'name'},[]),
            h('label', {for: 'note'}, 'Note:'),
