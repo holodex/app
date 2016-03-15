@@ -1,7 +1,5 @@
 const h = require('vdux/element').default
 
-const { map } = require('lodash')
-
 const actions = require('../actions')
 
 module.exports = {
@@ -10,7 +8,7 @@ module.exports = {
 }
 
 function render ({ props, children }) {
-  return h('div', {},  children)
+  return h('div', {}, children)
 }
 
 function onCreate () {

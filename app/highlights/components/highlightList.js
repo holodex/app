@@ -10,9 +10,9 @@ module.exports = {
 }
 
 function render ({ props, children }) {
-  return h('ul', {},  map(children, (child, childKey) => {
-      return h('li', {}, child)
-    })
+  return h('ul', {}, map(children, (child, childKey) => {
+    return h('li', {}, child)
+  })
   )
 }
 

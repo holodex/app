@@ -13,10 +13,9 @@ function render ({ props, children }) {
   return h('div', {id: 'newHighlightList'}, map(children, (child, childKey) => {
     return h(child, {}, [])
   }),
-  h('button', {onClick: addHighlight }, 'Add new highlight'))
+  h('button', { onClick: addHighlight }, 'Add new highlight'))
 }
-function addHighlight() {
-  //How to add a component I don't know about?
+function addHighlight () {
   console.log('Add Highlight')
 }
 
