@@ -1,7 +1,7 @@
 const h = require('vdux/element').default
 
-const Highlight = require('../../highlights/components/Highlight')
-const HighlightList = require('../../highlights/components/HighlightList')
+const Highlight = require('app/highlights/components/Highlight')
+const HighlightList = require('app/highlights/components/HighlightList')
 
 const { map } = require('lodash')
 

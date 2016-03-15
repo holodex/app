@@ -1,14 +1,14 @@
 const h = require('vdux/element').default
 const { Profile } = require('../models')
-const NewHighlightList = require('../../highlights/components/newHighlightList')
-const NewHighlight = require('../../highlights/components/newHighlight')
+const NewHighlightList = require('app/highlights/components/newHighlightList')
+const NewHighlight = require('app/highlights/components/newHighlight')
 
 const validate = require('tcomb-validation').validate
 
 const { filter } = require('lodash')
 
 const actions = require('../actions')
-const highlightActions = require('../../highlights/actions')
+const highlightActions = require('app/highlights/actions')
 
 module.exports = {
   render,
