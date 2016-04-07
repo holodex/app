@@ -1,9 +1,11 @@
+const execSync = require('child_process').execSync
+
 module.exports = {
   db: {
     client: 'pg',
     connection: {
-      host     : 'localhost',
-      user     : 'postgres',
+      host     : execSync('docker-machine ip default').toString().trim(),
+      user: 'postgres',
       //password : 'postgres',
       database : 'postgres'
     },

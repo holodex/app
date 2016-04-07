@@ -14,6 +14,7 @@
     "pg:stop": "docker stop mad-science-postgres",
     "pg:rm": "docker rm mad-science-postgres",
     "pg:logs": "docker logs mad-science-postgres",
+    "pg:sql": "psql -h $(docker-machine ip default) -p 5432 -d postgres -U postgres",
     "db:migrate": "cd api; npm run knex -- migrate:latest",
     "gen:migration": "cd api; npm run knex -- migrate:make",
     "test": "npm-run-all -p test:*",
@@ -37,8 +38,7 @@
     "files": [
       "**/*.spec.js"
     ],
-    "require": [
-    ]
+    "require": []
   },
   "repository": {
     "type": "git",
@@ -73,6 +73,7 @@
     "cuke-tap": "^1.0.2",
     "glob": "^6.0.2",
     "jsdom": "^7.1.0",
+    "lodash": "^4.5.1",
     "node-dev": "^2.7.1",
     "redux-logger": "^2.0.4",
     "run-parallel": "^1.1.4",
