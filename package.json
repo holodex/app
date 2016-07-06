@@ -1,44 +1,18 @@
 {
   "name": "holodex",
   "version": "3.0.0-pre.0",
-  "description": "people and groups profiles and relationships",
+  "description": "agents and relationships",
   "main": "server",
   "scripts": {
-    "postinstall": "npm run modules",
-    "modules": "linklocal link -r && linklocal list -r | bulk -c 'npm install'",
+    "postinstall": "lnfs app node_modules/app",
     "lint": "snazzy",
     "format": "snazzy --format",
-    "pg:pull": "docker pull postgres",
-    "pg:run": "docker run -d -p 5432:5432 --name=mad-science-postgres postgres",
-    "pg:start": "docker start mad-science-postgres",
-    "pg:stop": "docker stop mad-science-postgres",
-    "pg:rm": "docker rm mad-science-postgres",
-    "pg:logs": "docker logs mad-science-postgres",
-    "db:migrate": "cd api; npm run knex -- migrate:latest",
-    "gen:migration": "cd api; npm run knex -- migrate:make",
-    "test": "npm-run-all -p test:*",
-    "test:spec": "ava",
-    "test:feature": "node features",
-    "dev:assets": "cpx \"assets/**/*\" build -w",
-    "dev:api": "node-dev ./api/cli",
-    "dev:render-browser": "watchify render -o build/bundle.js -dv -p browserify-hmr",
-    "dev:render-node": "node-dev ./render/cli --livereload",
-    "dev:static": "node-dev ./static/cli --livereload",
-    "dev:livereload": "wtch -d build -e js,html,css,png,gif,jpg | garnish --level debug",
-    "prod:render-browser": "browserify render -o build/bundle.js -g envify -g uglifyify",
-    "prod:render-node": "node ./render/cli",
-    "prod:assets": "cpx \"assets/**/*\" build",
-    "prod:api": "node ./api/cli",
-    "prod:static": "node ./static/cli",
-    "dev": "NODE_ENV=development npm-run-all -p dev:*",
-    "prod": "NODE_ENV=production npm-run-all -s prod:*"
-  },
-  "ava": {
-    "files": [
-      "**/*.spec.js"
-    ],
-    "require": [
-    ]
+    "test:spec": "",
+    "test:feature": "",
+    "test": "NODE_ENV=test npm-run-all -p test:*",
+    "dev:api": "node-dev ./api",
+    "dev:browser": "budo ui --serve bundle.js --host localhost --dir ui --pushstate -- -r ./app:app",
+    "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
   "repository": {
     "type": "git",
@@ -47,64 +21,34 @@
   "keywords": [
     "stack",
     "example",
-    "react",
-    "redux",
     "frp",
     "functional",
     "reactive",
     "immutable",
-    "feathers",
     "ddd",
-    "tcomb"
+    "mad science"
   ],
   "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.is)",
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/holodex/app/issues"
   },
   "homepage": "https://github.com/holodex/app#readme",
   "engines": {
-    "node": "^4.0.0",
+    "node": "^6.0.0",
     "npm": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.10.0",
-    "browserify-hmr": "^0.3.1",
-    "cuke-tap": "^1.0.2",
-    "glob": "^6.0.2",
-    "jsdom": "^7.1.0",
+    "browserify": "^13.0.1",
+    "budo": "^8.3.0",
+    "es2040": "^1.2.2",
     "node-dev": "^2.7.1",
-    "redux-logger": "^2.0.4",
-    "run-parallel": "^1.1.4",
-    "tape": "^4.4.0",
-    "watchify": "^3.6.1",
-    "wtch": "^4.0.1"
+    "uglifyify": "^3.0.2",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
-    "api": "file:./api",
-    "app": "file:./app",
-    "babel-core": "^6.2.1",
-    "babel-plugin-transform-class-properties": "^6.3.13",
-    "babel-plugin-transform-object-rest-spread": "^6.1.18",
-    "babel-plugin-transform-runtime": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-register": "^6.3.13",
-    "babel-runtime": "^6.2.0",
-    "babelify": "^7.2.0",
-    "browserify": "github:ahdinosaur/node-browserify",
-    "bulk": "^2.0.0",
-    "bulk-require": "^0.2.1",
-    "bulkify": "^1.1.1",
-    "config": "file:./config",
-    "cpx": "^1.2.1",
-    "envify": "^3.4.0",
-    "garnish": "^5.0.1",
-    "linklocal": "^2.5.2",
+    "lnfs-cli": "^1.0.1",
     "npm-run-all": "^1.3.2",
-    "pinkie-promise": "^2.0.0",
-    "ramda": "^0.18.0",
-    "render": "file:./render",
-    "static": "file:./static",
     "uglifyify": "^3.0.1"
   }
 }
