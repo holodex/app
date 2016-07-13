@@ -3,22 +3,17 @@ const defer = require('pull-defer')
 const pull = inu.pull
 const getFormData = require('get-form-data')
 
-module.exports = Ui
+module.exports = Account
 
-function Ui ({ api }) {
+function Account ({ api }) {
   return {
     init: () => ({
-      model: {
-        user: null,
-        agents: {}
-      },
+      model: null,
       effect: { type: 'getUser' }
     }),
     update: (model, action) => {
       var effect
       switch (action.type) {
-        case 'do':
-          effect = action.effect
         case 'setUser':
           model = Object.assign({}, model, {
             user: action.key
@@ -29,7 +24,7 @@ function Ui ({ api }) {
     },
     view: (model, dispatch) => {
       return inu.html`
-        <main>
+        <div class='account'>
           <div>
             ${ model.user != null
               ? `hello ${model.user} !`
@@ -49,7 +44,7 @@ function Ui ({ api }) {
             <input type='submit' onclick=${handleAuth('signup')} value='signup' />
             <input type='submit' onclick=${handleAuth('login')} value='login' />
           </form>
-        </main>
+        </div>
       `
 
       function handleAuth (type) {
