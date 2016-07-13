@@ -10,7 +10,7 @@
     "test:spec": "",
     "test:feature": "",
     "test": "NODE_ENV=test npm-run-all -p test:*",
-    "dev:api": "nodemon api --watch .",
+    "dev:api": "nodemon ./cli server --watch .",
     "dev:browser": "budo browser --serve bundle.js --host localhost --dir app --pushstate",
     "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
@@ -47,11 +47,16 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "get-form-data": "^1.2.5",
     "inu": "^3.0.2",
+    "level-party": "^3.0.4",
     "lnfs-cli": "^1.0.1",
     "npm-run-all": "^1.3.2",
     "pull-defer": "^0.2.2",
+    "pull-level": "^2.0.2",
+    "subleveldown": "^2.1.0",
+    "township-auth": "^2.0.5",
     "uglifyify": "^3.0.1",
-    "vas": "^1.0.0"
+    "vas": "github:ahdinosaur/vas#cli"
   }
 }

@@ -1,3 +1,4 @@
 node_modules
 npm-debug.log*
-/ui/bundle.js
+/app/bundle.js
+/db
