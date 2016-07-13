@@ -10,8 +10,8 @@
     "test:spec": "",
     "test:feature": "",
     "test": "NODE_ENV=test npm-run-all -p test:*",
-    "dev:api": "node-dev ./api",
-    "dev:browser": "budo ui --serve bundle.js --host localhost --dir ui --pushstate -- -r ./app:app",
+    "dev:api": "nodemon api --watch .",
+    "dev:browser": "budo browser --serve bundle.js --host localhost --dir app --pushstate",
     "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
   "repository": {
@@ -42,13 +42,16 @@
     "browserify": "^13.0.1",
     "budo": "^8.3.0",
     "es2040": "^1.2.2",
-    "node-dev": "^2.7.1",
+    "nodemon": "^1.9.2",
     "uglifyify": "^3.0.2",
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "inu": "^3.0.2",
     "lnfs-cli": "^1.0.1",
     "npm-run-all": "^1.3.2",
-    "uglifyify": "^3.0.1"
+    "pull-defer": "^0.2.2",
+    "uglifyify": "^3.0.1",
+    "vas": "^1.0.0"
   }
 }

@@ -1,3 +1,9 @@
-const app = require('app')
+const vas = require('vas')
 
-console.log('app.service', app.service)
+const service = require('app/service')
+const config = require('./config')
+
+vas.listen(service, config, {
+  port: config.port
+})
+
