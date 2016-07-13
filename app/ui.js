@@ -31,11 +31,12 @@ function Ui ({ api }) {
       return inu.html`
         <main>
           <div>
-            ${ model.user
+            ${ model.user != null
               ? `hello ${model.user} !`
               : ''
             }
           </div>
+          <button onclick=${logout}>logout</button>
           <form onsubmit=${(ev) => ev.preventDefault()}>
             <fieldset>
               <label>email</label>
@@ -59,21 +60,31 @@ function Ui ({ api }) {
           dispatch({ type: 'do', effect })
         }
       }
+
+      function logout () {
+        dispatch({ type: 'do', effect: { type: 'logout' } })
+      }
     },
     run: (effect, sources) => {
+      console.log('effect', effect)
       const deferred = defer.source()
 
       switch (effect.type) {
         case 'getUser':
-          const user = localStorage.getItem('holodex-user')
+          const user = JSON.parse(localStorage.getItem('holodex-user'))
           if (!user) return
           return pull.values([
             { type: 'setUser', key: user }
           ])
-        case 'persistUser':
-          localStorage.setItem('holodex-user', effect.key)
+        case 'setUser':
+          localStorage.setItem('holodex-user', JSON.stringify(effect.key))
           return pull.values([
             { type: 'setUser', key: effect.key }
+          ])
+
+        case 'logout':
+          return pull.values([
+            { type: 'do', effect: { type: 'setUser', key: null  } }
           ])
         case 'signup':
           api.accounts.create('basic', effect.credentials, onAuth)
@@ -89,7 +100,7 @@ function Ui ({ api }) {
           return
         }
         deferred.resolve(pull.values([
-          { type: 'do', effect: { type: 'persistUser', key: account.key } }
+          { type: 'do', effect: { type: 'setUser', key: account.key } }
         ]))
       }
 
