@@ -12,22 +12,18 @@ function Account ({ api }) {
       effect: { type: 'getUser' }
     }),
     update: (model, action) => {
-      var effect
       switch (action.type) {
         case 'setUser':
-          model = Object.assign({}, model, {
-            user: action.key
-          })
-          break
+          return { model: action.key }
       }
-      return { model, effect }
+      return { model }
     },
     view: (model, dispatch) => {
       return inu.html`
         <div class='account'>
           <div>
-            ${ model.user != null
-              ? `hello ${model.user} !`
+            ${ model != null
+              ? `hello ${model} !`
               : ''
             }
           </div>

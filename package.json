@@ -11,7 +11,7 @@
     "test:feature": "",
     "test": "NODE_ENV=test npm-run-all -p test:*",
     "dev:api": "nodemon ./cli server --watch .",
-    "dev:browser": "budo browser --serve bundle.js --host localhost --dir app --pushstate",
+    "dev:browser": "budo browser --serve bundle.js --host localhost --dir app --pushstate -- -d",
     "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
   "repository": {
@@ -57,6 +57,7 @@
     "subleveldown": "^2.1.0",
     "township-auth": "^2.0.5",
     "uglifyify": "^3.0.1",
-    "vas": "github:ahdinosaur/vas#cli"
+    "vas": "github:ahdinosaur/vas#cli",
+    "xtend": "^4.0.1"
   }
 }
