@@ -1,7 +1,8 @@
 const extend = require('xtend')
 const { html } = require('inu')
-const { combineApps } = require('inu-action')
+const { combineApps } = require('inux')
 
+const { SEND } = require('app/send')
 const Account = require('app/accounts/app')
 
 module.exports = App
@@ -15,8 +16,8 @@ function App ({ api }) {
 
   return extend(app, {
     update: (model, action) => {
-      if (action.type === 'do') {
-        return { model, effect: action.effect }
+      if (action.type === SEND) {
+        return { model, effect: action.payload }
       }
       return app.update(model, action)
     },
@@ -26,10 +27,10 @@ function App ({ api }) {
           <nav></nav>
           <article></article>
           <div class='account'>
-            ${account.view(model.account, dispatch)}
+            ${account.views.account(model.account, dispatch)}
           </div>
         </main>
       `
-    },
+    }
   })
 }

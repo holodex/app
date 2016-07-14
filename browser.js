@@ -14,7 +14,12 @@ const sources = inu.start(app({ api: client }))
 const main = document.querySelector('main')
 
 pull(
-  sources.models(),
+  sources.actions(),
+  pull.log()
+)
+
+pull(
+  sources.states(),
   pull.log()
 )
 

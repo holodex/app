@@ -1,7 +1,24 @@
 const inu = require('inu')
+const { create } = require('inux')
 const defer = require('pull-defer')
 const pull = inu.pull
 const getFormData = require('get-form-data')
+
+const { send } = require('app/send')
+
+const GET = Symbol('get')
+const SET = Symbol('set')
+
+const LOGIN = Symbol('login')
+const LOGOUT = Symbol('logout')
+const SIGNUP = Symbol('signup')
+
+const get = create(GET)
+const set = create(SET)
+
+const login = create(LOGIN)
+const logout = create(LOGOUT)
+const signup = create(SIGNUP)
 
 module.exports = Account
 
@@ -9,93 +26,79 @@ function Account ({ api }) {
   return {
     init: () => ({
       model: null,
-      effect: { type: 'getUser' }
+      effect: get()
     }),
-    update: (model, action) => {
-      switch (action.type) {
-        case 'setUser':
-          return { model: action.key }
-      }
-      return { model }
+    update: {
+      [SET]: (model, user) => ({ model: user })
     },
-    view: (model, dispatch) => {
-      return inu.html`
-        <div class='account'>
-          <div>
-            ${ model != null
-              ? `hello ${model} !`
-              : ''
-            }
+    views: {
+      account: (model, dispatch) => {
+        return inu.html`
+          <div class='account'>
+            <div>
+              ${ model != null
+                ? `hello ${model} !`
+                : ''
+              }
+            </div>
+            <button onclick=${logout}>logout</button>
+            <form onsubmit=${(ev) => ev.preventDefault()}>
+              <fieldset>
+                <label>email</label>
+                <input name='email' type='email' autofocus />
+              </fieldset>
+              <fieldset>
+                <label>password</label>
+                <input name='password' type='password' />
+              </fieldset>
+              <input type='submit' onclick=${handleAuth(SIGNUP)} value='signup' />
+              <input type='submit' onclick=${handleAuth(LOGIN)} value='login' />
+            </form>
           </div>
-          <button onclick=${logout}>logout</button>
-          <form onsubmit=${(ev) => ev.preventDefault()}>
-            <fieldset>
-              <label>email</label>
-              <input name='email' type='email' autofocus />
-            </fieldset>
-            <fieldset>
-              <label>password</label>
-              <input name='password' type='password' />
-            </fieldset>
-            <input type='submit' onclick=${handleAuth('signup')} value='signup' />
-            <input type='submit' onclick=${handleAuth('login')} value='login' />
-          </form>
-        </div>
-      `
+        `
 
-      function handleAuth (type) {
-        return (ev) => {
-          ev.preventDefault()
-          const credentials = getFormData(ev.target.parentElement)
-          const effect = { type, credentials }
-          dispatch({ type: 'do', effect })
+        function handleAuth (type) {
+          return (ev) => {
+            ev.preventDefault()
+            const credentials = getFormData(ev.target.parentElement)
+            const effect = { type, credentials }
+            dispatch(send(effect))
+          }
         }
-      }
 
-      function logout () {
-        dispatch({ type: 'do', effect: { type: 'logout' } })
+        function logout () {
+          dispatch(send(logout()))
+        }
       }
     },
-    run: (effect, sources) => {
-      console.log('effect', effect)
-      const deferred = defer.source()
-
-      switch (effect.type) {
-        case 'getUser':
-          const user = JSON.parse(localStorage.getItem('holodex-user'))
-          if (!user) return
-          return pull.values([
-            { type: 'setUser', key: user }
-          ])
-        case 'setUser':
-          localStorage.setItem('holodex-user', JSON.stringify(effect.key))
-          return pull.values([
-            { type: 'setUser', key: effect.key }
-          ])
-
-        case 'logout':
-          return pull.values([
-            { type: 'do', effect: { type: 'setUser', key: null  } }
-          ])
-        case 'signup':
-          api.accounts.create('basic', effect.credentials, onAuth)
-          break;
-        case 'login':
-          api.accounts.verify('basic', effect.credentials, onAuth)
-          break;
+    run: {
+      [GET]: () => {
+        const user = JSON.parse(localStorage.getItem('holodex-user'))
+        if (!user) return
+        console.log('user', user)
+        return pull.values([set(user)])
+      },
+      [SET]: (user) => {
+        localStorage.setItem('holodex-user', JSON.stringify(user))
+        return pull.values([set(user)])
+      },
+      [LOGOUT]: (effect) => {
+        return pull.values([send(set(null))])
+      },
+      [LOGIN]: (effect) => {
+        const deferred = defer.source()
+        api.accounts.verify('basic', effect.credentials, (err, account) => {
+          if (err) return console.error(err)
+          deferred.resolve(pull.values([send(set(account.key))]))
+        })
+      },
+      [SIGNUP]: (effect) => {
+        const deferred = defer.source()
+        api.accounts.create('basic', effect.credentials, (err, account) => {
+          if (err) return console.error(err)
+          deferred.resolve(pull.values([send(set(account.key))]))
+        })
       }
-
-      function onAuth (err, account) {
-        if (err) {
-          console.error(err)
-          return
-        }
-        deferred.resolve(pull.values([
-          { type: 'do', effect: { type: 'setUser', key: account.key } }
-        ]))
-      }
-
-      return deferred
     }
   }
 }
