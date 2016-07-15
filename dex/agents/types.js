@@ -1,5 +1,5 @@
 const ty = require('mintype')
-const Id = require('app/util/id')
+const Id = require('dex/util/id')
 
 const Agent = ty.struct({
   id: Id

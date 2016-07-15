@@ -2,7 +2,7 @@
 
 const vas = require('vas')
 
-const service = require('app/service')
+const service = require('dex/service')
 const config = require('./config')
 
 vas.command(service, config, {

@@ -2,8 +2,8 @@ const pull = require('pull-stream')
 const vas = require('vas')
 const inu = require('inu')
 
-const app = require('app/app')
-const service = require('app/service')
+const app = require('dex/app')
+const service = require('dex/service')
 const config = require('./config')
 
 const client = vas.connect(service, config, {

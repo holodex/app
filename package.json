@@ -4,15 +4,20 @@
   "description": "agents and relationships",
   "main": "server",
   "scripts": {
-    "postinstall": "lnfs app node_modules/app",
+    "postinstall": "lnfs dex node_modules/dex",
     "lint": "snazzy",
     "format": "snazzy --format",
     "test:spec": "",
     "test:feature": "",
     "test": "NODE_ENV=test npm-run-all -p test:*",
     "dev:api": "nodemon ./cli server --watch .",
-    "dev:browser": "budo browser --serve bundle.js --host localhost --dir app --pushstate -- -d",
+    "dev:browser": "budo browser --serve bundle.js --host localhost --dir dex --pushstate -- -d",
     "dev": "NODE_ENV=development npm-run-all -p dev:*"
+  },
+  "browseify": {
+    "transform": [
+      "es2040"
+    ]
   },
   "repository": {
     "type": "git",

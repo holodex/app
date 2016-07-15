@@ -2,8 +2,8 @@ const extend = require('xtend')
 const { html } = require('inu')
 const { combineApps } = require('inux')
 
-const { SEND } = require('app/send')
-const Account = require('app/accounts/app')
+const { RUN } = require('dex/run')
+const Account = require('dex/accounts/app')
 
 module.exports = App
 
@@ -16,7 +16,8 @@ function App ({ api }) {
 
   return extend(app, {
     update: (model, action) => {
-      if (action.type === SEND) {
+      if (action.type === RUN) {
+        console.log('effect', action.payload)
         return { model, effect: action.payload }
       }
       return app.update(model, action)
