@@ -1,5 +1,5 @@
 const inu = require('inu')
-const { create } = require('inux')
+const { create, handleActions, handleEffects } = require('inux')
 const defer = require('pull-defer')
 const pull = inu.pull
 const getFormData = require('get-form-data')
@@ -28,9 +28,9 @@ function Account ({ api }) {
       model: null,
       effect: get()
     }),
-    update: {
+    update: handleActions({
       [SET]: (model, user) => ({ model: user })
-    },
+    }),
     views: {
       account: (model, dispatch) => {
         return inu.html`
@@ -71,7 +71,7 @@ function Account ({ api }) {
         }
       }
     },
-    run: {
+    run: handleEffects({
       [GET]: () => {
         const user = JSON.parse(localStorage.getItem('holodex-user'))
         console.log('user', user)
@@ -99,6 +99,6 @@ function Account ({ api }) {
           deferred.resolve(pull.values([send(set(account.key))]))
         })
       }
-    }
+    })
   }
 }
