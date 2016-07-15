@@ -49,6 +49,7 @@
   "dependencies": {
     "get-form-data": "^1.2.5",
     "inu": "^3.0.2",
+    "inux": "^1.0.0",
     "level-party": "^3.0.4",
     "lnfs-cli": "^1.0.1",
     "npm-run-all": "^1.3.2",

@@ -15,12 +15,12 @@ const main = document.querySelector('main')
 
 pull(
   sources.actions(),
-  pull.log()
+  pull.drain(console.log.bind(console, 'action'))
 )
 
 pull(
   sources.states(),
-  pull.log()
+  pull.drain(console.log.bind(console, 'state'))
 )
 
 pull(

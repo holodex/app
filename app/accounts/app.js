@@ -41,7 +41,7 @@ function Account ({ api }) {
                 : ''
               }
             </div>
-            <button onclick=${logout}>logout</button>
+            <button onclick=${handleLogout}>logout</button>
             <form onsubmit=${(ev) => ev.preventDefault()}>
               <fieldset>
                 <label>email</label>
@@ -60,13 +60,13 @@ function Account ({ api }) {
         function handleAuth (type) {
           return (ev) => {
             ev.preventDefault()
-            const credentials = getFormData(ev.target.parentElement)
-            const effect = { type, credentials }
+            const payload = getFormData(ev.target.parentElement)
+            const effect = { type, payload }
             dispatch(send(effect))
           }
         }
 
-        function logout () {
+        function handleLogout () {
           dispatch(send(logout()))
         }
       }
@@ -74,27 +74,27 @@ function Account ({ api }) {
     run: {
       [GET]: () => {
         const user = JSON.parse(localStorage.getItem('holodex-user'))
-        if (!user) return
         console.log('user', user)
+        if (!user) return
         return pull.values([set(user)])
       },
       [SET]: (user) => {
         localStorage.setItem('holodex-user', JSON.stringify(user))
         return pull.values([set(user)])
       },
-      [LOGOUT]: (effect) => {
+      [LOGOUT]: () => {
         return pull.values([send(set(null))])
       },
-      [LOGIN]: (effect) => {
+      [LOGIN]: (credentials) => {
         const deferred = defer.source()
-        api.accounts.verify('basic', effect.credentials, (err, account) => {
+        api.accounts.verify('basic', credentials, (err, account) => {
           if (err) return console.error(err)
           deferred.resolve(pull.values([send(set(account.key))]))
         })
       },
-      [SIGNUP]: (effect) => {
+      [SIGNUP]: (credentials) => {
         const deferred = defer.source()
-        api.accounts.create('basic', effect.credentials, (err, account) => {
+        api.accounts.create('basic', credentials, (err, account) => {
           if (err) return console.error(err)
           deferred.resolve(pull.values([send(set(account.key))]))
         })
