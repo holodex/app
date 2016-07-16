@@ -5,6 +5,7 @@ const getFormData = require('get-form-data')
 
 const { run } = require('dex/run')
 
+const { account } = require('./views')
 const { SET, set } = require('./actions')
 const { PERSIST, RESTORE, LOGIN, LOGOUT, SIGNUP, restore, persist } = require('./effects')
 
@@ -19,7 +20,19 @@ function Account ({ api }) {
     update: handleActions({
       [SET]: (model, user) => ({ model: user })
     }),
-    views: require('./views'),
+    routes: [
+      ['account', (params, model, dispatch) => {
+        return html`
+          <main>
+            <nav></nav>
+            <article></article>
+            <div class='account'>
+              ${account(model.account, dispatch)}
+            </div>
+          </main>
+        `
+      }],
+    ],
     run: handleEffects({
       [RESTORE]: () => {
         const user = JSON.parse(localStorage.getItem('holodex-user'))
