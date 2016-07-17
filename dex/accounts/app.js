@@ -1,9 +1,7 @@
 const { html, pull } = require('inu')
-const { create, handleActions, handleEffects } = require('inux')
+const { Domain, run } = require('inux')
 const defer = require('pull-defer')
 const getFormData = require('get-form-data')
-
-const { run } = require('dex/run')
 
 const { account } = require('./views')
 const { SET, set } = require('./actions')
@@ -12,14 +10,15 @@ const { PERSIST, RESTORE, LOGIN, LOGOUT, SIGNUP, restore, persist } = require('.
 module.exports = Account
 
 function Account ({ api }) {
-  return {
+  return Domain({
+    name: 'account',
     init: () => ({
       model: null,
       effect: restore()
     }),
-    update: handleActions({
+    update: {
       [SET]: (model, user) => ({ model: user })
-    }),
+    },
     routes: [
       ['account', (params, model, dispatch) => {
         return html`
@@ -33,7 +32,7 @@ function Account ({ api }) {
         `
       }],
     ],
-    run: handleEffects({
+    run: {
       [RESTORE]: () => {
         const user = JSON.parse(localStorage.getItem('holodex-user'))
         if (!user) return
@@ -62,6 +61,6 @@ function Account ({ api }) {
         })
         return deferred
       }
-    })
-  }
+    }
+  })
 }

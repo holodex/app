@@ -1,7 +1,6 @@
 const { html } = require('inu')
+const { run } = require('inux')
 const getFormData = require('get-form-data')
-
-const { run } = require('dex/run')
 
 const { login } = require('../effects')
 

@@ -1,8 +1,8 @@
-const { create } = require('inux')
+const { Action } = require('inux')
 
 const SET = Symbol('set')
 
-const set = create(SET)
+const set = Action(SET)
 
 module.exports = {
   SET,

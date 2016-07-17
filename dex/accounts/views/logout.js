@@ -1,6 +1,5 @@
 const { html } = require('inu')
-
-const { run } = require('dex/run')
+const { run } = require('inux')
 
 const { logout } = require('../effects')
 
