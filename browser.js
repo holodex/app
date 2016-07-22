@@ -14,18 +14,14 @@ const sources = inu.start(app({ api: client }))
 const main = document.querySelector('main')
 
 pull(
-  sources.actions(),
-  pull.drain(console.log.bind(console, 'action'))
-)
-
-pull(
-  sources.states(),
-  pull.drain(console.log.bind(console, 'state'))
+  sources.models(),
+  pull.log()
 )
 
 pull(
   sources.views(),
   pull.drain(view => {
+    console.log('view', view)
     inu.html.update(main, view)
   })
 )

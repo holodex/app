@@ -3,11 +3,13 @@ const { Domain, run } = require('inux')
 const defer = require('pull-defer')
 const getFormData = require('get-form-data')
 
-const { account } = require('./views')
+const views = require('./views')
+const { account } = views
 const { SET, set } = require('./actions')
 const { PERSIST, RESTORE, LOGIN, LOGOUT, SIGNUP, restore, persist } = require('./effects')
 
 module.exports = Account
+module.exports.views = views
 
 function Account ({ api }) {
   return Domain({
@@ -19,19 +21,6 @@ function Account ({ api }) {
     update: {
       [SET]: (model, user) => ({ model: user })
     },
-    routes: [
-      ['account', (params, model, dispatch) => {
-        return html`
-          <main>
-            <nav></nav>
-            <article></article>
-            <div class='account'>
-              ${account(model.account, dispatch)}
-            </div>
-          </main>
-        `
-      }],
-    ],
     run: {
       [RESTORE]: () => {
         const user = JSON.parse(localStorage.getItem('holodex-user'))
