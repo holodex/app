@@ -1,6 +1,6 @@
 const { html, pull } = require('inu')
 const { Domain, run } = require('inux')
-const defer = require('pull-defer')
+const pullAsync = require('pull-async')
 const getFormData = require('get-form-data')
 
 const views = require('./views')
@@ -35,20 +35,21 @@ function Account ({ api }) {
         return pull.values([run(persist(null))])
       },
       [LOGIN]: (credentials) => {
-        const deferred = defer.source()
-        api.accounts.verify('basic', credentials, (err, account) => {
-          if (err) return console.error(err)
-          deferred.resolve(pull.values([run(persist(account.key))]))
+        return pullAsync((cb) => {
+          console.log('cb', cb)
+          api.accounts.verify('basic', credentials, (err, account) => {
+            if (err) return console.error(err)
+            cb(null, run(persist(account.key)))
+          })
         })
-        return deferred
       },
       [SIGNUP]: (credentials) => {
-        const deferred = defer.source()
-        api.accounts.create('basic', credentials, (err, account) => {
-          if (err) return console.error(err)
-          deferred.resolve(pull.values([run(persist(account.key))]))
+        return pullAsync((cb) => {
+          api.accounts.create('basic', credentials, (err, account) => {
+            if (err) return console.error(err)
+            cb(null, run(persist(account.key)))
+          })
         })
-        return deferred
       }
     }
   })

@@ -18,7 +18,6 @@ const service = {
     }
 
     function create (provider, body, cb) {
-      console.log('body', body)
       auth.findOne(provider, body.email, function (err, data) {
         if (err) return cb(err)
         if (data) return cb(new Error('Account already created.'))

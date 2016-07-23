@@ -4,11 +4,11 @@ const logout = require('./logout')
 
 module.exports = viewAccount
 
-function viewAccount (model, dispatch) {
+function viewAccount (agentId, model, dispatch) {
   return html`
-    <div class='account' id=${model.account}>
+    <div class='account'>
       <header>
-        <h1>hello ${model.account}</h1>
+        <h1>hello ${agentId}</h1>
       </header>
       ${logout(model, dispatch)}
     </div>

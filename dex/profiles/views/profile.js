@@ -10,10 +10,11 @@ module.exports = viewProfile
 function viewProfile (agentId, model, dispatch) {
   const profilesByAgent = getProfilesByAgent(model)
   const profile = profilesByAgent[agentId] || {}
-  const { name, description } = profile
+  const { key, name, description } = profile
 
   return html`
     <form onsubmit=${handleSubmit} onload=${handleLoad}>
+      <input name='agentId' type='hidden' value=${agentId} />
       <fieldset>
         <label>name</label>
         <input name='name' type='text' value=${name || ''} />
@@ -22,7 +23,6 @@ function viewProfile (agentId, model, dispatch) {
         <label>description</label>
         <input name='description' type='text' value=${description || ''} />
       </fieldset>
-      <input name='agentId' type='hidden' value=${agentId} />
       <input type='submit' value='save' />
     </form>
   `
@@ -43,7 +43,8 @@ function viewProfile (agentId, model, dispatch) {
 
   function handleSubmit (ev) {
     ev.preventDefault()
-    const nextProfile = getFormData(ev.target)
+    var nextProfile = getFormData(ev.target)
+    if (key) nextProfile.key = key
     dispatch(run(put(nextProfile)))
   }
 }

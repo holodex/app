@@ -1,6 +1,6 @@
 const { html, pull } = require('inu')
 const { Domain, run } = require('inux')
-const defer = require('pull-defer')
+const pullAsync = require('pull-async')
 const extend = require('xtend')
 
 const { FIND_ONE, PUT } = require('./effects')
@@ -29,20 +29,20 @@ function Profiles ({ api }) {
 
     run: {
       [FIND_ONE]: ({ index, value }, sources) => {
-        const deferred = defer.source()
-        api.profiles.findOne(index, value, (err, profile) => {
-          if (err) return console.error(err)
-          deferred.resolve(pull.values([set(profile)]))
+        return pullAsync(cb => {
+          api.profiles.findOne(index, value, (err, profile) => {
+            if (err) return console.error(err)
+            cb(null, set(profile))
+          })
         })
-        return deferred
       },
       [PUT]: (nextProfile, sources) => {
-        const deferred = defer.source()
-        api.profiles.put(nextProfile, (err, profile) => {
-          if (err) return console.error(err)
-          deferred.resolve(pull.values([set(profile)]))
+        return pullAsync(cb => {
+          api.profiles.put(nextProfile, (err, profile) => {
+            if (err) return console.error(err)
+            cb(null, set(profile))
+          })
         })
-        return deferred
       }
     }
   })

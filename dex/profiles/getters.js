@@ -2,6 +2,8 @@ const { createSelector } = require('reselect')
 
 const getProfiles = (model) => model.profiles
 
+// has-one relation:
+//   agent has-one profile
 const getProfilesByAgent = createSelector(
   getProfiles,
   (profiles) => {
