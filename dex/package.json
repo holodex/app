@@ -1,0 +1,8 @@
+{
+  "browserify": {
+    "transform": [
+      "sheetify/transform",
+      "es2040"
+    ]
+  }
+}

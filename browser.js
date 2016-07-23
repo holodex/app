@@ -1,12 +1,12 @@
 const pull = require('pull-stream')
-const vas = require('vas')
+const connect = require('vas/connect')
 const inu = require('inu')
 
 const app = require('dex/app')
 const service = require('dex/service')
 const config = require('./config')
 
-const client = vas.connect(service, config, {
+const client = connect(service, config, {
   url: config.url
 })
 const sources = inu.start(app({ api: client }))
