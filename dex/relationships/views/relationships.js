@@ -1,5 +1,6 @@
 const { html } = require('inu')
 const { run } = require('inux')
+const plural = require('plur')
 
 const { getRelationshipTypesByAgent } = require('dex/relationshipTypes/getters')
 const { getRelationshipsByAgentTypeKind } = require('../getters')
@@ -20,20 +21,39 @@ function viewRelationship (agent, model, dispatch) {
     <div>
       <ul onload=${handleLoad}>
         ${relationshipTypes.map(relType => {
-          const relationshipsByKind = relationshipsByTypeKind[relType.key]
-            || { source: [], target: [], context: [] }
+          const relsByKind = relationshipsByTypeKind[relType.key] || {}
+
+          console.log('relsByKind', relsByKind)
 
           return html`
             <li>
               ${relationshipType(relType, model, dispatch)}
 
-              <ul>
-                ${relationshipsByKind.source.map(rel => {
-                  return relationship(rel, model, dispatch)
-                })}
-              </ul>
+              ${relsByKind.source && html`
+                  <section>
+                    <h3>${plural(relType.name, relsByKind.source.length)}</h3>
+                    <ul>
+                      ${relsByKind.source.map(rel => {
+                        return relationship(rel, model, dispatch)
+                      })}
+                    </ul>
+                  </section>
+                `
+              }
 
               <button onclick=${handleAddSourceRel(relType.key)}>add relationship</button>
+
+              ${relsByKind.target && html`
+                  <section>
+                    <h3>${plural(relType.name, relsByKind.target.length)} of</h3>
+                    <ul>
+                      ${relsByKind.target.map(rel => {
+                        return relationship(rel, model, dispatch)
+                      })}
+                    </ul>
+                  </section>
+                `
+              }
             </li>
           `
         })}
