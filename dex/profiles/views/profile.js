@@ -7,14 +7,14 @@ const { getProfilesByAgent } = require('../getters')
 
 module.exports = viewProfile
 
-function viewProfile (agentId, model, dispatch) {
+function viewProfile (agent, model, dispatch) {
   const profilesByAgent = getProfilesByAgent(model)
-  const profile = profilesByAgent[agentId] || {}
+  const profile = profilesByAgent[agent] || {}
   const { key, name, description } = profile
 
   return html`
     <form onsubmit=${handleSubmit} onload=${handleLoad}>
-      <input name='agentId' type='hidden' value=${agentId} />
+      <input name='agent' type='hidden' value=${agent} />
       <fieldset>
         <label>name</label>
         <input name='name' type='text' value=${name || ''} />
@@ -37,8 +37,8 @@ function viewProfile (agentId, model, dispatch) {
 */
 
   function handleLoad () {
-    if (!agentId || profile.key) return
-    dispatch(run(findOne({ index: 'agentId', value: agentId })))
+    if (!agent || profile.key) return
+    dispatch(run(findOne({ index: 'agent', value: agent })))
   }
 
   function handleSubmit (ev) {

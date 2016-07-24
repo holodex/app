@@ -1,22 +1,22 @@
 {
   "type": "object",
   "properties": {
-    "typeId": {
+    "type": {
       "type": "string",
       "format": "uuid"
     },
-    "sourceId": {
+    "source": {
       "type": "string",
       "format": "uuid"
     },
-    "targetId": {
+    "target": {
       "type": "string",
       "format": "uuid"
     },
-    "contextId": {
+    "context": {
       "type": "string",
       "format": "uuid"
     }
   },
-  "required": ["typeId", "sourceId"]
+  "required": ["type"]
 }

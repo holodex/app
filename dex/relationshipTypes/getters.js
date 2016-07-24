@@ -1,4 +1,5 @@
 const { createSelector } = require('reselect')
+const groupBy = require('lodash/groupBy')
 
 const getRelationshipTypes = (model) => model.relationshipTypes
 
@@ -7,14 +8,7 @@ const getRelationshipTypes = (model) => model.relationshipTypes
 const getRelationshipTypesByAgent = createSelector(
   getRelationshipTypes,
   (relationshipTypes) => {
-    if (!relationshipTypes) return {}
-    return Object.keys(relationshipTypes)
-      .reduce((sofar, key) => {
-        const relationshipType = relationshipTypes[key]
-        sofar[relationshipType.agentId] = sofar[relationshipType.agentId] || []
-        sofar[relationshipType.agentId].push(relationshipType)
-        return sofar
-      }, {})
+    return groupBy(relationshipTypes, 'agent')
   }
 )
 

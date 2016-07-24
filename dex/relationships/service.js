@@ -15,7 +15,7 @@ const service = {
       config.db,
       extend(schema, {
         modelName: 'relationship',
-        indexKeys: ['typeId', 'sourceId', 'targetId', 'contextId']
+        indexKeys: ['type', 'source', 'target', 'context']
       })
     )
 

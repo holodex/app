@@ -5,27 +5,26 @@ const getFormData = require('get-form-data')
 const { find, put } = require('../effects')
 const { getRelationshipTypesByAgent } = require('../getters')
 
-module.exports = viewRelationshipType
+module.exports = viewRelationship
 
-function viewRelationshipType (relationshipId, model, dispatch) {
-  const relationship = model.relationships[relationshipId] || {}
+function viewRelationship (relationship, model, dispatch) {
   if (!relationship) return null
-  const { key, typeId, sourceId, targetId, contextId } = relationship
+  const { key, type, source, target, context } = relationship
 
   return html`
     <form onsubmit=${handleSubmit}>
-      <input name='typeId' type='hidden' value=${typeId} />
+      <input name='type' type='hidden' value=${type} />
       <fieldset>
         <label>source</label>
-        <input name='sourceId' type='text' value=${sourceId || ''} />
+        <input name='source' type='text' value=${source || ''}/>
       </fieldset>
       <fieldset>
         <label>target</label>
-        <input name='targetId' type='text' value=${targetId || ''} />
+        <input name='target' type='text' value=${target || ''} />
       </fieldset>
       <fieldset>
-        <label>contextId</label>
-        <input name='contextId' type='text' value=${contextId || ''} />
+        <label>context</label>
+        <input name='context' type='text' value=${context || ''} />
       </fieldset>
       <input type='submit' value='save' />
     </form>

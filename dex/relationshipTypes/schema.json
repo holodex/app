@@ -1,7 +1,7 @@
 {
   "type": "object",
   "properties": {
-    "agentId": {
+    "agent": {
       "type": "string",
       "format": "uuid"
     },

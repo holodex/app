@@ -6,14 +6,13 @@ const { find, put } = require('./effects')
 
 module.exports = viewRelationshipType
 
-function viewRelationshipType (typeId, model, dispatch) {
-  const relationshipType = model.relationshipTypes[typeId]
+function viewRelationshipType (relationshipType, model, dispatch) {
   if (!relationshipType) return null
-  const { key, agentId, name } = relationshipType
+  const { key, agent, name } = relationshipType
 
   return html`
     <form onsubmit=${handleSubmit}>
-      <input name='agentId' type='hidden' value=${agentId} />
+      <input name='agent' type='hidden' value=${agent} />
       <fieldset>
         <label>name</label>
         <input name='name' type='text' value=${name || ''} />

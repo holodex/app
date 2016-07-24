@@ -2,7 +2,7 @@ const { html } = require('inu')
 const { run } = require('inux')
 
 const { getRelationshipTypesByAgent } = require('dex/relationshipTypes/getters')
-const { getRelationshipsBySourceAndType } = require('../getters')
+const { getRelationshipsByAgentTypeKind } = require('../getters')
 const relationshipType = require('dex/relationshipTypes/view')
 const relationship = require('./relationship')
 const { find: findRelationshipTypes, put: putRelationshipType } = require('dex/relationshipTypes/effects')
@@ -10,31 +10,30 @@ const { find: findRelationships, put: putRelationship } = require('../effects')
 
 module.exports = viewRelationship
 
-function viewRelationship (agentId, model, dispatch) {
-  const relationshipsBySourceAndType = getRelationshipsBySourceAndType(model)
-  const relationshipsByType = relationshipsBySourceAndType[agentId] || {}
+function viewRelationship (agent, model, dispatch) {
+  const relationshipsByAgentTypeKind = getRelationshipsByAgentTypeKind(model)
+  const relationshipsByTypeKind = relationshipsByAgentTypeKind[agent] || {}
   const relationshipTypesByAgent = getRelationshipTypesByAgent(model)
-  const relationshipTypes = relationshipTypesByAgent[agentId] || []
+  const relationshipTypes = relationshipTypesByAgent[agent] || []
 
   return html`
     <div>
       <ul onload=${handleLoad}>
         ${relationshipTypes.map(relType => {
-          const typeId = relType.key
-          const relationships = relationshipsByType[typeId] || []
+          const relationshipsByKind = relationshipsByTypeKind[relType.key]
+            || { source: [], target: [], context: [] }
 
           return html`
             <li>
-              ${relationshipType(typeId, model, dispatch)}
+              ${relationshipType(relType, model, dispatch)}
 
               <ul>
-                ${relationships.map(rel => {
-                  const relId = rel.key
-                  return relationship(relId, model, dispatch)
+                ${relationshipsByKind.source.map(rel => {
+                  return relationship(rel, model, dispatch)
                 })}
               </ul>
 
-              <button onclick=${handleAddSourceRel(typeId)}>add relationship</button>
+              <button onclick=${handleAddSourceRel(relType.key)}>add relationship</button>
             </li>
           `
         })}
@@ -45,20 +44,19 @@ function viewRelationship (agentId, model, dispatch) {
   `
 
   function handleLoad () {
-    if (!agentId || relationshipTypes.length > 0) return
-    dispatch(run(findRelationshipTypes({ index: 'agentId', value: agentId })))
-    dispatch(run(findRelationships({ index: 'sourceId', value: agentId })))
+    if (!agent || relationshipTypes.length > 0) return
+    dispatch(run(findRelationshipTypes({ index: 'agent', value: agent })))
+    dispatch(run(findRelationships({ index: 'source', value: agent })))
   }
 
   function handleAddRelType () {
-    const relType = { agentId, name: '' }
+    const relType = { agent, name: '' }
     dispatch(run(putRelationshipType(relType)))
   }
 
-  function handleAddSourceRel (typeId) {
+  function handleAddSourceRel (type) {
     return () => {
-      const sourceRel = { sourceId: agentId, typeId }
-      console.log('sourceRel', sourceRel)
+      const sourceRel = { source: agent, type }
       dispatch(run(putRelationship(sourceRel)))
     }
   }

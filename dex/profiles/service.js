@@ -14,7 +14,7 @@ const service = {
       config.db,
       extend(schema, {
         modelName: 'profile',
-        indexKeys: ['agentId']
+        indexKeys: ['agent']
       })
     )
 
