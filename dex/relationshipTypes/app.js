@@ -3,7 +3,7 @@ const { Domain, run } = require('inux')
 const pullAsync = require('pull-async')
 const extend = require('xtend')
 
-const { FIND, PUT } = require('./effects')
+const { FIND, GET, PUT } = require('./effects')
 const { SET, set } = require('./actions')
 
 module.exports = RelationshipTypes
@@ -34,6 +34,15 @@ function RelationshipTypes ({ api }) {
             return set(relationshipType)
           })
         )
+      },
+      [GET]: (key, sources) => {
+        return pullAsync(cb => {
+          api.relationshipTypes.get(key, (err, relationshipType) => {
+            if (err) return console.error(err)
+            console.log('got', relationshipType)
+            cb(null, set(relationshipType))
+          })
+        })
       },
       [PUT]: (nextRelationshipType, sources) => {
         return pullAsync(cb => {

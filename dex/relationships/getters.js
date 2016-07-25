@@ -15,12 +15,8 @@ const getRelationshipsByAgentTypeKind = createSelector(
   (relationships) => {
     const bySource = groupBy(relationships, 'source')
     const byTarget = groupBy(relationships, 'target')
-    const byContext = groupBy(relationships, 'context')
 
-    const byAgent = mergeWith({},
-      bySource, byTarget, byContext,
-      concatMerge
-    )
+    const byAgent = mergeWith(bySource, byTarget, concatMerge)
 
     return mapValues(
       byAgent,
@@ -29,11 +25,7 @@ const getRelationshipsByAgentTypeKind = createSelector(
           groupBy(agentRelationships, 'type'),
           (agentTypeRelationships) => {
             return groupBy(agentTypeRelationships, (rel) => {
-              switch (agent) {
-                case rel.source: return 'source'
-                case rel.target: return 'target'
-                case rel.context: return 'context'
-              }
+              return agent === rel.source ? 'source' : 'target'
             })
           }
         )

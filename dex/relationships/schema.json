@@ -12,11 +12,7 @@
     "target": {
       "type": "string",
       "format": "uuid"
-    },
-    "context": {
-      "type": "string",
-      "format": "uuid"
     }
   },
-  "required": ["type"]
+  "required": ["type", "source", "target"]
 }

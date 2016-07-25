@@ -8,6 +8,7 @@ const service = {
   name: 'relationships',
   manifest: {
     put: 'async',
+    del: 'async',
     find: 'source'
   },
   init: function (server, config) {
@@ -15,17 +16,22 @@ const service = {
       config.db,
       extend(schema, {
         modelName: 'relationship',
-        indexKeys: ['type', 'source', 'target', 'context']
+        indexKeys: ['type', 'source', 'target']
       })
     )
 
     return {
       put,
+      del,
       find
     }
 
     function put (relationship, cb) {
       relationships.put(relationship, cb)
+    }
+
+    function del (key, cb) {
+      relationships.del(key, cb)
     }
 
     function find (index, value) {

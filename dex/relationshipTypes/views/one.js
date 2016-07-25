@@ -2,7 +2,7 @@ const { html } = require('inu')
 const { run } = require('inux')
 const getFormData = require('get-form-data')
 
-const { find, put } = require('./effects')
+const { find, put } = require('../effects')
 
 module.exports = viewRelationshipType
 

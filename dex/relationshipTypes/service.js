@@ -7,6 +7,7 @@ const schema = require('./schema')
 const service = {
   name: 'relationshipTypes',
   manifest: {
+    get: 'async',
     put: 'async',
     find: 'source'
   },
@@ -20,8 +21,14 @@ const service = {
     )
 
     return {
+      get,
       put,
       find
+    }
+
+    function get (key, cb) {
+      console.log('get', key)
+      relationshipTypes.get(key, cb)
     }
 
     function put (profile, cb) {

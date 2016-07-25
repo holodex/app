@@ -64,6 +64,7 @@
     "pull-async": "^1.0.0",
     "pull-defer": "^0.2.2",
     "pull-level": "^2.0.2",
+    "pull-zip": "^2.0.0",
     "reselect": "^2.5.3",
     "sheetify": "^5.0.3",
     "stream-to-pull-stream": "^1.7.0",
