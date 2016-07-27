@@ -58,7 +58,8 @@
     "evalify": "^2.0.0",
     "get-form-data": "^1.2.5",
     "inu": "^3.1.3",
-    "inux": "^2.0.4",
+    "inu-log": "^1.0.2",
+    "inux": "github:ahdinosaur/inux#navigate",
     "level-model": "^2.0.2",
     "level-party": "^3.0.4",
     "lnfs-cli": "^1.0.1",
@@ -75,7 +76,7 @@
     "subleveldown": "^2.1.0",
     "township-auth": "^2.0.5",
     "uglifyify": "^3.0.1",
-    "vas": "github:ahdinosaur/vas#cli",
+    "vas": "github:ahdinosaur/vas#reduce-browser-bundles",
     "xtend": "^4.0.1"
   }
 }
