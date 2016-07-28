@@ -1,7 +1,7 @@
 const { html } = require('inu')
 const { navigate } = require('inux')
 
-const login = require('dex/accounts/views/login')
+const login = require('dex/user/views/login')
 const landing = require('./view')
 
 module.exports = Landing
@@ -27,7 +27,7 @@ function Landing ({ api }) {
 
         return html`
           <main>
-            ${login(model.account, dispatch)}
+            ${login(model, dispatch)}
           </main>
         `
       }]

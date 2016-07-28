@@ -2,7 +2,7 @@ const { html } = require('inu')
 const { navigate } = require('inux')
 const css = require('sheetify')
 
-const signup = require('dex/accounts/views/signup')
+const signup = require('dex/user/views/signup')
 
 module.exports = viewLanding
 

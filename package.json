@@ -10,20 +10,15 @@
     "test:spec": "",
     "test:feature": "",
     "test": "NODE_ENV=test npm-run-all -p test:*",
-    "dev:api": "nodemon ./cli server --watch .",
-    "dev:browser": "budo browser --serve bundle.js --host localhost --dir dex --pushstate -- -d",
-    "prod:size": "browserify browser.js -g uglifyify -g unassertify | gzip | wc -c | pretty-bytes",
+    "dev:server": "nodemon ./cli server --watch .",
+    "prod:size": "browserify browser.js -g es2040 -g uglifyify -g unassertify | gzip | wc -c | pretty-bytes",
     "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/holodex/app.git"
   },
-  "browserify": {
-    "transform": [
-      "es2040"
-    ]
-  },
+  "browserify": {},
   "keywords": [
     "stack",
     "example",
@@ -46,15 +41,16 @@
   },
   "devDependencies": {
     "browserify": "^13.0.1",
-    "budo": "^8.3.0",
     "es2040": "^1.2.2",
     "nodemon": "^1.9.2",
     "pretty-bytes-cli": "^1.0.0",
     "uglifyify": "^3.0.2",
     "unassertify": "^2.0.3",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "wzrd": "^1.4.0"
   },
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "evalify": "^2.0.0",
     "get-form-data": "^1.2.5",
     "inu": "^3.1.3",
@@ -72,9 +68,11 @@
     "pull-zip": "^2.0.0",
     "reselect": "^2.5.3",
     "sheetify": "^5.0.3",
+    "stack": "^0.1.0",
     "stream-to-pull-stream": "^1.7.0",
     "subleveldown": "^2.1.0",
-    "township-auth": "^2.0.5",
+    "ticket-auth": "0.0.1",
+    "tiny-route": "^2.1.2",
     "uglifyify": "^3.0.1",
     "vas": "github:ahdinosaur/vas#reduce-browser-bundles",
     "xtend": "^4.0.1"

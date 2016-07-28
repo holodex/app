@@ -4,8 +4,7 @@
       ["evalify", {
         "files": ["**/service.js"]
       }],
-      "sheetify/transform",
-      "es2040"
+      "sheetify/transform"
     ]
   }
 }

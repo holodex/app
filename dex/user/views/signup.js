@@ -13,17 +13,13 @@ function viewSignup (model, dispatch) {
         <label>email</label>
         <input name='email' type='email' autofocus />
       </fieldset>
-      <fieldset>
-        <label>password</label>
-        <input name='password' type='password' />
-      </fieldset>
       <input type='submit' value='signup' />
     </form>
   `
 
   function handleSignup (ev) {
     ev.preventDefault()
-    const credentials = getFormData(ev.target)
-    dispatch(run(signup(credentials)))
+    const data = getFormData(ev.target)
+    dispatch(run(signup(data.email)))
   }
 }
