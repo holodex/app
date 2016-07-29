@@ -29,7 +29,7 @@ function viewLanding (model, dispatch) {
           <h2>Connecting you and your networks</h2>
         </header>
         <section class='call-to-action'>
-          ${signup(model.account, dispatch)}
+          ${signup(model, dispatch)}
         </section>
       </div>
     </main>

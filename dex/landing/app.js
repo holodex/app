@@ -10,7 +10,7 @@ function Landing ({ api }) {
   return {
     routes: [
       ['', (params, model, dispatch) => {
-        if (model.account) {
+        if (model.user) {
           process.nextTick(() => {
             dispatch(navigate('dashboard'))
           })
@@ -19,7 +19,7 @@ function Landing ({ api }) {
         return landing(model, dispatch)
       }],
       ['login', (params, model, dispatch) => {
-        if (model.account) {
+        if (model.user) {
           process.nextTick(() => {
             dispatch(navigate('dashboard'))
           })

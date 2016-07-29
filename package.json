@@ -74,7 +74,7 @@
     "ticket-auth": "0.0.1",
     "tiny-route": "^2.1.2",
     "uglifyify": "^3.0.1",
-    "vas": "github:ahdinosaur/vas#reduce-browser-bundles",
+    "vas": "github:ahdinosaur/vas#all-the-betters",
     "xtend": "^4.0.1"
   }
 }

@@ -18,7 +18,7 @@ const service = {
       config.db,
       extend(schema, {
         modelName: 'account',
-        indexKeys: ['agent', 'email']
+        indexKeys: ['email']
       })
     )
 
@@ -30,7 +30,7 @@ const service = {
     }
 
     function get (key, cb) {
-      acounts.get(key, cb)
+      accounts.get(key, cb)
     }
 
     function create (email, cb) {

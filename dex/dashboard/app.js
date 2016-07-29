@@ -11,7 +11,7 @@ function Dashboard ({ api }) {
   return {
     routes: [
       ['dashboard', (params, model, dispatch) => {
-        if (!model.account) {
+        if (!model.user) {
           process.nextTick(() => {
             dispatch(navigate('/'))
           })
