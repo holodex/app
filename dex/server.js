@@ -6,8 +6,8 @@ module.exports = createServer
 
 function createServer (config) {
   return Stack(
-    // redeem a user ticket at /redeem/<ticket>
-    Route.get(/^\/redeem\/([0-9a-f]+)/, function (req, res, next) {
+    // redeem a user ticket at /login/<ticket>
+    Route.get(/^\/login\/([0-9a-f]+)/, function (req, res, next) {
       config.tickets.redeem(req.params[0], function (err, cookie) {
         if(err) return next(err)
         // ticket is redeemed! set it as a cookie, 

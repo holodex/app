@@ -7,6 +7,8 @@ const relationships = require('dex/relationships/views/list')
 module.exports = viewAgent
 
 function viewAgent (agent, model, dispatch) {
+  if (!agent) return null
+
   return html`
     <article>
       ${profile(agent, model, dispatch)}

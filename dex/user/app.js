@@ -24,7 +24,6 @@ function User ({ api }) {
       [WHOAMI]: () => {
         return pullAsync(cb => {
           api.user.whoami((err, id) => {
-            console.log('id', id)
             if (err) return console.error(err)
             cb(null, set(id))
           })
@@ -34,11 +33,10 @@ function User ({ api }) {
         window.location = '/logout'
       },
       [LOGIN]: (credentials) => {
-        console.log('creds', credentials)
         return pullAsync((cb) => {
           api.user.login(credentials, (err, accountKey) => {
             if (err) return console.error(err)
-            window.location = `/redeem/${accountKey}`
+            window.location = `/login/${accountKey}`
           })
         })
       },
@@ -46,7 +44,7 @@ function User ({ api }) {
         return pullAsync((cb) => {
           api.user.signup(email, (err, accountKey) => {
             if (err) return console.error(err)
-            window.location = `/redeem/${accountKey}`
+            window.location = `/login/${accountKey}`
           })
         })
       }

@@ -75,6 +75,7 @@
     "tiny-route": "^2.1.2",
     "uglifyify": "^3.0.1",
     "vas": "github:ahdinosaur/vas#all-the-betters",
+    "wzrd": "github:ahdinosaur/wzrd#patch-1",
     "xtend": "^4.0.1"
   }
 }

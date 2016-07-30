@@ -8,12 +8,13 @@ const { find, put } = require('../effects')
 module.exports = viewRelationshipTypes
 
 function viewRelationshipTypes (agent, model, dispatch) {
+  console.log('view agent relationship type', agent)
   const relationshipTypesByAgent = getRelationshipTypesByAgent(model)
   const relationshipTypes = relationshipTypesByAgent[agent] || []
 
   return html`
-    <div onload=${handleLoad}>
-      <ul>
+    <section>
+      <ul onload=${handleLoad}>
         ${relationshipTypes.map(relType => {
           return html`
             <li>
@@ -24,11 +25,11 @@ function viewRelationshipTypes (agent, model, dispatch) {
       </ul>
 
       <button onclick=${handleAddRelType}>add relationship type</button>
-    </div>
+    </section>
   `
 
   function handleLoad () {
-    if (!agent) return
+    console.log('load agent relationship type', agent)
     dispatch(run(find({ index: 'agent', value: agent })))
   }
 

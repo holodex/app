@@ -17,8 +17,8 @@ function viewRelationships (agent, model, dispatch) {
   const relationshipTypes = keys(relationshipsByTypeKind)
 
   return html`
-    <div onload=${handleLoad}>
-      <ul>
+    <section>
+      <ul onload=${handleLoad}>
         ${relationshipTypes.map(relTypeKey => {
           const relType = model.relationshipTypes[relTypeKey]
           if (!relType) return
@@ -64,11 +64,10 @@ function viewRelationships (agent, model, dispatch) {
       </ul>
 
       ${createRelationship(agent, model, dispatch)}
-    </div>
+    </section>
   `
 
   function handleLoad () {
-    if (!agent) return
     dispatch(run(findRelationships({ index: 'source', value: agent })))
     dispatch(run(findRelationships({ index: 'target', value: agent })))
   }
