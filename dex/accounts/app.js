@@ -4,7 +4,7 @@ const { Domain, run } = require('inux')
 const pullAsync = require('pull-async')
 
 const { SET, set } = require('./actions')
-const { GET, get } = require('./effects')
+const { GET, UPDATE, get, update } = require('./effects')
 
 module.exports = Accounts
 
@@ -22,9 +22,17 @@ function Accounts ({ api }) {
       }
     },
     run: {
-      [GET]: (key, account) => {
+      [GET]: (key) => {
         return pullAsync(cb => {
           return api.accounts.get(key, (err, account) => {
+            if (err) return console.error(err)
+            return cb(null, set(account))
+          })
+        })
+      },
+      [UPDATE]: (nextAccount) => {
+        return pullAsync(cb => {
+          return api.accounts.update(nextAccount, (err, account) => {
             if (err) return console.error(err)
             return cb(null, set(account))
           })

@@ -24,7 +24,7 @@ function viewProfile (agent, model, dispatch) {
           <label>description</label>
           <input name='description' type='text' value=${description || ''} />
         </fieldset>
-        <input type='submit' value='save' />
+        <input type='submit' value='save profile' />
       </form>
     </section>
   `

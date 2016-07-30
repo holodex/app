@@ -33,6 +33,10 @@ const service = {
       accounts.get(key, cb)
     }
 
+    function getByEmail (email, cb) {
+      accounts.findOne('email', email, cb)
+    }
+
     function create (email, cb) {
       const notFoundMessage = '[NotFoundError: model not found with email'
       accounts.findOne('email', email, function (err, data) {
@@ -48,10 +52,14 @@ const service = {
 
     function update (body, cb) {
       const saltRounds = 10
-      var nextAccount = {}
+        console.log('body', body)
+      var nextAccount = {
+        key: body.key,
+        agent: body.agent
+      }
       if (body.email) nextAccount.email = body.email
       if (body.password) {
-        return bcrypt.genSalt(body.password, saltRounds, function (err, hash) {
+        return bcrypt.hash(body.password, saltRounds, function (err, hash) {
           if (err) return cb(err)
           nextAccount.hash = hash
           accounts.update(nextAccount, cb)
@@ -61,7 +69,7 @@ const service = {
     }
 
     function verify (body, cb) {
-      accounts.get(body.key, function (err, account) {
+      getByEmail(body.email, function (err, account) {
         if (err) return cb(err)
 
         bcrypt.compare(body.password, account.hash, function (err, res) {

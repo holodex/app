@@ -8,7 +8,6 @@ const { find, put } = require('../effects')
 module.exports = viewRelationshipTypes
 
 function viewRelationshipTypes (agent, model, dispatch) {
-  console.log('view agent relationship type', agent)
   const relationshipTypesByAgent = getRelationshipTypesByAgent(model)
   const relationshipTypes = relationshipTypesByAgent[agent] || []
 
@@ -29,7 +28,6 @@ function viewRelationshipTypes (agent, model, dispatch) {
   `
 
   function handleLoad () {
-    console.log('load agent relationship type', agent)
     dispatch(run(find({ index: 'agent', value: agent })))
   }
 

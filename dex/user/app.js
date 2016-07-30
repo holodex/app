@@ -2,8 +2,6 @@ const { html, pull } = require('inu')
 const { Domain, run } = require('inux')
 const pullAsync = require('pull-async')
 
-const views = require('./views')
-const { account } = views
 const { SET, set } = require('./actions')
 const { set: setAccount } = require('dex/accounts/actions')
 const { WHOAMI, LOGIN, LOGOUT, SIGNUP, whoami } = require('./effects')

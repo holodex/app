@@ -9,7 +9,7 @@ const service = {
     put: 'async',
     findOne: 'async'
   },
-  init: function (server, config) {
+  methods: function (server, config) {
     const profiles = Model(
       config.db,
       extend(schema, {
@@ -29,6 +29,16 @@ const service = {
 
     function findOne (index, value, cb) {
       profiles.findOne(index, value, cb)
+    }
+  },
+  permissions: function (server, config) {
+    return {
+      put: function (profile) {
+        return this.id === profile.agent
+      },
+      findOne: function (index, value) {
+        return index === 'agent' && this.id === value
+      }
     }
   }
 }

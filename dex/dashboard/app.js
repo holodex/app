@@ -1,6 +1,7 @@
 const { html } = require('inu')
 const { navigate } = require('inux')
 
+const logout = require('dex/user/views/logout')
 const agent = require('dex/agents/views/agent')
 const account = require('dex/accounts/views/account')
 
@@ -18,8 +19,9 @@ function Dashboard ({ api }) {
 
         return html`
           <main>
-            ${account(model.user, model, dispatch)}
-            ${agent(model.user, model, dispatch)}
+            ${logout(model, dispatch)}
+            ${model.user && account(model.user, model, dispatch)}
+            ${model.user && agent(model.user, model, dispatch)}
           </main>
         `
       }]

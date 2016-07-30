@@ -1,22 +1,40 @@
 const { html } = require('inu')
 const { run } = require('inux')
+const getFormData = require('get-form-data')
 
-const { get } = require('../effects')
-const logout = require('dex/user/views/logout')
+const { get, update } = require('../effects')
 
 module.exports = viewAccount
 
-function viewAccount (user, model, dispatch) {
-  const account = model.accounts[user] || {}
+function viewAccount (agent, model, dispatch) {
+  const account = model.accounts[agent] || {}
+  const { key, email } = account
 
   return html`
-    <div onload=${handleLoad}>
-      ${logout(user, model, dispatch)}
-      <h1>hello ${account.email}</h1>
-    </div>
+    <section>
+      <form onsubmit=${handleSubmit} onload=${handleLoad}>
+        <input name='agent' type='hidden' value=${agent} />
+        <fieldset>
+          <label>email</label>
+          <input name='email' type='email' value=${email || ''} />
+        </fieldset>
+        <fieldset>
+          <label>password</label>
+          <input name='password' type='password' />
+        </fieldset>
+        <input type='submit' value='save account' />
+      </form>
+    </section>
   `
 
   function handleLoad () {
-    dispatch(run(get(user)))
+    dispatch(run(get(agent)))
+  }
+
+  function handleSubmit (ev) {
+    ev.preventDefault()
+    var nextAccount = getFormData(ev.target)
+    if (key) nextAccount.key = key
+    dispatch(run(update(nextAccount)))
   }
 }

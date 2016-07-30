@@ -7,7 +7,6 @@ const { FIND_ONE, PUT } = require('./effects')
 const { SET, set } = require('./actions')
 
 module.exports = Profiles
-module.exports.views = require('./views')
 
 function Profiles ({ api }) {
   return Domain({
