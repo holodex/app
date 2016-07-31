@@ -74,7 +74,6 @@
     "stream-to-pull-stream": "^1.7.0",
     "subleveldown": "^2.1.0",
     "ticket-auth": "0.0.1",
-    "tiny-route": "^2.1.2",
     "uglifyify": "^3.0.1",
     "vas": "github:ahdinosaur/vas#more-better-server",
     "wzrd": "github:ahdinosaur/wzrd#patch-1",

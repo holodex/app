@@ -1,5 +1,4 @@
 const Route = require('http-routes')
-const Tiny = require('tiny-route')
 
 const service = {
   name: 'user',
