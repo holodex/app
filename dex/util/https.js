@@ -1,13 +1,14 @@
 const https = require('https')
 
-var Lex = require('letsencrypt-express')
-if (process.env.NODE_ENV !== 'production') {
-  Lex = Lex.testing()
-}
-
 module.exports = createHttpsServer
 
 function createHttpsServer (handler, options = {}) {
+  const Lex = require('letsencrypt-express')
+
+  if (process.env.NODE_ENV !== 'production') {
+    Lex = Lex.testing()
+  }
+
   const host = options.host
   const email = options.email
   const agreeTos = options.agreeTos
