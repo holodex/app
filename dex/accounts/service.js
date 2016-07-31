@@ -52,7 +52,6 @@ const service = {
 
     function update (body, cb) {
       const saltRounds = 10
-        console.log('body', body)
       var nextAccount = {
         key: body.key,
         agent: body.agent
@@ -71,6 +70,10 @@ const service = {
     function verify (body, cb) {
       getByEmail(body.email, function (err, account) {
         if (err) return cb(err)
+
+        if (!account.hash) {
+          return cb(new Error('Login password not setup with account.'))
+        }
 
         bcrypt.compare(body.password, account.hash, function (err, res) {
           if (err) return cb(err)

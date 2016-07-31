@@ -5,9 +5,9 @@ const vas = require('vas')
 const level = require('level-party')
 const sub = require('subleveldown')
 const Tickets = require('ticket-auth')
+const Stack = require('stack')
 
 const service = require('dex/service')
-const createServer = require('dex/server')
 const config = require('./config')
 const https = require('dex/util/https')
 
@@ -15,16 +15,12 @@ config.db = level(config.dbPath)
 const ticketsDb = sub(config.db, 'tickets', { valueEncoding: 'json' })
 const tickets = config.tickets = Tickets(ticketsDb)
 
-const server = https(createServer(config), config.letsencrypt)
-
 vas.command(service, config, {
   port: config.port,
   url: config.url,
-  server,
-  getId: function (ws, cb) {
-    tickets.check(ws.headers.cookie, function (err, id) {
-      if (err) console.error(err)
-      cb(null, id)
-    })
-  }
+  createHttpServer: config.letsencrypt ? createHttpServer : undefined,
 }, process.argv)
+
+function createHttpServer (handlers, config) {
+  return https(Stack(...handlers), config.letsencrypt)
+}

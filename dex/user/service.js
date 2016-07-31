@@ -1,3 +1,6 @@
+const Route = require('http-routes')
+const Tiny = require('tiny-route')
+
 const service = {
   name: 'user',
   manifest: {
@@ -41,6 +44,40 @@ const service = {
         })
       })
     }
+  },
+  handlers: (server, config) => {
+    return [
+      // redeem a user ticket at /login/<ticket>
+      Route([
+        ['login/:ticket', function (req, res, next) {
+          config.tickets.redeem(req.params.ticket, function (err, cookie) {
+            if(err) return next(err)
+            // ticket is redeemed! set it as a cookie, 
+            res.setHeader('Set-Cookie', cookie)
+            res.setHeader('Location', '/') // redirect to the login page.
+            res.statusCode = 303
+            res.end()
+          })
+        }],
+        ['logout', function (req, res, next) {
+          res.setHeader('Set-Cookie', 'cookie=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;')
+          res.setHeader('Location', '/') // redirect to the login page.
+          res.statusCode = 303
+          res.end()
+        }]
+      ]),
+      // check cookies, and authorize this connection (or not)
+      function (req, res, next) {
+        const context = this
+        config.tickets.check(req.headers.cookie, function (err, id) {
+          context.id = id; next()
+        })
+      },
+      // return list of the current access rights. (for debugging)
+      Route('whoami', function (req, res, next) {
+        res.end(JSON.stringify(this.id) + '\n')
+      })
+    ]
   }
 }
 
