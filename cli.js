@@ -9,12 +9,13 @@ const Tickets = require('ticket-auth')
 const service = require('dex/service')
 const createServer = require('dex/server')
 const config = require('./config')
+const https = require('dex/util/https')
 
 config.db = level(config.dbPath)
 const ticketsDb = sub(config.db, 'tickets', { valueEncoding: 'json' })
 const tickets = config.tickets = Tickets(ticketsDb)
 
-const server = http.createServer(createServer(config))
+const server = https(createServer(config), config.letsencrypt)
 
 vas.command(service, config, {
   port: config.port,
