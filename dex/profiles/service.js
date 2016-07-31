@@ -23,8 +23,9 @@ const service = {
       findOne
     }
 
-    function put (profile, cb) {
-      profiles.put(profile, cb)
+   function put (profile, cb) {
+    console.log('profile', profile)
+     profiles.put(profile, cb)
     }
 
     function findOne (index, value, cb) {

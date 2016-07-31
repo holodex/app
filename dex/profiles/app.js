@@ -37,6 +37,7 @@ function Profiles ({ api }) {
         })
       },
       [PUT]: (nextProfile, sources) => {
+        console.log('nprofile', nextProfile)
         return pullAsync(cb => {
           api.profiles.put(nextProfile, (err, profile) => {
             if (err) return console.error(err)
