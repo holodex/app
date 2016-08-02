@@ -51,6 +51,7 @@
   "dependencies": {
     "bankai": "^2.0.7",
     "bcrypt": "^0.8.7",
+    "ecstatic": "^1.4.1",
     "evalify": "^2.0.0",
     "get-form-data": "^1.2.5",
     "http-routes": "github:ahdinosaur/http-routes#v1.0.2",
