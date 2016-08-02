@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "agent": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": ["name"]
+}

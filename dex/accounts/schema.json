@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "hash": {
+      "type": "string",
+      "format": "hash"
+    }
+  },
+  "required": ["email"]
+}

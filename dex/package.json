@@ -1,0 +1,10 @@
+{
+  "browserify": {
+    "transform": [
+      ["evalify", {
+        "files": ["**/service.js"]
+      }],
+      "sheetify/transform"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # UNRELEASED
 
-- Re-write for [Enspiral Dev Academy](http://devacademy.co.nz) alumni
+- re-write with more mad science
 
 # 0.2.1 (2015-05-24)
 
