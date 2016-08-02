@@ -11,7 +11,7 @@ const service = {
     del: 'async',
     find: 'source'
   },
-  init: function (server, config) {
+  methods: function (server, config) {
     const relationships = Model(
       config.db,
       extend(schema, {

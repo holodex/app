@@ -11,7 +11,7 @@ const service = {
     put: 'async',
     find: 'source'
   },
-  init: function (server, config) {
+  methods: function (server, config) {
     const relationshipTypes = Model(
       config.db,
       extend(schema, {
@@ -27,7 +27,6 @@ const service = {
     }
 
     function get (key, cb) {
-      console.log('get', key)
       relationshipTypes.get(key, cb)
     }
 

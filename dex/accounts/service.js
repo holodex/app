@@ -13,7 +13,7 @@ const service = {
     update: 'async',
     verify: 'async'
   },
-  init: function (server, config) {
+  methods: function (server, config) {
     const accounts = Model(
       config.db,
       extend(schema, {
