@@ -63,7 +63,7 @@
     "level-model": "^2.0.2",
     "level-party": "^3.0.4",
     "lnfs-cli": "^1.0.1",
-    "lodash": "^4.13.1",
+    "lodash": "^4.14.1",
     "npm-run-all": "^1.3.2",
     "plur": "^2.1.2",
     "pull-async": "^1.0.0",
@@ -75,6 +75,7 @@
     "stream-to-pull-stream": "^1.7.0",
     "subleveldown": "^2.1.0",
     "township-auth": "^2.0.5",
+    "traverse": "^0.6.6",
     "uglifyify": "^3.0.1",
     "vas": "github:ahdinosaur/vas#cli",
     "xtend": "^4.0.1"
