@@ -23,7 +23,7 @@ npm install
 ### develop
 
 ```
-npm run develop
+npm run dev
 ```
 
 ### start
