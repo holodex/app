@@ -18,7 +18,7 @@ const tickets = config.tickets = Tickets(ticketsDb)
 vas.command(service, config, {
   port: config.port,
   url: config.url,
-  createHttpServer: config.letsencrypt ? createHttpServer : undefined,
+  createHttpServer: config.letsencrypt ? createHttpServer : undefined
 }, process.argv)
 
 function createHttpServer (handlers, config) {

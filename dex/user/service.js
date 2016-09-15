@@ -8,7 +8,12 @@ const service = {
     signup: 'async',
     whoami: 'sync'
   },
-  init: function (server, config) {
+  authenticate: function getId (server, config) {
+    return (req, cb) => {
+      config.tickets.check(req.headers.cookie, cb)
+    }
+  },
+  methods: function (server, config) {
     const accounts = server.methods.accounts
     const tickets = config.tickets
 
@@ -65,16 +70,9 @@ const service = {
           res.end()
         }]
       ]),
-      // check cookies, and authorize this connection (or not)
-      function (req, res, next) {
-        const context = this
-        config.tickets.check(req.headers.cookie, function (err, id) {
-          context.id = id; next()
-        })
-      },
       // return list of the current access rights. (for debugging)
       Route('whoami', function (req, res, next) {
-        res.end(JSON.stringify(this.id) + '\n')
+        res.end(JSON.stringify(req.id) + '\n')
       })
     ]
   }

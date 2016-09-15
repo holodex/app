@@ -6,7 +6,7 @@ const service = {
     async: 'async',
     source: 'source'
   },
-  init: (server, config) => {
+  methods: (server, config) => {
     return {
       sync: () => {
         return 'a'
