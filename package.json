@@ -5,10 +5,10 @@
   "main": "server",
   "scripts": {
     "postinstall": "lnfs dex node_modules/dex",
-    "lint": "snazzy",
-    "format": "snazzy --format",
-    "test:spec": "",
-    "test:feature": "",
+    "format": "standard --format",
+    "test:lint": "standard",
+    "test:spec": "true",
+    "test:feature": "true",
     "test": "NODE_ENV=test npm-run-all -p test:*",
     "dev:server": "nodemon ./cli server --watch .",
     "prod:size": "browserify browser.js -g es2040 -g uglifyify -g unassertify | gzip | wc -c | pretty-bytes",
@@ -44,6 +44,7 @@
     "es2040": "^1.2.2",
     "nodemon": "^1.9.2",
     "pretty-bytes-cli": "^1.0.0",
+    "standard": "^8.0.0",
     "uglifyify": "^3.0.2",
     "unassertify": "^2.0.3",
     "watchify": "^3.7.0"
