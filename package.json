@@ -77,6 +77,7 @@
     "subleveldown": "^2.1.0",
     "ticket-auth": "0.0.1",
     "uglifyify": "^3.0.1",
+    "uuid": "^3.0.0",
     "vas": "github:ahdinosaur/vas#v2",
     "xtend": "^4.0.1"
   }
